@@ -1,0 +1,3158 @@
+<materials version="2">
+<material id="{E6188083-C4F1-4D99-BCB8-729707DC7A9B}">
+    <name>Gneiss, porphyres</name>
+    <description></description>
+    <conductivity>3.5</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>41</red>
+        <green>35</green>
+        <blue>190</blue>
+    </color>
+</material>
+<material id="{57EEDE69-9F0B-44AA-87E1-D0CD9FE927A4}">
+    <name>Granites</name>
+    <description></description>
+    <conductivity>2.8</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>132</red>
+        <green>225</green>
+        <blue>108</blue>
+    </color>
+</material>
+<material id="{1A2861D7-D914-42FF-A7B2-7E0A45978A0B}">
+    <name>Schistes, ardoises</name>
+    <description></description>
+    <conductivity>2.2</conductivity>
+    <mu>1000</mu>
+    <color>
+        <red>214</red>
+        <green>174</green>
+        <blue>82</blue>
+    </color>
+</material>
+<material id="{6CDBE113-DA83-4C35-AA33-D9C817436B0A}">
+    <name>Basaltes</name>
+    <description></description>
+    <conductivity>1.6</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>144</red>
+        <green>73</green>
+        <blue>241</blue>
+    </color>
+</material>
+<material id="{4B1843CF-FD67-4175-B928-E0BFE4CC6954}">
+    <name>Trachytes, andésites</name>
+    <description></description>
+    <conductivity>1.1</conductivity>
+    <mu>20</mu>
+    <color>
+        <red>241</red>
+        <green>187</green>
+        <blue>233</blue>
+    </color>
+</material>
+<material id="{9C8E3E36-15AD-404A-ACC5-B5C1AFFB2763}">
+    <name>Pierres naturelles poreuses (ex : laves)</name>
+    <description></description>
+    <conductivity>0.55</conductivity>
+    <mu>20</mu>
+    <color>
+        <red>235</red>
+        <green>179</green>
+        <blue>166</blue>
+    </color>
+</material>
+<material id="{20BF2EE0-1B0F-4FD4-8A0B-8B9CBE5DB094}">
+    <name>Marbres</name>
+    <description></description>
+    <conductivity>3.5</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>219</red>
+        <green>60</green>
+        <blue>135</blue>
+    </color>
+</material>
+<material id="{D5F26E81-B194-4F9F-B4C3-643FCC015866}">
+    <name>Pierres froides ou extra dures</name>
+    <description></description>
+    <conductivity>2.3</conductivity>
+    <mu>250</mu>
+    <color>
+        <red>12</red>
+        <green>62</green>
+        <blue>153</blue>
+    </color>
+</material>
+<material id="{2B9C925C-F647-44F0-8C94-0F9907D54613}">
+    <name>Pierres dures</name>
+    <description></description>
+    <conductivity>1.7</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>36</red>
+        <green>94</green>
+        <blue>13</blue>
+    </color>
+</material>
+<material id="{5135DF27-2877-44A1-832E-A5B8D923A2A7}">
+    <name>Pierres fermes, demi-fermes</name>
+    <description></description>
+    <conductivity>1.4</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>28</red>
+        <green>6</green>
+        <blue>183</blue>
+    </color>
+</material>
+<material id="{1A5D94AB-FC48-47BA-B0A3-D4C4FF8468F2}">
+    <name>Pierres tendres n°2 et 3</name>
+    <description></description>
+    <conductivity>1.1</conductivity>
+    <mu>40</mu>
+    <color>
+        <red>71</red>
+        <green>222</green>
+        <blue>179</blue>
+    </color>
+</material>
+<material id="{02066B7F-326A-4BDD-B7A1-CD7693190046}">
+    <name>Pierres très tendres</name>
+    <description></description>
+    <conductivity>0.85</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>18</red>
+        <green>77</green>
+        <blue>200</blue>
+    </color>
+</material>
+<material id="{1AD93BBE-6C30-4F44-982F-59E56A7E967E}">
+    <name>Grès quartzeux</name>
+    <description></description>
+    <conductivity>2.6</conductivity>
+    <mu>40</mu>
+    <color>
+        <red>67</red>
+        <green>187</green>
+        <blue>139</blue>
+    </color>
+</material>
+<material id="{3E7EE9C0-C27E-4118-8AE9-C0EF835CE624}">
+    <name>Grès (silice)</name>
+    <description></description>
+    <conductivity>2.3</conductivity>
+    <mu>40</mu>
+    <color>
+        <red>166</red>
+        <green>31</green>
+        <blue>3</blue>
+    </color>
+</material>
+<material id="{EA949569-489A-4FE9-B2B7-34CE189B7AD9}">
+    <name>Grès calcarifères</name>
+    <description></description>
+    <conductivity>1.9</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>90</red>
+        <green>125</green>
+        <blue>9</blue>
+    </color>
+</material>
+<material id="{634BB117-C89B-4413-8CDE-C032FA95DCE8}">
+    <name>Silex</name>
+    <description></description>
+    <conductivity>2.6</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>56</red>
+        <green>37</green>
+        <blue>31</blue>
+    </color>
+</material>
+<material id="{33998E9E-941D-4D8B-8CBF-685D1C636534}">
+    <name>Meulières</name>
+    <description></description>
+    <conductivity>1.8</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>93</red>
+        <green>212</green>
+        <blue>203</blue>
+    </color>
+</material>
+<material id="{CC614CF7-3949-44DF-A421-72A8C1A37680}">
+    <name>Meulières</name>
+    <description></description>
+    <conductivity>0.9</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>252</red>
+        <green>150</green>
+        <blue>245</blue>
+    </color>
+</material>
+<material id="{1A9CB7C9-7359-4B8A-BE51-E5462DF4D7BA}">
+    <name>Ponces naturelles</name>
+    <description></description>
+    <conductivity>0.12</conductivity>
+    <mu>8</mu>
+    <color>
+        <red>69</red>
+        <green>59</green>
+        <blue>19</blue>
+    </color>
+</material>
+<material id="{4D299FDC-FFF9-4BB8-B4E6-306922DD51E9}">
+    <name>Béton plein de granulats courants siliceux, silico-calcaires et calcaires</name>
+    <description></description>
+    <conductivity>2</conductivity>
+    <mu>130</mu>
+    <color>
+        <red>13</red>
+        <green>137</green>
+        <blue>10</blue>
+    </color>
+</material>
+<material id="{DDFF2689-A102-4631-A1A0-FE88AF4277A4}">
+    <name>Béton plein de granulats courants siliceux, silico-calcaires et calcaires</name>
+    <description></description>
+    <conductivity>1.65</conductivity>
+    <mu>120</mu>
+    <color>
+        <red>28</red>
+        <green>219</green>
+        <blue>174</blue>
+    </color>
+</material>
+<material id="{B2881FA7-6444-4821-88D2-AA8141E31869}">
+    <name>Béton caverneux de granulats courants siliceux, silico-calcaires et calcaires</name>
+    <description></description>
+    <conductivity>1.35</conductivity>
+    <mu>100</mu>
+    <color>
+        <red>50</red>
+        <green>32</green>
+        <blue>154</blue>
+    </color>
+</material>
+<material id="{423B7B81-C97C-4819-A2D4-0FED8A1D648F}">
+    <name>Béton caverneux de granulats courants siliceux, silico-calcaires et calcaires</name>
+    <description></description>
+    <conductivity>1.15</conductivity>
+    <mu>100</mu>
+    <color>
+        <red>80</red>
+        <green>238</green>
+        <blue>64</blue>
+    </color>
+</material>
+<material id="{0B13B513-75F1-4665-B328-2705CFE5E702}">
+    <name>Béton plein armé de granulats courants siliceux, silico-calcaires et calcaires</name>
+    <description></description>
+    <conductivity>2.3</conductivity>
+    <mu>130</mu>
+    <color>
+        <red>120</red>
+        <green>54</green>
+        <blue>253</blue>
+    </color>
+</material>
+<material id="{A242280D-3227-4D28-9B23-20E250EEF065}">
+    <name>Béton plein armé de granulats courants siliceux, silico-calcaires et calcaires</name>
+    <description></description>
+    <conductivity>2.5</conductivity>
+    <mu>130</mu>
+    <color>
+        <red>18</red>
+        <green>73</green>
+        <blue>50</blue>
+    </color>
+</material>
+<material id="{90D5EACC-3255-4F42-A541-3894622F0479}">
+    <name>Béton plein de granulats courants de laitiers de hauts fourneaux</name>
+    <description></description>
+    <conductivity>1.4</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>246</red>
+        <green>158</green>
+        <blue>125</blue>
+    </color>
+</material>
+<material id="{06FEC1AF-60F7-4F68-82E0-BC1BBA63872E}">
+    <name>Béton plein de granulats courants de laitiers de hauts fourneaux</name>
+    <description></description>
+    <conductivity>0.8</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>73</red>
+        <green>220</green>
+        <blue>173</blue>
+    </color>
+</material>
+<material id="{DFA17B98-0B02-4E59-920C-FE8FFF27BDE6}">
+    <name>Béton caverneux de granulats courants de laitiers de hauts fourneaux</name>
+    <description></description>
+    <conductivity>0.7</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>79</red>
+        <green>20</green>
+        <blue>242</blue>
+    </color>
+</material>
+<material id="{9C1BDEFD-7DF2-4225-8541-924AFB5C4727}">
+    <name>Béton de pouzzolane ou de laitier expansé à structures caverneuses</name>
+    <description></description>
+    <conductivity>0.52</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>68</red>
+        <green>64</green>
+        <blue>102</blue>
+    </color>
+</material>
+<material id="{115B25F7-5AD5-465D-BA70-5DB5D5C1C059}">
+    <name>Béton de pouzzolane ou de laitier expansé à structures caverneuses</name>
+    <description></description>
+    <conductivity>0.44</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>208</red>
+        <green>107</green>
+        <blue>196</blue>
+    </color>
+</material>
+<material id="{6D0540AD-1EE6-4167-AB4F-00A52759ED53}">
+    <name>Béton de pouzzolane ou de laitier expansé à structures caverneuses</name>
+    <description></description>
+    <conductivity>0.35</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>48</red>
+        <green>183</green>
+        <blue>50</blue>
+    </color>
+</material>
+<material id="{307B1D9F-D3BA-43E9-BD1B-8B69819076BA}">
+    <name>Béton de cendres volantes frittées</name>
+    <description></description>
+    <conductivity>0.35</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>59</red>
+        <green>161</green>
+        <blue>34</blue>
+    </color>
+</material>
+<material id="{3556D1E3-723A-41F6-B1F7-A75CF7E3A4E3}">
+    <name>Béton de ponce naturelle</name>
+    <description></description>
+    <conductivity>0.46</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>246</red>
+        <green>34</green>
+        <blue>145</blue>
+    </color>
+</material>
+<material id="{C59BE9C2-9FAA-4CA0-A426-33C43D00576D}">
+    <name>Bétons de structure d'argile ou de schiste expansé</name>
+    <description></description>
+    <conductivity>1.05</conductivity>
+    <mu>8</mu>
+    <color>
+        <red>157</red>
+        <green>225</green>
+        <blue>139</blue>
+    </color>
+</material>
+<material id="{256B1AC0-4B40-4D6F-A1C2-39824DEB4F60}">
+    <name>Bétons de structure d'argile ou de schiste expansé</name>
+    <description></description>
+    <conductivity>0.85</conductivity>
+    <mu>8</mu>
+    <color>
+        <red>31</red>
+        <green>218</green>
+        <blue>176</blue>
+    </color>
+</material>
+<material id="{4AC3F40A-1228-4E30-9E09-A5C7911838C2}">
+    <name>Bétons isolants porteurs d'argile ou de schiste expansé</name>
+    <description></description>
+    <conductivity>0.7</conductivity>
+    <mu>6</mu>
+    <color>
+        <red>202</red>
+        <green>153</green>
+        <blue>2</blue>
+    </color>
+</material>
+<material id="{08B8DE3A-F0D5-4D15-AF44-AD76D32024B4}">
+    <name>Bétons isolants porteurs d'argile ou de schiste expansé</name>
+    <description></description>
+    <conductivity>0.46</conductivity>
+    <mu>6</mu>
+    <color>
+        <red>185</red>
+        <green>114</green>
+        <blue>157</blue>
+    </color>
+</material>
+<material id="{4B0FE855-11E9-4B97-851D-8C0B96407CFA}">
+    <name>Bétons caverneux et semi-caverneux d'argile ou de schiste expansé</name>
+    <description></description>
+    <conductivity>0.33</conductivity>
+    <mu>6</mu>
+    <color>
+        <red>73</red>
+        <green>44</green>
+        <blue>128</blue>
+    </color>
+</material>
+<material id="{84CF4F2B-B960-4FF3-B0D9-C7BB293F17B4}">
+    <name>Bétons caverneux et semi-caverneux d'argile ou de schiste expansé</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>6</mu>
+    <color>
+        <red>126</red>
+        <green>197</green>
+        <blue>153</blue>
+    </color>
+</material>
+<material id="{BB34C5B1-1D0B-4F73-8F30-BCF26E426716}">
+    <name>Bétons caverneux et semi-caverneux d'argile ou de schiste expansé</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <mu>6</mu>
+    <color>
+        <red>213</red>
+        <green>233</green>
+        <blue>128</blue>
+    </color>
+</material>
+<material id="{64E21949-AA9D-4874-B45C-D807AEE6A29E}">
+    <name>Béton léger à base de ciment et de granulats légers artificiels ou naturels</name>
+    <description></description>
+    <conductivity>0.7</conductivity>
+    <mu>6</mu>
+    <color>
+        <red>178</red>
+        <green>234</green>
+        <blue>201</blue>
+    </color>
+</material>
+<material id="{0AB7A2E3-106A-4161-8839-09A0083EE5F4}">
+    <name>Mortier à base de granulats ou de billes de polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>204</red>
+        <green>83</green>
+        <blue>191</blue>
+    </color>
+</material>
+<material id="{3320E0AE-EC04-4D94-841E-F7A4B6F5AF67}">
+    <name>Mortier à base de granulats ou de billes de polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.28</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>103</red>
+        <green>214</green>
+        <blue>191</blue>
+    </color>
+</material>
+<material id="{5D845B36-01CE-4E94-9E90-582123AE1884}">
+    <name>Mortier à base de granulats ou de billes de polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.36</conductivity>
+    <mu>30</mu>
+    <color>
+        <red>20</red>
+        <green>214</green>
+        <blue>126</blue>
+    </color>
+</material>
+<material id="{179A6B3B-1830-4554-9A6F-B6C11A4A5BBB}">
+    <name>Bétons de perlite ou de vermiculite grade 3</name>
+    <description></description>
+    <conductivity>0.31</conductivity>
+    <mu>15</mu>
+    <color>
+        <red>45</red>
+        <green>220</green>
+        <blue>142</blue>
+    </color>
+</material>
+<material id="{4C6915F3-23EF-4406-90F1-537A9F94DB72}">
+    <name>Bétons de perlite ou de vermiculite grade 3</name>
+    <description></description>
+    <conductivity>0.24</conductivity>
+    <mu>15</mu>
+    <color>
+        <red>102</red>
+        <green>131</green>
+        <blue>239</blue>
+    </color>
+</material>
+<material id="{6D77D98C-7625-439A-8895-63E42E2AA361}">
+    <name>Plaques de béton de vermiculite fabriquées en usine</name>
+    <description></description>
+    <conductivity>0.19</conductivity>
+    <mu>15</mu>
+    <color>
+        <red>87</red>
+        <green>73</green>
+        <blue>97</blue>
+    </color>
+</material>
+<material id="{422BAB47-6459-4CAB-B0B3-FB4DD6B3BB5D}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.29</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>255</red>
+        <green>105</green>
+        <blue>143</blue>
+    </color>
+</material>
+<material id="{5ECACC83-1609-446E-BBF1-D9CEB422F294}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.27</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>97</red>
+        <green>205</green>
+        <blue>209</blue>
+    </color>
+</material>
+<material id="{1CAB9604-3620-4A92-A61E-CDD9A79C6143}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>30</red>
+        <green>157</green>
+        <blue>156</blue>
+    </color>
+</material>
+<material id="{02CF3193-051B-427E-BDDD-074530F3C614}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.23</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>22</red>
+        <green>114</green>
+        <blue>114</blue>
+    </color>
+</material>
+<material id="{F5A68849-F0A8-4182-BFAA-7C78BCC43025}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.21</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>230</red>
+        <green>29</green>
+        <blue>240</blue>
+    </color>
+</material>
+<material id="{01909633-B864-4674-8F4F-32F39A2BDB67}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.19</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>132</red>
+        <green>79</green>
+        <blue>74</blue>
+    </color>
+</material>
+<material id="{9B17696F-9BDF-4B66-8618-2906D3FDB711}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.175</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>119</red>
+        <green>2</green>
+        <blue>215</blue>
+    </color>
+</material>
+<material id="{7309FCE0-1B32-4886-AECB-C8126CE45A67}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.16</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>232</red>
+        <green>57</green>
+        <blue>44</blue>
+    </color>
+</material>
+<material id="{BCF13D31-CFA0-4B92-BF60-5D531288D6E5}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.145</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>83</red>
+        <green>203</green>
+        <blue>201</blue>
+    </color>
+</material>
+<material id="{DA196FE3-3A91-4464-BF40-D37591B03EFA}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>18</red>
+        <green>30</green>
+        <blue>51</blue>
+    </color>
+</material>
+<material id="{7685A4F4-887F-45C4-95C1-7821EC6F66A6}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.225</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>116</red>
+        <green>158</green>
+        <blue>12</blue>
+    </color>
+</material>
+<material id="{D9EF1276-5CB5-4142-920B-E6C25879E43A}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>244</red>
+        <green>213</green>
+        <blue>212</blue>
+    </color>
+</material>
+<material id="{BDBC3F27-59B4-4A38-9604-DACEE1B1C53D}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>159</red>
+        <green>212</green>
+        <blue>164</blue>
+    </color>
+</material>
+<material id="{5B19D937-8E36-4DEE-9F70-58D0449EC7CF}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.16</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>89</red>
+        <green>126</green>
+        <blue>53</blue>
+    </color>
+</material>
+<material id="{8A065772-2DD0-4A95-BC71-7459FF725721}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.14</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>207</red>
+        <green>50</green>
+        <blue>34</blue>
+    </color>
+</material>
+<material id="{4E146D3A-D77B-47B8-9CF0-0502EAA56541}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.125</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>244</red>
+        <green>204</green>
+        <blue>207</blue>
+    </color>
+</material>
+<material id="{D6C97324-E12D-4D55-AAFB-07B79CE810C4}">
+    <name>Bétons cellulaires traités à l'autoclave</name>
+    <description></description>
+    <conductivity>0.11</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>211</red>
+        <green>144</green>
+        <blue>45</blue>
+    </color>
+</material>
+<material id="{3C3ED53C-A16F-483A-A022-B8D403BE3858}">
+    <name>Béton de copeaux de bois</name>
+    <description></description>
+    <conductivity>0.16</conductivity>
+    <mu>15</mu>
+    <color>
+        <red>72</red>
+        <green>211</green>
+        <blue>143</blue>
+    </color>
+</material>
+<material id="{75F60134-007F-4E16-AC42-8AA323E41EEE}">
+    <name>Béton de fibres végétales</name>
+    <description></description>
+    <conductivity>0.1</conductivity>
+    <color>
+        <red>117</red>
+        <green>230</green>
+        <blue>217</blue>
+    </color>
+</material>
+<material id="{55EEF532-9C56-4BED-8EFD-595CA3BC8752}">
+    <name>Béton de fibres végétales</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <color>
+        <red>29</red>
+        <green>42</green>
+        <blue>229</blue>
+    </color>
+</material>
+<material id="{30DCA970-47CB-4F09-B97D-76201C9BB3E0}">
+    <name>Plâtre gaché serré ou très serré</name>
+    <description></description>
+    <conductivity>0.56</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>192</red>
+        <green>247</green>
+        <blue>43</blue>
+    </color>
+</material>
+<material id="{A1AE7780-57F3-40C5-95D4-CE7EFF8E44A0}">
+    <name>Plâtre gaché serré ou très serré</name>
+    <description></description>
+    <conductivity>0.43</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>120</red>
+        <green>129</green>
+        <blue>135</blue>
+    </color>
+</material>
+<material id="{8DE97BE0-3980-4C3F-9945-B0F8F18B2210}">
+    <name>Plâtre gaché serré ou très serré</name>
+    <description></description>
+    <conductivity>0.3</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>68</red>
+        <green>14</green>
+        <blue>95</blue>
+    </color>
+</material>
+<material id="{A99A3053-2AB2-4E74-9DD3-7A979C5AF88E}">
+    <name>Plâtre gaché serré ou très serré</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>80</red>
+        <green>0</green>
+        <blue>212</blue>
+    </color>
+</material>
+<material id="{9B1209C5-86F9-4EFF-A250-3DB6E896CD89}">
+    <name>Plâtre courant d'enduit intérieur</name>
+    <description></description>
+    <conductivity>0.57</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>97</red>
+        <green>141</green>
+        <blue>190</blue>
+    </color>
+</material>
+<material id="{56BDA9A4-8408-4410-8B03-09FAD3819324}">
+    <name>Plâtre courant d'enduit intérieur</name>
+    <description></description>
+    <conductivity>0.4</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>123</red>
+        <green>5</green>
+        <blue>21</blue>
+    </color>
+</material>
+<material id="{09203B96-85FB-4272-949B-74932E24922C}">
+    <name>Enduit intérieur à base de plâtre et de sable</name>
+    <description></description>
+    <conductivity>0.8</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>7</red>
+        <green>59</green>
+        <blue>51</blue>
+    </color>
+</material>
+<material id="{70E6A244-5DBA-4032-9C04-42FD7F667ACD}">
+    <name>Plaques de plâtres</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>130</red>
+        <green>31</green>
+        <blue>24</blue>
+    </color>
+</material>
+<material id="{CF4DA30F-F3A5-4863-BA20-A3653FE8ECAC}">
+    <name>Plaques de plâtre</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>112</red>
+        <green>146</green>
+        <blue>218</blue>
+    </color>
+</material>
+<material id="{39554A74-6089-4E6E-B8DC-CC0444DE7058}">
+    <name>Plâtre d'enduit</name>
+    <description></description>
+    <conductivity>0.3</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>100</red>
+        <green>84</green>
+        <blue>206</blue>
+    </color>
+</material>
+<material id="{8F12E9A7-C3DE-485F-BC2F-5931E1B0A12F}">
+    <name>Plâtre d'enduit</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>177</red>
+        <green>133</green>
+        <blue>62</blue>
+    </color>
+</material>
+<material id="{B402F4FC-F380-41C0-B50E-115101382FDB}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>1.04</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>105</red>
+        <green>21</green>
+        <blue>248</blue>
+    </color>
+</material>
+<material id="{23AD83D2-04EA-4F2C-B1D2-6532322414DA}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.98</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>70</red>
+        <green>106</green>
+        <blue>4</blue>
+    </color>
+</material>
+<material id="{2D1C0237-EA8B-4A01-B6AF-EF5A66983F41}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.92</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>150</red>
+        <green>115</green>
+        <blue>14</blue>
+    </color>
+</material>
+<material id="{417B3F77-66BB-49F4-8C7D-1949C1BEAC32}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.85</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>217</red>
+        <green>22</green>
+        <blue>47</blue>
+    </color>
+</material>
+<material id="{39CFDD30-E08A-44CA-BD7E-FAA5D534F659}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.79</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>103</red>
+        <green>104</green>
+        <blue>212</blue>
+    </color>
+</material>
+<material id="{02F426E1-2039-42F9-B250-7A79A8EE3D99}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.74</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>247</red>
+        <green>74</green>
+        <blue>74</blue>
+    </color>
+</material>
+<material id="{2BD38AEF-C13F-47BE-86DD-60C6BEFFF840}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.69</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>208</red>
+        <green>87</green>
+        <blue>104</blue>
+    </color>
+</material>
+<material id="{694A8E7A-62BF-4DA3-A8E2-1E7C0FA5DA94}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.64</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>118</red>
+        <green>250</green>
+        <blue>22</blue>
+    </color>
+</material>
+<material id="{E5A0916C-68BE-403C-809A-BA49CD63325E}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.6</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>187</red>
+        <green>17</green>
+        <blue>173</blue>
+    </color>
+</material>
+<material id="{0E6D94C3-3F39-4B98-A14E-6D17B74A5428}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.55</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>174</red>
+        <green>36</green>
+        <blue>136</blue>
+    </color>
+</material>
+<material id="{B025C592-609C-4C1D-8742-AB2C94AE3B15}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.5</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>121</red>
+        <green>254</green>
+        <blue>82</blue>
+    </color>
+</material>
+<material id="{6453C018-2EA8-42E7-8C7B-235ECB5DAA3D}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.46</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>219</red>
+        <green>37</green>
+        <blue>67</blue>
+    </color>
+</material>
+<material id="{D547301D-4313-401A-A98F-7FDF501918EE}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.41</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>229</red>
+        <green>60</green>
+        <blue>244</blue>
+    </color>
+</material>
+<material id="{1156F422-E530-4EFF-B777-43FE2C9FF08C}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.38</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>69</red>
+        <green>211</green>
+        <blue>216</blue>
+    </color>
+</material>
+<material id="{8895D727-46C5-45F6-9DF8-516BF4CD19DB}">
+    <name>Terre cuite</name>
+    <description></description>
+    <conductivity>0.34</conductivity>
+    <mu>16</mu>
+    <color>
+        <red>40</red>
+        <green>206</green>
+        <blue>11</blue>
+    </color>
+</material>
+<material id="{781B3A3D-6465-47A0-B48F-A7D3D4D71D8A}">
+    <name>Bois : feuillus très lourds</name>
+    <description></description>
+    <conductivity>0.29</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>245</red>
+        <green>197</green>
+        <blue>96</blue>
+    </color>
+</material>
+<material id="{5B71BC6A-DE87-45BB-962E-CF768DF215B6}">
+    <name>Bois : feuillus lourds</name>
+    <description></description>
+    <conductivity>0.23</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>89</red>
+        <green>61</green>
+        <blue>151</blue>
+    </color>
+</material>
+<material id="{945B7BBE-DB0D-47B1-8E40-BCC584F6CE66}">
+    <name>Bois : feuillus mi-lourds</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>39</red>
+        <green>138</green>
+        <blue>89</blue>
+    </color>
+</material>
+<material id="{6F88DB22-71A6-4AFC-B29E-6EC5D31DB9A6}">
+    <name>Bois : feuillus légers</name>
+    <description></description>
+    <conductivity>0.15</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>118</red>
+        <green>45</green>
+        <blue>208</blue>
+    </color>
+</material>
+<material id="{670CDF37-1752-4404-8A53-FB08FC8595C2}">
+    <name>Bois : feuillus très légers hors balsa</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>194</red>
+        <green>201</green>
+        <blue>205</blue>
+    </color>
+</material>
+<material id="{CB9086CB-30DB-452C-945F-37388D6F17A2}">
+    <name>Bois : balsa inférieurs à 230 kilogrammes par mètre cube</name>
+    <description></description>
+    <conductivity>0.06</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>104</red>
+        <green>212</green>
+        <blue>73</blue>
+    </color>
+</material>
+<material id="{79286DAF-D093-4A57-8A4C-0A19BEEF87F2}">
+    <name>Bois : résineux très lourds</name>
+    <description></description>
+    <conductivity>0.23</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>106</red>
+        <green>121</green>
+        <blue>37</blue>
+    </color>
+</material>
+<material id="{16D5FFE2-363B-42CD-A92B-BA737B775008}">
+    <name>Bois : résineux lourds</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>8</red>
+        <green>97</green>
+        <blue>64</blue>
+    </color>
+</material>
+<material id="{18B8AB5D-4500-4F9A-AA6A-8E29DF5E4991}">
+    <name>Bois : résineux mi-lourds</name>
+    <description></description>
+    <conductivity>0.15</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>20</red>
+        <green>177</green>
+        <blue>59</blue>
+    </color>
+</material>
+<material id="{9B9417BE-BAD8-438F-AF8F-3555BB335343}">
+    <name>Bois : résineux légers</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>106</red>
+        <green>165</green>
+        <blue>17</blue>
+    </color>
+</material>
+<material id="{89DD0C0C-482C-47E3-AFBC-D270FB163E7A}">
+    <name>Epicéa, Sapin blanc, Western Red Cedar</name>
+    <description></description>
+    <conductivity>0.11</conductivity>
+    <color>
+        <red>40</red>
+        <green>193</green>
+        <blue>140</blue>
+    </color>
+</material>
+<material id="{ACB2BEE3-20EC-4ECD-9F9E-5728C019254C}">
+    <name>Acajou</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <color>
+        <red>85</red>
+        <green>255</green>
+        <blue>127</blue>
+    </color>
+</material>
+<material id="{B416F11D-1719-4D6A-A6FE-D6B1DB36F902}">
+    <name>Bossé clair, Châtaignier, Jequitiba, Limba/Fraké, Tauari, Tiama, Tola</name>
+    <description></description>
+    <conductivity>0.15</conductivity>
+    <color>
+        <red>135</red>
+        <green>151</green>
+        <blue>140</blue>
+    </color>
+</material>
+<material id="{DF62DDCD-E778-4121-AFA3-83C5D9B9C381}">
+    <name>Iroko, Louro vermelho (Grignon franc), Makoré/Douka, Mangkulang (Palapi), Meranti dark red, Niangon, Sapelli, Sipo, Teck</name>
+    <description></description>
+    <conductivity>0.16</conductivity>
+    <color>
+        <red>47</red>
+        <green>241</green>
+        <blue>21</blue>
+    </color>
+</material>
+<material id="{F1365350-AA18-4B2E-8BEB-487076BB02DB}">
+    <name>Bintangor, Bossé foncé, Chêne (rouvre et/ou pédonculé), Curupixa, Doussié, Euvalyptus globulus, Eucalyptus grandis, Frêne, Hêtre, Kosipo, Kotibé, Merbau, Moabi, Movingui, Robinier (faux Acacia)</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <color>
+        <red>29</red>
+        <green>154</green>
+        <blue>149</blue>
+    </color>
+</material>
+<material id="{3396CA96-D9D5-45AE-AF5D-6A55B6C89231}">
+    <name>Panneaux contreplaqués</name>
+    <description></description>
+    <conductivity>0.24</conductivity>
+    <mu>250</mu>
+    <color>
+        <red>193</red>
+        <green>155</green>
+        <blue>225</blue>
+    </color>
+</material>
+<material id="{ECE8DA13-2429-4FFA-A96F-FAFB3E9C6655}">
+    <name>Panneaux contreplaqués</name>
+    <description></description>
+    <conductivity>0.21</conductivity>
+    <mu>250</mu>
+    <color>
+        <red>192</red>
+        <green>126</green>
+        <blue>233</blue>
+    </color>
+</material>
+<material id="{AAF0F966-BC88-4884-AD93-CCB04978BDC1}">
+    <name>Panneaux contreplaqués</name>
+    <description></description>
+    <conductivity>0.17</conductivity>
+    <mu>220</mu>
+    <color>
+        <red>168</red>
+        <green>154</green>
+        <blue>167</blue>
+    </color>
+</material>
+<material id="{75DE476F-6619-4256-981D-0AB3FF92D116}">
+    <name>Panneaux contreplaqués</name>
+    <description></description>
+    <conductivity>0.15</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>134</red>
+        <green>194</green>
+        <blue>181</blue>
+    </color>
+</material>
+<material id="{FDE2D62A-ABD1-4622-B0F7-B8FA6F3EFE43}">
+    <name>Panneaux contreplaqués</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>84</red>
+        <green>191</green>
+        <blue>154</blue>
+    </color>
+</material>
+<material id="{DD15CEB2-B20B-4E08-9328-8589832C32BA}">
+    <name>Panneaux contreplaqués</name>
+    <description></description>
+    <conductivity>0.11</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>231</red>
+        <green>217</green>
+        <blue>35</blue>
+    </color>
+</material>
+<material id="{5269517B-50B2-475F-81C6-F7ADB06F8245}">
+    <name>Panneaux contreplaqués</name>
+    <description></description>
+    <conductivity>0.09</conductivity>
+    <mu>200</mu>
+    <color>
+        <red>209</red>
+        <green>85</green>
+        <blue>144</blue>
+    </color>
+</material>
+<material id="{D4D7A761-D09D-409E-8C42-255FE9D9B5C5}">
+    <name>Panneaux à lamelles longues et orientées OSB</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>56</red>
+        <green>40</green>
+        <blue>209</blue>
+    </color>
+</material>
+<material id="{43AA788E-C2D0-48F8-B20B-F7EB1759F7A2}">
+    <name>Panneaux de particules liées au ciment</name>
+    <description></description>
+    <conductivity>0.23</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>217</red>
+        <green>108</green>
+        <blue>161</blue>
+    </color>
+</material>
+<material id="{6F554C5D-CC72-4FB2-8A7C-A04C773EAAF6}">
+    <name>Panneaux de particules</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>102</red>
+        <green>94</green>
+        <blue>78</blue>
+    </color>
+</material>
+<material id="{962206A4-F07B-46E3-BDAD-1FF97DC20E0F}">
+    <name>Panneaux de particules</name>
+    <description></description>
+    <conductivity>0.15</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>225</red>
+        <green>48</green>
+        <blue>156</blue>
+    </color>
+</material>
+<material id="{7D80DCE7-55DF-41B7-9788-AFAA844FD4C0}">
+    <name>Panneaux de particules</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>254</red>
+        <green>217</green>
+        <blue>113</blue>
+    </color>
+</material>
+<material id="{148DB02E-FE0E-46B8-A0D0-63E72C089216}">
+    <name>Panneaux de particules</name>
+    <description></description>
+    <conductivity>0.1</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>159</red>
+        <green>226</green>
+        <blue>165</blue>
+    </color>
+</material>
+<material id="{9B4F1F7C-3A17-45F3-A653-6247D058EBA9}">
+    <name>Laines de roche</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>226</red>
+        <green>12</green>
+        <blue>155</blue>
+    </color>
+</material>
+<material id="{FC694405-2AFA-4D71-B050-9233B24C875A}">
+    <name>Laines de roche</name>
+    <description></description>
+    <conductivity>0.044</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>180</red>
+        <green>71</green>
+        <blue>101</blue>
+    </color>
+</material>
+<material id="{A0F98B3E-4C91-4F1E-82B4-FBC6E0F91BAE}">
+    <name>Laines de roche</name>
+    <description></description>
+    <conductivity>0.042</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>56</red>
+        <green>42</green>
+        <blue>70</blue>
+    </color>
+</material>
+<material id="{E34A914E-064E-4057-9842-C6AF1021175B}">
+    <name>Laines de roche</name>
+    <description></description>
+    <conductivity>0.044</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>137</red>
+        <green>169</green>
+        <blue>130</blue>
+    </color>
+</material>
+<material id="{04DEC45F-E4BB-4724-A7E1-09FB8B7EBDE5}">
+    <name>Laines de roche</name>
+    <description></description>
+    <conductivity>0.046</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>121</red>
+        <green>122</green>
+        <blue>118</blue>
+    </color>
+</material>
+<material id="{A511C2C5-F7B7-4244-9B8E-FBE7070774B6}">
+    <name>Laines de roche</name>
+    <description></description>
+    <conductivity>0.047</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>120</red>
+        <green>194</green>
+        <blue>99</blue>
+    </color>
+</material>
+<material id="{562A9787-B8E9-4952-9CBC-AA6650D121A9}">
+    <name>Laines de roche</name>
+    <description></description>
+    <conductivity>0.048</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>177</red>
+        <green>38</green>
+        <blue>223</blue>
+    </color>
+</material>
+<material id="{7306DDF8-23D9-421E-8852-98A34B8176E2}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.055</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>218</red>
+        <green>41</green>
+        <blue>109</blue>
+    </color>
+</material>
+<material id="{4360A180-B26D-430F-AC3E-6836791C63D0}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.047</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>62</red>
+        <green>98</green>
+        <blue>224</blue>
+    </color>
+</material>
+<material id="{B3163FAE-95A0-4F12-BAA7-32DFF42DE15C}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.044</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>150</red>
+        <green>18</green>
+        <blue>52</blue>
+    </color>
+</material>
+<material id="{6D7D872D-DA4C-4C3D-93BF-03DA4604542D}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.041</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>191</red>
+        <green>57</green>
+        <blue>166</blue>
+    </color>
+</material>
+<material id="{8B9E882F-2687-4893-B966-A31C692DA4DA}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.039</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>63</red>
+        <green>137</green>
+        <blue>94</blue>
+    </color>
+</material>
+<material id="{1E795EDA-F48D-4502-9A3D-D181789A60CB}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.038</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>241</red>
+        <green>109</green>
+        <blue>14</blue>
+    </color>
+</material>
+<material id="{AF13587C-3A17-4301-964F-867F10AFD224}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.039</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>227</red>
+        <green>108</green>
+        <blue>40</blue>
+    </color>
+</material>
+<material id="{BBE08F74-A9DB-4750-A695-D20E874FE0C8}">
+    <name>Laines de verre</name>
+    <description></description>
+    <conductivity>0.04</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>161</red>
+        <green>30</green>
+        <blue>32</blue>
+    </color>
+</material>
+<material id="{34F396EF-A601-4A21-A1DD-C236C0233F2C}">
+    <name>Laines minérales en vrac</name>
+    <description></description>
+    <conductivity>0.056</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>29</red>
+        <green>203</green>
+        <blue>194</blue>
+    </color>
+</material>
+<material id="{0C18CAD3-9AD0-4F43-8263-C8FD50D63212}">
+    <name>Laines minérales en vrac</name>
+    <description></description>
+    <conductivity>0.065</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>3</red>
+        <green>63</green>
+        <blue>65</blue>
+    </color>
+</material>
+<material id="{EA4A4329-5376-4AC0-8BF3-C615A3190521}">
+    <name>Laines minérales en vrac</name>
+    <description></description>
+    <conductivity>0.06</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>7</red>
+        <green>132</green>
+        <blue>15</blue>
+    </color>
+</material>
+<material id="{E86E9348-2861-4F43-84B4-60E2F172A200}">
+    <name>Autres laines minérales</name>
+    <description></description>
+    <conductivity>0.065</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>20</red>
+        <green>5</green>
+        <blue>101</blue>
+    </color>
+</material>
+<material id="{713C7519-0E41-4EE8-BECA-9AFCBAC73226}">
+    <name>Laine de laitier ou de roche ou hydraulique appliquées</name>
+    <description></description>
+    <conductivity>0.045</conductivity>
+    <mu>2</mu>
+    <color>
+        <red>27</red>
+        <green>40</green>
+        <blue>97</blue>
+    </color>
+</material>
+<material id="{D7E144F0-62C6-44B4-A2C4-0A158A622E20}">
+    <name>Laine de laitier ou de roche ou hydraulique appliquées</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>2</mu>
+    <color>
+        <red>201</red>
+        <green>197</green>
+        <blue>231</blue>
+    </color>
+</material>
+<material id="{11284200-E580-4320-9FB3-42323C01E3D9}">
+    <name>Laine de laitier ou de roche ou hydraulique appliquées</name>
+    <description></description>
+    <conductivity>0.07</conductivity>
+    <mu>2</mu>
+    <color>
+        <red>44</red>
+        <green>142</green>
+        <blue>70</blue>
+    </color>
+</material>
+<material id="{9C9EF1AD-9895-46A2-A122-44B5BE8C64FB}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.056</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>54</red>
+        <green>8</green>
+        <blue>220</blue>
+    </color>
+</material>
+<material id="{0E8598F2-1A22-4EBE-B943-97ABEFC364B6}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>243</red>
+        <green>168</green>
+        <blue>141</blue>
+    </color>
+</material>
+<material id="{8909D784-9C0C-4FE7-8BD3-9D4BF0E3E27D}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.047</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>254</red>
+        <green>190</green>
+        <blue>242</blue>
+    </color>
+</material>
+<material id="{DD2B8EE2-99D6-4B73-8E87-B22821F85DF8}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.044</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>235</red>
+        <green>113</green>
+        <blue>255</blue>
+    </color>
+</material>
+<material id="{70341E3F-6301-4C87-806D-83BBEA99B91B}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.042</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>160</red>
+        <green>208</green>
+        <blue>59</blue>
+    </color>
+</material>
+<material id="{28479449-E952-4C9F-BDC9-BF9FCCB47F7E}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.04</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>117</red>
+        <green>6</green>
+        <blue>140</blue>
+    </color>
+</material>
+<material id="{F9D981D2-C175-475E-A0F0-BD6DF817FE2C}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.039</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>126</red>
+        <green>135</green>
+        <blue>120</blue>
+    </color>
+</material>
+<material id="{62183F28-3BF6-4E15-8993-97808ADE27C8}">
+    <name>Polystyrène expansé</name>
+    <description></description>
+    <conductivity>0.038</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>115</red>
+        <green>77</green>
+        <blue>208</blue>
+    </color>
+</material>
+<material id="{55D4AA9C-2173-47AF-A69D-454E4DF250B8}">
+    <name>Plaques de polystyrène extrudées</name>
+    <description></description>
+    <conductivity>0.041</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>190</red>
+        <green>130</green>
+        <blue>190</blue>
+    </color>
+</material>
+<material id="{23B84379-EFEC-4292-9C4F-E5C335851789}">
+    <name>Plaques de polystyrène extrudées</name>
+    <description></description>
+    <conductivity>0.046</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>219</red>
+        <green>194</green>
+        <blue>70</blue>
+    </color>
+</material>
+<material id="{0EBA4B75-6DE9-4716-BC9C-683E8B155BE6}">
+    <name>Plaques de polystyrène extrudées</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>65</red>
+        <green>43</green>
+        <blue>140</blue>
+    </color>
+</material>
+<material id="{11195C33-DEBF-40DC-9C23-8CE4963AA391}">
+    <name>Plaques de polystyrène extrudées</name>
+    <description></description>
+    <conductivity>0.033</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>250</red>
+        <green>48</green>
+        <blue>127</blue>
+    </color>
+</material>
+<material id="{E41E0DD1-642F-4C3F-AAF0-EBFEAA34BCC6}">
+    <name>Plaques de polystyrène extrudées</name>
+    <description></description>
+    <conductivity>0.031</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>112</red>
+        <green>240</green>
+        <blue>167</blue>
+    </color>
+</material>
+<material id="{AA1445C8-1097-44B2-8DE5-753281C26679}">
+    <name>Plaques de polystyrène extrudées</name>
+    <description></description>
+    <conductivity>0.039</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>84</red>
+        <green>134</green>
+        <blue>50</blue>
+    </color>
+</material>
+<material id="{D0813ADD-3258-44F3-B4A2-11CB38D30021}">
+    <name>Plaques de polystyrène extrudées</name>
+    <description></description>
+    <conductivity>0.044</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>149</red>
+        <green>170</green>
+        <blue>91</blue>
+    </color>
+</material>
+<material id="{2F9FC14A-6337-4A01-9393-EC1B80270986}">
+    <name>Plaques de polystyrène expansées autres</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>150</mu>
+    <color>
+        <red>104</red>
+        <green>19</green>
+        <blue>11</blue>
+    </color>
+</material>
+<material id="{D3277F84-5109-4D91-9E64-1790314FD7AA}">
+    <name>Mousse rigide de PVC, Q2</name>
+    <description></description>
+    <conductivity>0.031</conductivity>
+    <color>
+        <red>230</red>
+        <green>252</green>
+        <blue>245</blue>
+    </color>
+</material>
+<material id="{C533B47C-DBDB-452C-992F-A1E27FA573F7}">
+    <name>Mousse rigide de PVC, Q3</name>
+    <description></description>
+    <conductivity>0.034</conductivity>
+    <color>
+        <red>202</red>
+        <green>190</green>
+        <blue>125</blue>
+    </color>
+</material>
+<material id="{D6324974-7A78-4D60-B0B4-9B2235B3070A}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>159</red>
+        <green>137</green>
+        <blue>138</blue>
+    </color>
+</material>
+<material id="{02ECC426-DC7E-4ED6-89CB-50BAC29F5BB2}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.03</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>65</red>
+        <green>27</green>
+        <blue>253</blue>
+    </color>
+</material>
+<material id="{1F64BE97-7925-4807-9425-29CF81B4EEBC}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.041</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>184</red>
+        <green>79</green>
+        <blue>104</blue>
+    </color>
+</material>
+<material id="{9C08AD8D-61DC-4787-9BF3-40DD63C312BD}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.032</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>246</red>
+        <green>114</green>
+        <blue>123</blue>
+    </color>
+</material>
+<material id="{11452EE4-9AEB-4B5E-A159-2270F86C536C}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>20</red>
+        <green>153</green>
+        <blue>205</blue>
+    </color>
+</material>
+<material id="{6DA129F1-23A0-42EE-BFBB-FFF6986495E3}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>211</red>
+        <green>13</green>
+        <blue>240</blue>
+    </color>
+</material>
+<material id="{07C67F7F-DD29-4067-93CE-D16C5FA0E2BE}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.04</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>68</red>
+        <green>58</green>
+        <blue>180</blue>
+    </color>
+</material>
+<material id="{4F08D32F-EEF1-4717-91A9-D222F6FF7C13}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.03</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>166</red>
+        <green>102</green>
+        <blue>83</blue>
+    </color>
+</material>
+<material id="{EEC7B906-D007-4A28-BEB7-00BA9F261B26}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.03</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>51</red>
+        <green>11</green>
+        <blue>203</blue>
+    </color>
+</material>
+<material id="{AE9D7252-9A31-4E50-8AF6-127D7D6EA2C0}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>161</red>
+        <green>16</green>
+        <blue>94</blue>
+    </color>
+</material>
+<material id="{838988B6-140E-4ECF-BA8D-8C435B8C7E2A}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>76</red>
+        <green>236</green>
+        <blue>3</blue>
+    </color>
+</material>
+<material id="{D7AADB19-8FDD-4DB3-98A2-16700D6F38C5}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.04</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>76</red>
+        <green>115</green>
+        <blue>230</blue>
+    </color>
+</material>
+<material id="{CC632766-1BF6-4F2D-B6D0-645DC6636A74}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.045</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>5</red>
+        <green>180</green>
+        <blue>49</blue>
+    </color>
+</material>
+<material id="{4ADACC7D-819D-43EC-AEE5-0ED088DD5FD3}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.03</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>14</red>
+        <green>170</green>
+        <blue>173</blue>
+    </color>
+</material>
+<material id="{1B964D45-DEC0-4982-BDEC-8FA9C496E357}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.03</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>207</red>
+        <green>213</green>
+        <blue>176</blue>
+    </color>
+</material>
+<material id="{28583337-8775-40A7-9C8D-D4763395099B}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>202</red>
+        <green>39</green>
+        <blue>255</blue>
+    </color>
+</material>
+<material id="{4AEE4ADC-8AC6-4FED-852F-FAFB5A9FD505}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>216</red>
+        <green>157</green>
+        <blue>20</blue>
+    </color>
+</material>
+<material id="{16CC3377-9206-4069-A63F-70B09E8C3FB7}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.035</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>77</red>
+        <green>244</green>
+        <blue>121</blue>
+    </color>
+</material>
+<material id="{8C6EF68E-6FCE-4F8D-8C7B-254AB052DFAC}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.04</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>39</red>
+        <green>89</green>
+        <blue>66</blue>
+    </color>
+</material>
+<material id="{82AC66D8-7744-44E3-923F-FCA926D6FB9E}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.04</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>124</red>
+        <green>156</green>
+        <blue>193</blue>
+    </color>
+</material>
+<material id="{183457DA-537D-4284-B1D1-FB7D4DB330A9}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.045</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>248</red>
+        <green>205</green>
+        <blue>140</blue>
+    </color>
+</material>
+<material id="{28B801CB-300F-4FA2-BBF9-44FA35F80DF7}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.03</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>135</red>
+        <green>32</green>
+        <blue>35</blue>
+    </color>
+</material>
+<material id="{77A826BA-E9C3-4637-8549-35F3FFBBE3FC}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>100</red>
+        <green>184</green>
+        <blue>166</blue>
+    </color>
+</material>
+<material id="{C8796ECE-FBBA-465A-884E-CAEBDD6F6507}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>135</red>
+        <green>149</green>
+        <blue>76</blue>
+    </color>
+</material>
+<material id="{3C2B50FD-F570-4E33-A6D5-6ACD96C6DCAA}">
+    <name>Mousse de polyuréthane ou de polyisocyanate</name>
+    <description></description>
+    <conductivity>0.06</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>176</red>
+        <green>90</green>
+        <blue>141</blue>
+    </color>
+</material>
+<material id="{A7A213FE-CB93-4E37-BF59-7998F6938BD8}">
+    <name>Mousse phénolite rigide</name>
+    <description></description>
+    <conductivity>0.03</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>78</red>
+        <green>45</green>
+        <blue>153</blue>
+    </color>
+</material>
+<material id="{01FAC455-7C71-482D-BE66-E8328B7273D4}">
+    <name>Mousse phénolite rigide</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>231</red>
+        <green>61</green>
+        <blue>177</blue>
+    </color>
+</material>
+<material id="{811E6FC2-A317-4F42-AA45-F8CBBC4CC3C7}">
+    <name>Autres matières plastiques alvéolaires fabriquées en usine</name>
+    <description></description>
+    <conductivity>0.065</conductivity>
+    <color>
+        <red>96</red>
+        <green>222</green>
+        <blue>177</blue>
+    </color>
+</material>
+<material id="{741355AB-D75D-4E50-BACD-B904C33ABF0B}">
+    <name>Plaques à base de perlite expansée</name>
+    <description></description>
+    <conductivity>0.062</conductivity>
+    <mu>5</mu>
+    <color>
+        <red>128</red>
+        <green>173</green>
+        <blue>8</blue>
+    </color>
+</material>
+<material id="{348D601F-9590-4354-B731-D7C59E492500}">
+    <name>Plaques à base de perlite expansée</name>
+    <description></description>
+    <conductivity>0.06</conductivity>
+    <mu>5</mu>
+    <color>
+        <red>65</red>
+        <green>233</green>
+        <blue>103</blue>
+    </color>
+</material>
+<material id="{827C1502-10AA-42F9-A02B-19C36F3640BD}">
+    <name>Plaques à base de perlite expansée</name>
+    <description></description>
+    <conductivity>0.059</conductivity>
+    <mu>5</mu>
+    <color>
+        <red>65</red>
+        <green>165</green>
+        <blue>213</blue>
+    </color>
+</material>
+<material id="{6A1CECE2-5ECF-4525-8001-672D2EC786F2}">
+    <name>Plaques à base de perlite expansée</name>
+    <description></description>
+    <conductivity>0.064</conductivity>
+    <color>
+        <red>159</red>
+        <green>228</green>
+        <blue>24</blue>
+    </color>
+</material>
+<material id="{F1D4A492-AAA8-4468-BF5B-6199C6FE9384}">
+    <name>Plaques homogènes de verre cellulaire</name>
+    <description></description>
+    <conductivity>0.051</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>159</red>
+        <green>21</green>
+        <blue>66</blue>
+    </color>
+</material>
+<material id="{786EBC71-ACFF-49C8-910B-96FD289BBCC1}">
+    <name>Plaques homogènes de verre cellulaire</name>
+    <description></description>
+    <conductivity>0.057</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>0</red>
+        <green>38</green>
+        <blue>254</blue>
+    </color>
+</material>
+<material id="{B840EDEA-C5B6-47B9-BB33-134B4E604359}">
+    <name>Mastic naturel</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>76</red>
+        <green>209</green>
+        <blue>33</blue>
+    </color>
+</material>
+<material id="{E4F442AE-A8BF-4DF6-BD87-3022967A5888}">
+    <name>Néoprène polychloroprène</name>
+    <description></description>
+    <conductivity>0.23</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>4</red>
+        <green>147</green>
+        <blue>47</blue>
+    </color>
+</material>
+<material id="{5BD0DCBC-817A-440B-9E7A-8A6875A555A4}">
+    <name>Butyle isobutène, plein/coulé à chaud</name>
+    <description></description>
+    <conductivity>0.24</conductivity>
+    <mu>200000</mu>
+    <color>
+        <red>179</red>
+        <green>143</green>
+        <blue>115</blue>
+    </color>
+</material>
+<material id="{D99EB38C-EB98-46AE-84AE-E2F46DCADB2E}">
+    <name>Caoutchouc mousse</name>
+    <description></description>
+    <conductivity>0.06</conductivity>
+    <mu>7000</mu>
+    <color>
+        <red>83</red>
+        <green>64</green>
+        <blue>67</blue>
+    </color>
+</material>
+<material id="{D23C2190-D893-48DB-B80A-186D51996660}">
+    <name>Caoutchouc dur ébonite, plein</name>
+    <description></description>
+    <conductivity>0.17</conductivity>
+    <color>
+        <red>138</red>
+        <green>175</green>
+        <blue>126</blue>
+    </color>
+</material>
+<material id="{64F9DC92-03DF-47BF-9DB6-E3BDE08DF384}">
+    <name>Ethylène propylène diène monomère EPDM</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>6000</mu>
+    <color>
+        <red>202</red>
+        <green>111</green>
+        <blue>213</blue>
+    </color>
+</material>
+<material id="{F4A37605-4CB8-4C08-8A52-FFBD55FC0038}">
+    <name>Polyisobuthylène</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>207</red>
+        <green>211</green>
+        <blue>161</blue>
+    </color>
+</material>
+<material id="{AB32CB81-4DB2-4802-B0E3-BF5871D7B6B6}">
+    <name>Polysulfure</name>
+    <description></description>
+    <conductivity>0.4</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>149</red>
+        <green>206</green>
+        <blue>90</blue>
+    </color>
+</material>
+<material id="{C43E9E07-3829-4B6F-8557-DE9C3F643C86}">
+    <name>Butadiène</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>190</red>
+        <green>101</green>
+        <blue>39</blue>
+    </color>
+</material>
+<material id="{8903BA64-FAB1-4E8E-8C12-89EF893BF52E}">
+    <name>Acryliques</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>42</red>
+        <green>246</green>
+        <blue>7</blue>
+    </color>
+</material>
+<material id="{7F4E49C0-7CD1-4660-9159-2A5B1FD10CDE}">
+    <name>Polycarbonates</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <mu>5000</mu>
+    <color>
+        <red>173</red>
+        <green>161</green>
+        <blue>190</blue>
+    </color>
+</material>
+<material id="{92D0D21F-666C-4CAB-B3C0-77009DCB5F3F}">
+    <name>Polytétrafluoréthylène PTFE</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>101</red>
+        <green>166</green>
+        <blue>180</blue>
+    </color>
+</material>
+<material id="{4EBCFA0B-A5B1-4C83-A5F5-AE9D9E71A1ED}">
+    <name>Chlorure de polyvinyle PVC</name>
+    <description></description>
+    <conductivity>0.17</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>201</red>
+        <green>192</green>
+        <blue>105</blue>
+    </color>
+</material>
+<material id="{1DD8B2DA-3836-45D3-8D41-4A9D73DC5A50}">
+    <name>Polyméthylméthacrylate PPMA</name>
+    <description></description>
+    <conductivity>0.18</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>50</red>
+        <green>52</green>
+        <blue>9</blue>
+    </color>
+</material>
+<material id="{BF42E261-4743-4EC6-9E16-9DBA9B000063}">
+    <name>Polyacétate</name>
+    <description></description>
+    <conductivity>0.3</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>44</red>
+        <green>77</green>
+        <blue>1</blue>
+    </color>
+</material>
+<material id="{40231D48-D14F-4AF6-912E-9F019C01C9BB}">
+    <name>Polyamide nylon</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>143</red>
+        <green>23</green>
+        <blue>86</blue>
+    </color>
+</material>
+<material id="{4516A349-CE65-48F2-A405-EBC36FB07235}">
+    <name>Polyamide 6.6 avec 15% de fibres de verre</name>
+    <description></description>
+    <conductivity>0.3</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>198</red>
+        <green>219</green>
+        <blue>157</blue>
+    </color>
+</material>
+<material id="{4108E883-B82C-43EA-8B3A-E060D2EA9EC9}">
+    <name>Polyéthylène/polythène, haute densité</name>
+    <description></description>
+    <conductivity>0.5</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>200</red>
+        <green>166</green>
+        <blue>216</blue>
+    </color>
+</material>
+<material id="{3A6D146B-497F-4983-A08C-3022D9DCD04F}">
+    <name>Polyéthylène/polythène, basse densité</name>
+    <description></description>
+    <conductivity>0.33</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>11</red>
+        <green>136</green>
+        <blue>129</blue>
+    </color>
+</material>
+<material id="{2B4EDE7E-7A97-40DF-95CA-A1FBAFFF435B}">
+    <name>Polystyrène</name>
+    <description></description>
+    <conductivity>0.16</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>56</red>
+        <green>97</green>
+        <blue>107</blue>
+    </color>
+</material>
+<material id="{3702E786-0387-4F95-9141-CADC7CD8C001}">
+    <name>Polypropylène</name>
+    <description></description>
+    <conductivity>0.22</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>104</red>
+        <green>18</green>
+        <blue>98</blue>
+    </color>
+</material>
+<material id="{AB8EAE35-3CBC-48A8-A910-1032CF8E897C}">
+    <name>Polypropylène avec 25% de fibres de verre</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>249</red>
+        <green>84</green>
+        <blue>208</blue>
+    </color>
+</material>
+<material id="{0C8D18D2-81A7-4D24-9D2B-F1F82961FE25}">
+    <name>Polyuréthane PU</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>6000</mu>
+    <color>
+        <red>231</red>
+        <green>113</green>
+        <blue>23</blue>
+    </color>
+</material>
+<material id="{DFA6826C-63B0-47A8-8184-305F09707CDC}">
+    <name>Résine époxy</name>
+    <description></description>
+    <conductivity>0.2</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>72</red>
+        <green>120</green>
+        <blue>13</blue>
+    </color>
+</material>
+<material id="{4C498EFB-BF00-4CEB-A7F2-A4B70669B485}">
+    <name>Résine phénolique</name>
+    <description></description>
+    <conductivity>0.3</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>146</red>
+        <green>41</green>
+        <blue>29</blue>
+    </color>
+</material>
+<material id="{B1387750-1B15-499C-9CB2-9172200B8EA1}">
+    <name>Résine polyester</name>
+    <description></description>
+    <conductivity>0.19</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>134</red>
+        <green>41</green>
+        <blue>153</blue>
+    </color>
+</material>
+<material id="{BC773590-24C7-48FB-9F58-FA520A34B156}">
+    <name>Silicagel dessicatif</name>
+    <description></description>
+    <conductivity>0.13</conductivity>
+    <color>
+        <red>114</red>
+        <green>219</green>
+        <blue>116</blue>
+    </color>
+</material>
+<material id="{FC33BEFE-09EA-43C5-9953-BE216732C3D6}">
+    <name>Silicone pur</name>
+    <description></description>
+    <conductivity>0.35</conductivity>
+    <mu>5000</mu>
+    <color>
+        <red>28</red>
+        <green>250</green>
+        <blue>79</blue>
+    </color>
+</material>
+<material id="{D3C998EE-87C9-4B45-88F5-FD8AD21DE6A4}">
+    <name>Silicone mastic</name>
+    <description></description>
+    <conductivity>0.5</conductivity>
+    <mu>5000</mu>
+    <color>
+        <red>55</red>
+        <green>184</green>
+        <blue>181</blue>
+    </color>
+</material>
+<material id="{B4E87CD8-205D-4541-9849-E3B3BB5FBA15}">
+    <name>Mousse de silicone</name>
+    <description></description>
+    <conductivity>0.12</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>176</red>
+        <green>149</green>
+        <blue>87</blue>
+    </color>
+</material>
+<material id="{6B674A6D-D480-45CC-BCE7-5E3C9CDED1C3}">
+    <name>Uréthane polyuréthane (coupure thermique)</name>
+    <description></description>
+    <conductivity>0.21</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>245</red>
+        <green>223</green>
+        <blue>128</blue>
+    </color>
+</material>
+<material id="{3DB1E909-2CAE-4994-AAB9-125E2C0A085B}">
+    <name>Chlorure de polyvinyle flexible avec 40% de plastifiant</name>
+    <description></description>
+    <conductivity>0.14</conductivity>
+    <mu>100000</mu>
+    <color>
+        <red>108</red>
+        <green>109</green>
+        <blue>141</blue>
+    </color>
+</material>
+<material id="{BED467F5-247A-4DDC-9F66-80E3B4F2F4A2}">
+    <name>Mousse élastomère flexible</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>116</red>
+        <green>217</green>
+        <blue>139</blue>
+    </color>
+</material>
+<material id="{688CCA0C-530B-436B-9CB4-81C0D2856E7E}">
+    <name>Mousse de polyuréthane PU</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>60</mu>
+    <color>
+        <red>67</red>
+        <green>101</green>
+        <blue>17</blue>
+    </color>
+</material>
+<material id="{2C320126-B238-409A-A0AB-2A973EE8F45D}">
+    <name>Mousse de de polyéthylène</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>100</mu>
+    <color>
+        <red>8</red>
+        <green>165</green>
+        <blue>246</blue>
+    </color>
+</material>
+<material id="{4B5F46F4-715D-4D00-AED9-2BF769858BFE}">
+    <name>Asphalte pur</name>
+    <description></description>
+    <conductivity>0.7</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>121</red>
+        <green>189</green>
+        <blue>247</blue>
+    </color>
+</material>
+<material id="{64F11C5F-F50A-41F0-87EE-4CBD16B4CD00}">
+    <name>Asphalte sablé</name>
+    <description></description>
+    <conductivity>1.15</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>235</red>
+        <green>21</green>
+        <blue>184</blue>
+    </color>
+</material>
+<material id="{DD68F8E6-D182-423D-B3D5-DDD06C2D073C}">
+    <name>Bitume pur</name>
+    <description></description>
+    <conductivity>0.17</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>224</red>
+        <green>225</green>
+        <blue>96</blue>
+    </color>
+</material>
+<material id="{F244791A-006B-4D4B-99EC-B37AE2ED6D2F}">
+    <name>Cartons feutres et chapes souples imprégnées</name>
+    <description></description>
+    <conductivity>0.23</conductivity>
+    <mu>50000</mu>
+    <color>
+        <red>143</red>
+        <green>110</green>
+        <blue>60</blue>
+    </color>
+</material>
+<material id="{24181968-C395-47C1-99F3-B3AD3FCC1D2E}">
+    <name>Aluminium</name>
+    <description></description>
+    <conductivity>230</conductivity>
+    <color>
+        <red>123</red>
+        <green>244</green>
+        <blue>91</blue>
+    </color>
+</material>
+<material id="{295FD3A3-255A-4094-86F4-A3C409413EC0}">
+    <name>Alliages d'aluminium</name>
+    <description></description>
+    <conductivity>160</conductivity>
+    <color>
+        <red>98</red>
+        <green>138</green>
+        <blue>138</blue>
+    </color>
+</material>
+<material id="{B52D82FB-8329-4839-A63C-0F1B4782EDE9}">
+    <name>Bronze</name>
+    <description></description>
+    <conductivity>65</conductivity>
+    <color>
+        <red>143</red>
+        <green>39</green>
+        <blue>92</blue>
+    </color>
+</material>
+<material id="{271E9819-B59E-4CA4-B472-CCCD940C9D9C}">
+    <name>Laiton</name>
+    <description></description>
+    <conductivity>120</conductivity>
+    <color>
+        <red>247</red>
+        <green>229</green>
+        <blue>135</blue>
+    </color>
+</material>
+<material id="{69DB2816-FD57-4853-9F06-331766F2E7A7}">
+    <name>Cuivre</name>
+    <description></description>
+    <conductivity>380</conductivity>
+    <color>
+        <red>74</red>
+        <green>59</green>
+        <blue>50</blue>
+    </color>
+</material>
+<material id="{5EE7BA0F-5283-46E4-BDE3-72076442FBDD}">
+    <name>Fer pur</name>
+    <description></description>
+    <conductivity>72</conductivity>
+    <color>
+        <red>155</red>
+        <green>97</green>
+        <blue>64</blue>
+    </color>
+</material>
+<material id="{6A250E70-75DA-48D0-9AF9-72E85D6173A8}">
+    <name>Fer, fonte</name>
+    <description></description>
+    <conductivity>50</conductivity>
+    <color>
+        <red>132</red>
+        <green>198</green>
+        <blue>195</blue>
+    </color>
+</material>
+<material id="{3504EA7F-17EF-4969-B6DF-FDE5BF506C35}">
+    <name>Plomb</name>
+    <description></description>
+    <conductivity>35</conductivity>
+    <color>
+        <red>177</red>
+        <green>167</green>
+        <blue>48</blue>
+    </color>
+</material>
+<material id="{AC1E38EA-5F1E-4725-9029-7BDBAEEE27EC}">
+    <name>Acier</name>
+    <description></description>
+    <conductivity>50</conductivity>
+    <color>
+        <red>74</red>
+        <green>16</green>
+        <blue>238</blue>
+    </color>
+</material>
+<material id="{4850C95D-79E9-49D6-B982-3A86B1E0C709}">
+    <name>Acier inoxydable</name>
+    <description></description>
+    <conductivity>17</conductivity>
+    <color>
+        <red>117</red>
+        <green>111</green>
+        <blue>3</blue>
+    </color>
+</material>
+<material id="{84B3AEAA-D297-4289-8A6D-109239D7A68E}">
+    <name>Zinc</name>
+    <description></description>
+    <conductivity>110</conductivity>
+    <color>
+        <red>47</red>
+        <green>158</green>
+        <blue>106</blue>
+    </color>
+</material>
+<material id="{7CDE1A70-E0FD-4570-AFAA-71D2A56447B4}">
+    <name>Sable et gravier</name>
+    <description></description>
+    <conductivity>2</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>239</red>
+        <green>16</green>
+        <blue>80</blue>
+    </color>
+</material>
+<material id="{731DD864-8E4C-4CCE-A69B-439D6D5B1C58}">
+    <name>Argile ou limon</name>
+    <description></description>
+    <conductivity>1.5</conductivity>
+    <mu>50</mu>
+    <color>
+        <red>155</red>
+        <green>200</green>
+        <blue>129</blue>
+    </color>
+</material>
+<material id="{007CB2A6-6D61-419D-8FC7-68676357347A}">
+    <name>Pisé, bauge, béton de terre stabilisé, blocs de terre comprimée</name>
+    <description></description>
+    <conductivity>1.1</conductivity>
+    <color>
+        <red>67</red>
+        <green>41</green>
+        <blue>40</blue>
+    </color>
+</material>
+<material id="{0BC57388-EEC4-405B-B003-D2DE07B488BE}">
+    <name>Caoutchouc</name>
+    <description></description>
+    <conductivity>0.17</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>138</red>
+        <green>246</green>
+        <blue>233</blue>
+    </color>
+</material>
+<material id="{DAAEFEAA-CD45-44DE-80DF-60A4B4BA67F1}">
+    <name>Plastique</name>
+    <description></description>
+    <conductivity>0.25</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>158</red>
+        <green>71</green>
+        <blue>161</blue>
+    </color>
+</material>
+<material id="{D840B9A6-9552-41DF-B654-64649CC70A6D}">
+    <name>Sous-couche, caoutchouc-mousse ou plastique cellulaire</name>
+    <description></description>
+    <conductivity>0.1</conductivity>
+    <mu>10000</mu>
+    <color>
+        <red>129</red>
+        <green>72</green>
+        <blue>49</blue>
+    </color>
+</material>
+<material id="{76B80CE2-154D-4F3F-B7A3-5F10A6FA3D8F}">
+    <name>Sous-couche feutre</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>20</mu>
+    <color>
+        <red>108</red>
+        <green>205</green>
+        <blue>164</blue>
+    </color>
+</material>
+<material id="{B8801170-3388-4A99-85A7-0D9379D613A3}">
+    <name>Sous-couche laine</name>
+    <description></description>
+    <conductivity>0.06</conductivity>
+    <mu>20</mu>
+    <color>
+        <red>158</red>
+        <green>222</green>
+        <blue>129</blue>
+    </color>
+</material>
+<material id="{F6A5B820-1FAD-46EC-A20B-687FE42E800B}">
+    <name>Sous-couche liège</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <mu>20</mu>
+    <color>
+        <red>163</red>
+        <green>140</green>
+        <blue>152</blue>
+    </color>
+</material>
+<material id="{360FBE33-CAB1-43E9-B602-E285EF6B6276}">
+    <name>Plaque de liège</name>
+    <description></description>
+    <conductivity>0.065</conductivity>
+    <mu>40</mu>
+    <color>
+        <red>16</red>
+        <green>255</green>
+        <blue>154</blue>
+    </color>
+</material>
+<material id="{97909CCF-941A-4A00-AFA7-A4B6A627BB2A}">
+    <name>Tapis, revetement textile</name>
+    <description></description>
+    <conductivity>0.06</conductivity>
+    <mu>5</mu>
+    <color>
+        <red>67</red>
+        <green>205</green>
+        <blue>207</blue>
+    </color>
+</material>
+<material id="{C0BB0FE0-B78C-4910-B4CE-6D70ECEB0762}">
+    <name>Linoleum</name>
+    <description></description>
+    <conductivity>0.17</conductivity>
+    <mu>1000</mu>
+    <color>
+        <red>87</red>
+        <green>199</green>
+        <blue>80</blue>
+    </color>
+</material>
+<material id="{34A62C47-9D26-4CB3-88A4-1275299B5518}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>1.8</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>89</red>
+        <green>191</green>
+        <blue>189</blue>
+    </color>
+</material>
+<material id="{9B484387-6E4E-492F-B0BE-8CCB907CA092}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>1.3</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>28</red>
+        <green>39</green>
+        <blue>3</blue>
+    </color>
+</material>
+<material id="{1FF0C3A1-60BE-498A-A939-FD87BF084C64}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>1</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>40</red>
+        <green>127</green>
+        <blue>93</blue>
+    </color>
+</material>
+<material id="{557C35B1-C932-49B6-B245-70A6BB4397BA}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>0.8</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>137</red>
+        <green>95</green>
+        <blue>185</blue>
+    </color>
+</material>
+<material id="{3105F801-9B1D-4E37-A9F5-F794E33A467B}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>0.7</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>73</red>
+        <green>52</green>
+        <blue>78</blue>
+    </color>
+</material>
+<material id="{351F96C1-3DC8-42FD-B217-EDFA8FE60ACF}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>0.55</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>96</red>
+        <green>60</green>
+        <blue>229</blue>
+    </color>
+</material>
+<material id="{DBCA67AB-F886-4B0E-847A-A8664939D06E}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>0.4</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>222</red>
+        <green>2</green>
+        <blue>152</blue>
+    </color>
+</material>
+<material id="{DD951549-89C9-467E-8C54-E181D2077DE6}">
+    <name>Mortiers d'enduits et de joints de ciment ou de chaux</name>
+    <description></description>
+    <conductivity>0.3</conductivity>
+    <mu>10</mu>
+    <color>
+        <red>66</red>
+        <green>178</green>
+        <blue>13</blue>
+    </color>
+</material>
+<material id="{D38DAD61-A9B7-42D4-9A6A-83B06044382A}">
+    <name>Fibres-ciment</name>
+    <description></description>
+    <conductivity>0.95</conductivity>
+    <color>
+        <red>43</red>
+        <green>182</green>
+        <blue>20</blue>
+    </color>
+</material>
+<material id="{715DF621-BA4E-4B55-AE54-2E4534649101}">
+    <name>Fibres-ciment</name>
+    <description></description>
+    <conductivity>0.65</conductivity>
+    <color>
+        <red>236</red>
+        <green>187</green>
+        <blue>184</blue>
+    </color>
+</material>
+<material id="{B1DDF3DC-25A0-4CBB-97B0-EE757868D3B5}">
+    <name>Fibres-ciment cellulose</name>
+    <description></description>
+    <conductivity>0.46</conductivity>
+    <color>
+        <red>47</red>
+        <green>115</green>
+        <blue>226</blue>
+    </color>
+</material>
+<material id="{A99BC81E-399D-48F1-BACA-CC5EA7FF2AD8}">
+    <name>Fibres-ciment cellulose</name>
+    <description></description>
+    <conductivity>0.35</conductivity>
+    <color>
+        <red>81</red>
+        <green>126</green>
+        <blue>125</blue>
+    </color>
+</material>
+<material id="{9AEF6560-EF6D-455D-B554-9C866F2BCEDE}">
+    <name>Plaques à base de vermiculite agglomérées aux silicates</name>
+    <description></description>
+    <conductivity>0.19</conductivity>
+    <color>
+        <red>29</red>
+        <green>216</green>
+        <blue>132</blue>
+    </color>
+</material>
+<material id="{1FB29E29-C205-46ED-B055-CF7B0C6894D0}">
+    <name>Plaques à base de vermiculite agglomérées aux silicates</name>
+    <description></description>
+    <conductivity>0.14</conductivity>
+    <color>
+        <red>211</red>
+        <green>31</green>
+        <blue>1</blue>
+    </color>
+</material>
+<material id="{AA4DA840-798A-4FB3-B752-477933DA46BC}">
+    <name>Plaques à base de vermiculite agglomérées aux silicates</name>
+    <description></description>
+    <conductivity>0.1</conductivity>
+    <color>
+        <red>190</red>
+        <green>80</green>
+        <blue>107</blue>
+    </color>
+</material>
+<material id="{6E0203E6-B9BF-4DEF-A6BF-5CA0C957F504}">
+    <name>Verre sodo-calcaire y compris le verre flotté</name>
+    <description></description>
+    <conductivity>1</conductivity>
+    <color>
+        <red>22</red>
+        <green>214</green>
+        <blue>67</blue>
+    </color>
+</material>
+<material id="{142D00E8-7BF6-4668-A676-B641E778425C}">
+    <name>Quartz</name>
+    <description></description>
+    <conductivity>1.4</conductivity>
+    <color>
+        <red>33</red>
+        <green>131</green>
+        <blue>25</blue>
+    </color>
+</material>
+<material id="{D0ECE9A5-493B-470F-9275-F7391DD51D41}">
+    <name>Pâte de verre</name>
+    <description></description>
+    <conductivity>1.2</conductivity>
+    <color>
+        <red>21</red>
+        <green>24</green>
+        <blue>152</blue>
+    </color>
+</material>
+<material id="{827F9B14-F0BB-4580-8E8D-C0C76B833B7D}">
+    <name>Air</name>
+    <description></description>
+    <conductivity>0.025</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>43</red>
+        <green>44</green>
+        <blue>46</blue>
+    </color>
+</material>
+<material id="{964FB083-A36B-4C72-97F1-DCC77541AE2C}">
+    <name>Dioxyde de carbone</name>
+    <description></description>
+    <conductivity>0.014</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>139</red>
+        <green>249</green>
+        <blue>14</blue>
+    </color>
+</material>
+<material id="{2D43E3D0-807E-403F-B200-3E211113635A}">
+    <name>Argon</name>
+    <description></description>
+    <conductivity>0.017</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>220</red>
+        <green>188</green>
+        <blue>240</blue>
+    </color>
+</material>
+<material id="{E890F508-1023-41E8-BA44-953E852B96FD}">
+    <name>Hexafluorure de soufre</name>
+    <description></description>
+    <conductivity>0.013</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>202</red>
+        <green>14</green>
+        <blue>61</blue>
+    </color>
+</material>
+<material id="{06271322-8E57-4BCA-8542-6E5D7A1AF8C3}">
+    <name>Krypton</name>
+    <description></description>
+    <conductivity>0.009</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>109</red>
+        <green>148</green>
+        <blue>49</blue>
+    </color>
+</material>
+<material id="{3002D408-628B-4F2E-AF51-92A75D10DFE6}">
+    <name>Xénon</name>
+    <description></description>
+    <conductivity>0.0054</conductivity>
+    <mu>1</mu>
+    <color>
+        <red>146</red>
+        <green>116</green>
+        <blue>175</blue>
+    </color>
+</material>
+<material id="{B76EFB40-5BEB-4846-8A20-874A248966B6}">
+    <name>Glace à -10°C</name>
+    <description></description>
+    <conductivity>2.3</conductivity>
+    <color>
+        <red>141</red>
+        <green>181</green>
+        <blue>164</blue>
+    </color>
+</material>
+<material id="{D18F356E-C0C4-4ECF-9216-7D27FF7B214C}">
+    <name>Glace à 0°C</name>
+    <description></description>
+    <conductivity>2.2</conductivity>
+    <color>
+        <red>144</red>
+        <green>213</green>
+        <blue>94</blue>
+    </color>
+</material>
+<material id="{AF670CED-8140-46AD-B22D-35D9D76E1E98}">
+    <name>Neige fraichement tombée inf. 30mm</name>
+    <description></description>
+    <conductivity>0.05</conductivity>
+    <color>
+        <red>106</red>
+        <green>64</green>
+        <blue>252</blue>
+    </color>
+</material>
+<material id="{CFD92847-AD48-4B72-9DCC-FE0FCF52CF9D}">
+    <name>Neige souple 30-70 mm</name>
+    <description></description>
+    <conductivity>0.12</conductivity>
+    <color>
+        <red>128</red>
+        <green>118</green>
+        <blue>2</blue>
+    </color>
+</material>
+<material id="{D1687500-7B61-4D14-9299-C2E2AD45227D}">
+    <name>Neige légèrement comprimée 70-100 mm</name>
+    <description></description>
+    <conductivity>0.23</conductivity>
+    <color>
+        <red>75</red>
+        <green>23</green>
+        <blue>107</blue>
+    </color>
+</material>
+<material id="{7CB83760-C274-458B-BA3A-259558903598}">
+    <name>Neige compactée</name>
+    <description></description>
+    <conductivity>0.6</conductivity>
+    <color>
+        <red>54</red>
+        <green>177</green>
+        <blue>33</blue>
+    </color>
+</material>
+<material id="{E31BF6CB-C0E8-4668-9CF3-819E63A26F22}">
+    <name>Eau à 10°C</name>
+    <description></description>
+    <conductivity>0.6</conductivity>
+    <color>
+        <red>219</red>
+        <green>125</green>
+        <blue>90</blue>
+    </color>
+</material>
+<material id="{7C2C1C6E-56D4-4C4B-86CA-4F1A789F603B}">
+    <name>Eau à 40°C</name>
+    <description></description>
+    <conductivity>0.63</conductivity>
+    <color>
+        <red>234</red>
+        <green>114</green>
+        <blue>30</blue>
+    </color>
+</material>
+<material id="{5BBD2BCC-C88E-441E-AE9C-65481642C951}">
+    <name>Eau à 80°C</name>
+    <description></description>
+    <conductivity>0.67</conductivity>
+    <color>
+        <red>130</red>
+        <green>141</green>
+        <blue>113</blue>
+    </color>
+</material>
+<material id="{38B2C94F-A1BC-4600-BF96-61D2099DCA20}">
+    <name>Laine de verre</name>
+    <description></description>
+    <conductivity>0.04</conductivity>
+    <color>
+        <red>168</red>
+        <green>140</green>
+        <blue>184</blue>
+    </color>
+</material>
+</materials>
