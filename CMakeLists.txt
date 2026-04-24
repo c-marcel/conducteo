@@ -94,19 +94,22 @@ if (APPLE)
 endif()
 
 qt_add_executable(conducteo MANUAL_FINALIZATION MACOSX_BUNDLE ${MACOSXResources} ${libs} ${libs_win32} ${sources} ${sources_c} ${headers} ${headers_libs} ${moc} ${rccs} ${WIN32Resources})
-target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid )
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(conducteo)
+if (WIN32)
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid )
 endif()
 
 if (UNIX AND NOT APPLE)
-    target_link_libraries(conducteo uuid zip)
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip)
 endif()
 
 if (APPLE)
-    target_link_libraries(conducteo ${COREFOUNDATION_LIBRARY})
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport ${COREFOUNDATION_LIBRARY})
+endif()
+
+if(QT_VERSION_MAJOR EQUAL 6)
+    qt_finalize_executable(conducteo)
 endif()
 
 # installers.

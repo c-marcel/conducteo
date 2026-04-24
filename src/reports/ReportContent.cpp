@@ -359,9 +359,10 @@ void ReportContent::onPdfExport()
 
     pdfWriter.setTitle(tr("Report"));
     pdfWriter.setCreator("conducte\u00F6");
+#ifdef _WIN32
     pdfWriter.setAuthor("conducte\u00F6");
+#endif
     QPainter painter(&pdfWriter);
-
 
     QFont f=font();
     f.setPixelSize(12);

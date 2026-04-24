@@ -37,7 +37,7 @@ set(CMAKE_INSTALL_DO_STRIP "TRUE")
 set(CPACK_STRIP_FILES "1")
 
 # Package dependencies.
-set(CPACK_DEBIAN_PACKAGE_DEPENDS "libqt5gui5, libqt5printsupport5", "libqt5xml5", "libzip4")
+set(CPACK_DEBIAN_PACKAGE_DEPENDS "libqt6gui6, libqt6printsupport6, libqt6xml6, libzip5")
 
 # conducteo.
 install(TARGETS conducteo RUNTIME DESTINATION ${CPACK_PACKAGING_INSTALL_PREFIX})
