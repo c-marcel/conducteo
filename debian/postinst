@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+#DEBHELPER#
+
 update-mime-database /usr/share/mime || true
 update-desktop-database /usr/share/applications || true
 
