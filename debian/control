@@ -1,0 +1,16 @@
+Source: conducteo
+Section: science
+Priority: optional
+Maintainer: C. Marcel <clement.marcel@nwanda.fr>
+Build-Depends: debhelper-compat (= 13), cmake, qt6-base-dev, libzip-dev, uuid-dev, libtinyxml-dev
+Standards-Version: 4.6.2
+Homepage: https://sourceforge.net/projects/conducteo
+
+Package: conducteo
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: 2D thermal bridge simulation software
+ Conducteo is a finite volume solver dedicated to the
+ simulation of linear thermal bridges in building physics.
+ It allows modelling and analysis of 2D heat transfer
+ problems.

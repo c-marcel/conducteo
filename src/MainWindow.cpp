@@ -921,7 +921,7 @@ void MainWindow::showQuickStart()
     if (choice == QMessageBox::AcceptRole)
     {
         LOG_INFO("Quick start guide requested.");
-        QDesktopServices::openUrl(QUrl("file:///"+QApplication::applicationDirPath()+"/documentation/quickstart.pdf"));
+        QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() +"/quickstart.pdf"));
     }
 }
 
@@ -938,7 +938,7 @@ void MainWindow::openExample(const QString &filename)
     if (userWantToRecalculateModel())
         return _menu.computationRequested();
 
-    std::string f=QApplication::applicationDirPath().toStdString()+"/exemples/"+filename.toStdString();
+    std::string f = UiTools::getExamplesDir().toStdString() + "/" + filename.toStdString();
     loadModel(f);
 }
 

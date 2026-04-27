@@ -21,6 +21,7 @@
 #include <QDesktopServices>
 #include <StatesManager.h>
 #include <tools/ToolBox.h>
+#include <tools/UiTools.h>
 #include <DocxConverter.h>
 #include <tools/UiTools.h>
 #include <XMLInputData.h>
@@ -134,12 +135,12 @@ void ReportContent::exportDocx(const std::string &model)
 void ReportContent::onDocxExport()
 {
 #ifdef WIN32
-    std::string model=QApplication::applicationDirPath().toLatin1().constData();
+    std::string model = UiTools::getTemplatesDir().toLatin1().constData();
 #else
-	std::string model=QApplication::applicationDirPath().toStdString();
+    std::string model = UiTools::getTemplatesDir().toStdString();
 #endif
 
-    model+="/docx/model_";
+    model+="/model_";
 
     // Thermal environments.
     if (!_environmentsResults.empty())

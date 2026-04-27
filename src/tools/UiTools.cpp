@@ -18,6 +18,7 @@
 
 #include <tools/UiTools.h>
 #include <LinguistManager.h>
+#include <QApplication>
 #include <QDateTime>
 
 QString UiTools::getSoftwareVersion()
@@ -75,3 +76,49 @@ QString UiTools::getCurrentDate()
     s_date+=m;
     return s_date;
 }
+
+QString UiTools::getBinaryDir()
+{
+#ifdef WIN32
+    return QApplication::applicationDirPath();
+#else
+    return "/usr/bin";
+#endif
+}
+
+QString UiTools::getDataDir()
+{
+#ifdef WIN32
+    return QApplication::applicationDirPath();
+#else
+    return "/usr/share/conducteo/data";
+#endif
+}
+
+QString UiTools::getDocumentationDir()
+{
+#ifdef WIN32
+    return QApplication::applicationDirPath() + "/documentation";
+#else
+    return "/usr/share/conducteo/documentation";
+#endif
+}
+
+QString UiTools::getExamplesDir()
+{
+#ifdef WIN32
+    return QApplication::applicationDirPath() + "/examples";
+#else
+    return "/usr/share/conducteo/examples";
+#endif
+}
+
+QString UiTools::getTemplatesDir()
+{
+#ifdef WIN32
+    return QApplication::applicationDirPath();
+#else
+    return "/usr/share/conducteo/templates";
+#endif
+}
+

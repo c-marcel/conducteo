@@ -43,6 +43,7 @@
 #include <QDesktopServices>
 #include <StatesManager.h>
 #include <tools/ToolBox.h>
+#include <tools/UiTools.h>
 #include <ModelViewer.h>
 #include <model/Model.h>
 #include <model/Image.h>
@@ -1631,25 +1632,25 @@ void MainMenu::updateFrontBack()
 void MainMenu::validationsReportRequested()
 {
     LOG_INFO("Validations report requested.");
-    QDesktopServices::openUrl(QUrl("file:///"+QApplication::applicationDirPath()+"/documentation/validations.pdf"));
+    QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/validations.pdf"));
 }
 
 void MainMenu::helpRequested()
 {
     LOG_INFO("Help requested.");
-    QDesktopServices::openUrl(QUrl("file:///"+QApplication::applicationDirPath()+"/documentation/documentation.pdf"));
+    QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/documentation.pdf"));
 }
 
 void MainMenu::tutorialRequested()
 {
     LOG_INFO("Tutorial requested.");
-    QDesktopServices::openUrl(QUrl("file:///"+QApplication::applicationDirPath()+"/documentation/tutorial.pdf"));
+    QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/tutorial.pdf"));
 }
 
 void MainMenu::quickStartRequested()
 {
     LOG_INFO("Quickstart requested.");
-    QDesktopServices::openUrl(QUrl("file:///"+QApplication::applicationDirPath()+"/documentation/quickstart.pdf"));
+    QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/quickstart.pdf"));
 }
 
 void MainMenu::onOpenExample()

@@ -38,13 +38,13 @@ include_directories("libs/states/include")
 include_directories("libs/string/include")
 include_directories("libs/surface-results/include")
 include_directories("libs/temperature/include")
-include_directories("libs/tinyxml/include")
 include_directories("libs/volume-infos/include")
 include_directories("libs/xml-parser/include")
 
 if (WIN32)
     include_directories("libs_win32/zip/include")
-    include_directories ("libs_win32/zip/include/win32")
+    include_directories("libs_win32/zip/include/win32")
+    include_directories("libs_win32/tinyxml/include")
 endif()
 
 set(rccs "resources/resources.qrc")
@@ -79,7 +79,6 @@ file(GLOB_RECURSE mocced_headers
     "${CMAKE_SOURCE_DIR}/libs/volume-infos/*.h"
 )
 
-
 QT_WRAP_CPP(moc ${mocced_headers} )
 
 # window icon (Win32 only).
@@ -101,7 +100,7 @@ if (WIN32)
 endif()
 
 if (UNIX AND NOT APPLE)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip)
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml)
 endif()
 
 if (APPLE)
@@ -112,13 +111,15 @@ if(QT_VERSION_MAJOR EQUAL 6)
     qt_finalize_executable(conducteo)
 endif()
 
-# installers.
-# Linux.
-if (UNIX AND NOT APPLE)
-    include(LinuxInstaller.cmake)
-endif()
+# Installers.
 
 # Windows.
 if (WIN32)
     include(WinInstaller.cmake)
 endif()
+
+# Linux Debian.
+if (UNIX AND NOT APPLE)
+    include(DebianInstaller.cmake)
+endif()
+

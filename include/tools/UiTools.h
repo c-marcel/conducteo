@@ -23,12 +23,14 @@
 
 class UiTools
 {
-
 public:
-
     static QString getSoftwareVersion();
     static QString getCurrentDate();
-    
+    static QString getBinaryDir();
+    static QString getDataDir();
+    static QString getDocumentationDir();
+    static QString getExamplesDir();
+    static QString getTemplatesDir();
 };
 
 #endif

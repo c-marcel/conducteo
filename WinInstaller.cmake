@@ -36,21 +36,21 @@ install(FILES ${CMAKE_SOURCE_DIR}/install/validations.pdf DESTINATION ./document
 
 file(GLOB_RECURSE validations_data_en10211 "${CMAKE_SOURCE_DIR}/validations/data/en10211/*.c2d")
 file(GLOB_RECURSE validations_data_common  "${CMAKE_SOURCE_DIR}/validations/data/common/*.c2d")
-install(FILES ${validations_data_en10211} DESTINATION ./exemples COMPONENT application)
-install(FILES ${validations_data_common} DESTINATION ./exemples COMPONENT application)
+install(FILES ${validations_data_en10211} DESTINATION ./examples COMPONENT application)
+install(FILES ${validations_data_common} DESTINATION ./examples COMPONENT application)
 
 file(GLOB_RECURSE validations_data_en10077 "${CMAKE_SOURCE_DIR}/validations/data/en10077/*.c2d")
-install(FILES ${validations_data_en10077} DESTINATION ./exemples COMPONENT application)
+install(FILES ${validations_data_en10077} DESTINATION ./examples COMPONENT application)
 
 file(GLOB_RECURSE tutorial_data "${CMAKE_SOURCE_DIR}/documentation/tutorial/*.c2d")
-install(FILES ${tutorial_data} DESTINATION ./exemples COMPONENT application)
+install(FILES ${tutorial_data} DESTINATION ./examples COMPONENT application)
 
 # Conducteo databases.
 install(FILES ${CMAKE_SOURCE_DIR}/install/rt2012.db DESTINATION . COMPONENT application)
 
 # Examples.
 file(GLOB_RECURSE c2d_examples "${CMAKE_SOURCE_DIR}/install/exemples/*.c2d")
-install(FILES ${c2d_examples} DESTINATION ./exemples COMPONENT application)
+install(FILES ${c2d_examples} DESTINATION ./examples COMPONENT application)
 
 # Docx template.
 install(FILES ${CMAKE_SOURCE_DIR}/install/model_fr.docx DESTINATION ./docx COMPONENT application)

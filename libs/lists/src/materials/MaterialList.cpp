@@ -31,6 +31,7 @@
 #include <LinguistManager.h>
 #include <LinguistManager.h>
 #include <tools/ToolBox.h>
+#include <tools/UiTools.h>
 #include <StatesManager.h>
 #include <QApplication>
 #include <LocalData.h>
@@ -114,7 +115,7 @@ MaterialList::MaterialList(QWidget *parent):
 
     destination = destination + "/rt2012-v3.db";
 
-    QString source=QApplication::applicationDirPath()+"/rt2012.db";
+    QString source= UiTools::getDataDir() + "/rt2012.db";
     if(!QFile::exists(destination))
         QFile::copy(source, destination);
 
