@@ -27,12 +27,12 @@ set(CPACK_NSIS_MODIFY_PATH OFF)
 install(TARGETS conducteo RUNTIME DESTINATION . COMPONENT application)
 
 # Documentation.
-install(FILES ${CMAKE_SOURCE_DIR}/install/documentation.pdf DESTINATION ./documentation COMPONENT application)
-install(FILES ${CMAKE_SOURCE_DIR}/install/tutorial.pdf DESTINATION ./documentation COMPONENT application)
-install(FILES ${CMAKE_SOURCE_DIR}/install/quickstart.pdf DESTINATION ./documentation COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/documentation/documentation.pdf DESTINATION ./documentation COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/documentation/tutorial.pdf DESTINATION ./documentation COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/documentation/quickstart.pdf DESTINATION ./documentation COMPONENT application)
 
 # Validation.
-install(FILES ${CMAKE_SOURCE_DIR}/install/validations.pdf DESTINATION ./documentation COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/documentation/validations.pdf DESTINATION ./documentation COMPONENT application)
 
 file(GLOB_RECURSE validations_data_en10211 "${CMAKE_SOURCE_DIR}/validations/data/en10211/*.c2d")
 file(GLOB_RECURSE validations_data_common  "${CMAKE_SOURCE_DIR}/validations/data/common/*.c2d")
@@ -46,18 +46,18 @@ file(GLOB_RECURSE tutorial_data "${CMAKE_SOURCE_DIR}/documentation/tutorial/*.c2
 install(FILES ${tutorial_data} DESTINATION ./examples COMPONENT application)
 
 # Conducteo databases.
-install(FILES ${CMAKE_SOURCE_DIR}/install/rt2012.db DESTINATION . COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/data/rt2012.db DESTINATION . COMPONENT application)
 
 # Examples.
-file(GLOB_RECURSE c2d_examples "${CMAKE_SOURCE_DIR}/install/exemples/*.c2d")
+file(GLOB_RECURSE c2d_examples "${CMAKE_SOURCE_DIR}/install/examples/*.c2d")
 install(FILES ${c2d_examples} DESTINATION ./examples COMPONENT application)
 
 # Docx template.
-install(FILES ${CMAKE_SOURCE_DIR}/install/model_fr.docx DESTINATION ./docx COMPONENT application)
-install(FILES ${CMAKE_SOURCE_DIR}/install/model_2_fr.docx DESTINATION ./docx COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/templates/model_fr.docx DESTINATION ./templates COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/templates/model_2_fr.docx DESTINATION ./templates COMPONENT application)
 
-install(FILES ${CMAKE_SOURCE_DIR}/install/model_en.docx DESTINATION ./docx COMPONENT application)
-install(FILES ${CMAKE_SOURCE_DIR}/install/model_2_en.docx DESTINATION ./docx COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/templates/model_en.docx DESTINATION ./templates COMPONENT application)
+install(FILES ${CMAKE_SOURCE_DIR}/install/templates/model_2_en.docx DESTINATION ./templates COMPONENT application)
 
 # HACK: set Qt bin/plugins directories.
 set( QT_BINARY_DIR    "${Qt6Core_DIR}/../../../bin"     )

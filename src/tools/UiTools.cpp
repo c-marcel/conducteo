@@ -116,7 +116,7 @@ QString UiTools::getExamplesDir()
 QString UiTools::getTemplatesDir()
 {
 #ifdef WIN32
-    return QApplication::applicationDirPath();
+    return QApplication::applicationDirPath() + "/templates";
 #else
     return "/usr/share/conducteo/templates";
 #endif
