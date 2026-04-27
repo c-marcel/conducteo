@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
+  <mime-type type="application/x-conducteo">
+    <comment>Conducteo 2d thermal bridge</comment>
+    <glob pattern="*.c2d"/>
+  </mime-type>
+</mime-info>

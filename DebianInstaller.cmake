@@ -33,3 +33,15 @@ install(FILES ${validations_data_en10077} DESTINATION share/conducteo/examples O
 file(GLOB_RECURSE tutorial_data "${CMAKE_SOURCE_DIR}/documentation/tutorial/*.c2d")
 install(FILES ${tutorial_data} DESTINATION share/conducteo/examples OPTIONAL)
 
+# Link.
+install(FILES ${CMAKE_SOURCE_DIR}/debian/conducteo.desktop
+        DESTINATION share/applications)
+        
+# Icon.
+install(FILES ${CMAKE_SOURCE_DIR}/debian/conducteo.png
+        DESTINATION share/icons/hicolor/128x128/apps)
+        
+# Mime type.
+install(FILES ${CMAKE_SOURCE_DIR}/debian/conducteo.xml
+        DESTINATION share/mime/packages)
+        

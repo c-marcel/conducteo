@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Conducteo
+Comment=2D thermal bridge simulation software
+MimeType=application/x-conducteo;
+Exec=conducteo %f
+Icon=conducteo
+Terminal=false
+Type=Application
+Categories=Science;Engineering;
