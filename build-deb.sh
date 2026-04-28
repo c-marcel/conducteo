@@ -13,12 +13,17 @@ echo "Generate source tarball"
 git -C ${NAME}-${VERSION} archive \
   --format=tar.gz \
   --prefix=${NAME}-${VERSION}/ \
-  HEAD \
+  v${VERSION} \
   -- . ':(exclude)debian' ':(exclude)install/windows' \
   > ${NAME}_${VERSION}.orig.tar.gz
 
 echo "Build Debian"
 cd ${NAME}-${VERSION}
-debuild -us -uc
+
+if [ "$1" = "source" ]; then
+    debuild -S -us -uc
+else
+    debuild -us -uc
+fi
 
 echo "Done."
