@@ -2,7 +2,7 @@
 set -e
 
 NAME=conducteo
-VERSION=5.0.0
+VERSION=5.0.1
 
 export DEBEMAIL="clement.marcel@nwanda.fr"
 export DEBFULLNAME="C. Marcel"
