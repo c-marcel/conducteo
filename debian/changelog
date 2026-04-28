@@ -1,5 +1,5 @@
-conducteo (5.0.0-1) unstable; urgency=medium
+conducteo (5.0.0-2) unstable; urgency=medium
 
-  * Initial release.
+  * Initial release. (Closes: #1135142)
 
- -- C. Marcel <clement.marcel@nwanda.fr>  Mon, 27 Apr 2026 12:00:00 +0200
+ -- C. Marcel <clement.marcel@nwanda.fr>  Tue, 28 Apr 2026 08:00:00 +0200
