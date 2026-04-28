@@ -19,6 +19,11 @@ git -C ${NAME}-${VERSION} archive \
 
 echo "Build Debian"
 cd ${NAME}-${VERSION}
-debuild -us -uc
+
+if [ "$1" = "source" ]; then
+    debuild -S -us -uc
+else
+    debuild -us -uc
+fi
 
 echo "Done."
