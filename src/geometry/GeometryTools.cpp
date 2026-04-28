@@ -18,23 +18,17 @@
 
 #include <geometry/GeometryTools.h>
 #include <geometry/transformations/Transformations.h>
-#include <boost/geometry/algorithms/intersection.hpp>
-#include <boost/geometry/algorithms/distance.hpp>
 #include <geometry/transformations/Translation.h>
-#include <boost/geometry/geometries/segment.hpp>
 #include <geometry/transformations/Rotation.h>
-#include <boost/geometry/geometries/point.hpp>
 #include <geometry/transformations/Scaling.h>
 #include <geometry/Line.h>
 #include <geometry/Arc.h>
+#include <cmath>
 
 #define _USE_MATH_DEFINES
 #include <math.h>
 
 #define POINT_DISTANCE_PRECISION 1.0e-12
-
-typedef boost::geometry::model::point<double, 2, boost::geometry::cs::cartesian> BoostPoint;
-typedef boost::geometry::model::segment<BoostPoint> BoostSegment;
 
 bool GeometryTools::intersects(const Line *line1, const Line *line2)
 {
@@ -77,16 +71,52 @@ bool GeometryTools::equivalentPoints(const Point &p1, const Point &p2)
 double GeometryTools::pointDistance(const Line *line, const Point &point)
 {
     if (!line)
-        return false;
+        return 0.0;
 
-    BoostPoint line_begin(line->begin().x(), line->begin().y());
-    BoostPoint line_end(line->end().x(), line->end().y());
+    double x1 = line->begin().x();
+    double y1 = line->begin().y();
 
-    BoostSegment line_segment(line_begin, line_end);
+    double x2 = line->end().x();
+    double y2 = line->end().y();
 
-    BoostPoint p(point.x(), point.y());
+    double x = point.x();
+    double y = point.y();
 
-    return boost::geometry::distance(line_segment, p);
+    double dx = x2 - x1;
+    double dy = y2 - y1;
+
+    double len = std::hypot(dx, dy);
+
+    if (len < 1e-12)
+    {
+        double dxp = x - x1;
+        double dyp = y - y1;
+        return std::hypot(dxp, dyp);
+    }
+
+    double t = ((x - x1) * dx + (y - y1) * dy) / (len * len);
+
+    double projX, projY;
+
+    if (t <= 0.0)
+    {
+        projX = x1;
+        projY = y1;
+    }
+
+    else if (t >= 1.0)
+    {
+        projX = x2;
+        projY = y2;
+    }
+
+    else
+    {
+        projX = x1 + t * dx;
+        projY = y1 + t * dy;
+    }
+
+    return std::hypot(x - projX, y - projY);
 }
 
 std::vector<Point> GeometryTools::intersectionPoint(const Line *line1, const Line *line2)
