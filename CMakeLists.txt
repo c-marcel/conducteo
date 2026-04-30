@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 
 project(conducteo-gpl)
 
+find_package(Eigen3 REQUIRED NO_MODULE)
+
 # Software version definition.
 include("${CMAKE_SOURCE_DIR}/Versions.cmake")
 
@@ -100,7 +102,7 @@ if (WIN32)
 endif()
 
 if (UNIX AND NOT APPLE)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml)
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml Eigen3::Eigen)
 endif()
 
 if (APPLE)
