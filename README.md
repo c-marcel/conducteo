@@ -24,8 +24,19 @@ Requirements:
 conducteö uses the following dependencies:
 
 - Qt 6
-- some parts of boost
 - some parts of Eigen library
 - tinyxml
 - dxflib
 - libzip
+
+**Microsoft Windows build steps**
+
+1. Download dependencies:
+    - Eigen: https://gitlab.com/libeigen/eigen
+    - dxflib: https://qcad.org/en/90-dxflib
+    
+2. Extract dependencies
+
+3. Set CMake variables:
+    - EIGEN_ROOT_DIRECTORY: directory containing Eigen folder with headers
+    - DXFLIB_ROOT_DIRECTORY: directory containing dxflib

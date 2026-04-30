@@ -2,16 +2,37 @@ cmake_minimum_required(VERSION 3.16)
 
 project(conducteo-gpl)
 
-# Dependencies.
-find_package(Eigen3 REQUIRED NO_MODULE)
+# Eigen.
+if (UNIX AND NOT APPLE)
+    find_package(Eigen3 REQUIRED NO_MODULE)
+else()
+    set(EIGEN_ROOT_DIRECTORY "" CACHE PATH "Path to Eigen root directory")
+    if (NOT EIGEN_ROOT_DIRECTORY)
+        message(FATAL_ERROR "EIGEN_ROOT_DIRECTORY is not set. Please set it to your Eigen directory.")
+    endif()
+    
+    include_directories(${EIGEN_ROOT_DIRECTORY})
+endif()
 
 # libdxf.
-find_path(DXFLIB_INCLUDE_DIR NAMES dl_dxf.h PATH_SUFFIXES dxflib)
-find_library(DXFLIB_LIBRARY NAMES dxflib)
+if (UNIX AND NOT APPLE)
+    find_path(DXFLIB_INCLUDE_DIR NAMES dl_dxf.h PATH_SUFFIXES dxflib)
+    find_library(DXFLIB_LIBRARY NAMES dxflib)
 
-if (NOT DXFLIB_INCLUDE_DIR OR NOT DXFLIB_LIBRARY)
-    message(FATAL_ERROR "dxflib not found")
+    if (NOT DXFLIB_INCLUDE_DIR OR NOT DXFLIB_LIBRARY)
+        message(FATAL_ERROR "dxflib not found")
+    endif()
+else()
+    set(DXFLIB_ROOT_DIRECTORY "" CACHE PATH "Path to dxflib root directory")
+    
+    if (NOT DXFLIB_ROOT_DIRECTORY)
+        message(FATAL_ERROR "DXFLIB_ROOT_DIRECTORY is not set. Please set it to your dxflib directory.")
+    endif()
+    
+    file(GLOB_RECURSE dxflib_src "${DXFLIB_ROOT_DIRECTORY}/src/*.cpp")
+    set(DXFLIB_INCLUDE_DIR "${DXFLIB_ROOT_DIRECTORY}/src")
 endif()
+
 include_directories(${DXFLIB_INCLUDE_DIR})
 
 # Software version.
@@ -111,7 +132,7 @@ if (APPLE)
     include(MacInstaller.cmake)
 endif()
 
-qt_add_executable(conducteo MANUAL_FINALIZATION MACOSX_BUNDLE ${MACOSXResources} ${libs} ${libs_win32} ${sources} ${sources_c} ${headers} ${headers_libs} ${moc} ${rccs} ${WIN32Resources})
+qt_add_executable(conducteo MANUAL_FINALIZATION MACOSX_BUNDLE ${MACOSXResources} ${libs} ${libs_win32} ${sources} ${sources_c} ${headers} ${headers_libs} ${moc} ${rccs} ${WIN32Resources} ${dxflib_src})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if (WIN32)
