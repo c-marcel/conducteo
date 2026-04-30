@@ -21,7 +21,11 @@
 #include <Translatable.h>
 
 LinguistManager::LinguistManager():
+#ifdef __linux__
+    _currentLanguage(English)   //< English as default language for Linux.
+#else
     _currentLanguage(French)
+#endif
 {
     loadEnglish();
 }

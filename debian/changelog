@@ -4,6 +4,7 @@ conducteo (5.0.1-2) unstable; urgency=medium
     - Remove Boost dependency: use internal implementation.
     - Remove Eigen source code: use system library
     - Remove libdxf source code: use system library
+    - Use english as default language for Linux
 
   * Initial release. (Closes: #1135142)
 
