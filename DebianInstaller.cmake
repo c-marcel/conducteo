@@ -8,7 +8,11 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/data/
         
 # Documentation.
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/documentation/
-        DESTINATION share/conducteo/documentation
+        DESTINATION share/doc/conducteo
+        OPTIONAL)
+        
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/documentation/
+        DESTINATION share/conducteo/docs
         OPTIONAL)
         
 # Examples.

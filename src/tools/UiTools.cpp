@@ -100,7 +100,7 @@ QString UiTools::getDocumentationDir()
 #ifdef WIN32
     return QApplication::applicationDirPath() + "/documentation";
 #else
-    return "/usr/share/conducteo/documentation";
+    return "/usr/share/conducteo/docs";
 #endif
 }
 
