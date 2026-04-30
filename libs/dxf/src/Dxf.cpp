@@ -17,7 +17,7 @@
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
 #include <Dxf.h>
-#include <libdxf/dl_dxf.h>
+#include <dl_dxf.h>
 #include <InsertData.h>
 #include <TextStyle.h>
 #include <Polyline.h>
@@ -215,7 +215,7 @@ void Dxf::defineEntityLine(Entity *entity)
     else if (width>0)
         entity->setWidth(Entity::CustomWidth, width*_unitConversion);
 
-    Entity::LineType type=Entity::lineTypeFromString(attributes.getLineType());
+    Entity::LineType type=Entity::lineTypeFromString(attributes.getLinetype());
     entity->setLineType(type);
 }
 
@@ -295,7 +295,7 @@ void Dxf::addLayer(const DL_LayerData& data)
     if (width>0)
         layer->setDefaultWidth(width*0.00001);
 
-    std::string lineType=attributes.getLineType();
+    std::string lineType=attributes.getLinetype();
     layer->setDefaultLineType(Entity::lineTypeFromString(lineType));
 
     if (data.flags & 0x01)

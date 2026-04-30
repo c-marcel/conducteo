@@ -2,7 +2,17 @@ cmake_minimum_required(VERSION 3.16)
 
 project(conducteo-gpl)
 
+# Dependencies.
 find_package(Eigen3 REQUIRED NO_MODULE)
+
+# libdxf.
+find_path(DXFLIB_INCLUDE_DIR NAMES dl_dxf.h PATH_SUFFIXES dxflib)
+find_library(DXFLIB_LIBRARY NAMES dxflib)
+
+if (NOT DXFLIB_INCLUDE_DIR OR NOT DXFLIB_LIBRARY)
+    message(FATAL_ERROR "dxflib not found")
+endif()
+include_directories(${DXFLIB_INCLUDE_DIR})
 
 # Software version definition.
 include("${CMAKE_SOURCE_DIR}/Versions.cmake")
@@ -102,7 +112,7 @@ if (WIN32)
 endif()
 
 if (UNIX AND NOT APPLE)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml Eigen3::Eigen)
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml Eigen3::Eigen ${DXFLIB_LIBRARY})
 endif()
 
 if (APPLE)

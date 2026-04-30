@@ -2,7 +2,7 @@ Source: conducteo
 Section: science
 Priority: optional
 Maintainer: C. Marcel <clement.marcel@nwanda.fr>
-Build-Depends: debhelper-compat (= 13), cmake, qt6-base-dev, libzip-dev, uuid-dev, libtinyxml-dev, libeigen3-dev
+Build-Depends: debhelper-compat (= 13), cmake, qt6-base-dev, libzip-dev, uuid-dev, libtinyxml-dev, libeigen3-dev, libdxf-dev
 Standards-Version: 4.7.2
 Homepage: https://sourceforge.net/projects/conducteo
 

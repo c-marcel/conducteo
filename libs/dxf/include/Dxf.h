@@ -19,7 +19,7 @@
 #ifndef _DXF_H
 #define _DXF_H
 
-#include <libdxf/dl_creationadapter.h>
+#include <dl_creationadapter.h>
 #include <vector>
 #include <string>
 
