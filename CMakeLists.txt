@@ -47,6 +47,28 @@ if (WIN32)
     include_directories("${TINYXML_ROOT_DIRECTORY}")
 endif()
 
+# libzip.
+if (WIN32)
+    set(LIBZIP_ROOT_DIRECTORY "" CACHE PATH "Path to libzip root directory")
+    
+    if (NOT LIBZIP_ROOT_DIRECTORY)
+        message(FATAL_ERROR "LIBZIP_ROOT_DIRECTORY is not set. Please set it to your libzip directory.")
+    endif()
+    
+    include_directories("${LIBZIP_ROOT_DIRECTORY}")
+    include_directories("${LIBZIP_ROOT_DIRECTORY}/lib")
+    set(LIBZIP_LIBRARY "${LIBZIP_ROOT_DIRECTORY}/lib/Release/zip.lib")
+endif()
+
+# zlib.
+if (WIN32)
+    set(ZLIB_LIBRARY "" CACHE FILEPATH "Path to zlib library (.lib)")
+    
+    if (NOT ZLIB_LIBRARY)
+        message(FATAL_ERROR "ZLIB_LIBRARY is not set. Please set it to your zlib library filepath.")
+    endif()
+endif()
+
 # Software version.
 file(READ "${CMAKE_SOURCE_DIR}/VERSION" VERSION_STRING)
 string(STRIP "${VERSION_STRING}" VERSION_STRING)
@@ -93,11 +115,6 @@ include_directories("libs/temperature/include")
 include_directories("libs/volume-infos/include")
 include_directories("libs/xml-parser/include")
 
-if (WIN32)
-    include_directories("libs_win32/zip/include")
-    include_directories("libs_win32/zip/include/win32")
-endif()
-
 set(rccs "resources/resources.qrc")
 
 # conducteö software.
@@ -106,10 +123,6 @@ file(GLOB_RECURSE headers_libs "${CMAKE_SOURCE_DIR}/libs/*.h")
 file(GLOB_RECURSE sources "${CMAKE_SOURCE_DIR}/src/*.cpp")
 file(GLOB_RECURSE sources_c "${CMAKE_SOURCE_DIR}/libs/*.c")
 file(GLOB_RECURSE libs "${CMAKE_SOURCE_DIR}/libs/*.cpp")
-
-if (WIN32)
-    file(GLOB_RECURSE libs_win32 "${CMAKE_SOURCE_DIR}/libs_win32/*.c*")
-endif()
 
 file(GLOB_RECURSE mocced_headers
     "${CMAKE_SOURCE_DIR}/include/ApplicationFactory.h"
@@ -147,7 +160,7 @@ qt_add_executable(conducteo MANUAL_FINALIZATION MACOSX_BUNDLE ${MACOSXResources}
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if (WIN32)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid )
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport ${LIBZIP_LIBRARY} ${ZLIB_LIBRARY})
 endif()
 
 if (UNIX AND NOT APPLE)
