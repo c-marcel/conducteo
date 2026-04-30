@@ -19,6 +19,11 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/documentation/
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/examples/
         DESTINATION share/conducteo/examples
         OPTIONAL)
+        
+# Translations.
+install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/translations/
+        DESTINATION share/conducteo/translations
+        OPTIONAL)
 
 # Templates.
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/templates/

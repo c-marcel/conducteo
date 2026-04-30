@@ -50,7 +50,7 @@ Report::Report(QWidget *parent):
     _export.setMargins(0, -15);
 #endif
 
-    _pdfExport=_exportMenu.addAction(_tr("Rapport PDF"));
+    _pdfExport=_exportMenu.addAction(_tr("PdfReport"));
     _pdfExport->setIconVisibleInMenu(true);
 
     _exportMenuAction=_exportMenu.addMenu(&_docxExportMenu);
@@ -77,7 +77,7 @@ void Report::setIcons()
 
 void Report::setTexts()
 {
-    _export.setTitle(_tr("Exporter le rapport"));
+    _export.setTitle(_tr("ExportReport"));
 }
 
 void Report::setMaterialLegend(const QImage &image)
@@ -155,7 +155,7 @@ void Report::setDocxModelList(QList<QString> &list)
     _docxExportMenu.clear();
 
     // Add default docx template.
-    QAction *default_template=_docxExportMenu.addAction(_tr("Modèle conducteö par défaut"));
+    QAction *default_template=_docxExportMenu.addAction(_tr("Defaultc2dReport"));
     connect(default_template, &QAction::triggered, &_report, &ReportContent::onDocxExport, Qt::UniqueConnection);
 
     if (list.isEmpty())
@@ -171,11 +171,11 @@ void Report::setDocxModelList(QList<QString> &list)
 
 void Report::translate()
 {
-    _docxExportMenu.setTitle(_tr("Rapport DocX"));
-    _pdfExport->setText(_tr("Rapport PDF"));
+    _docxExportMenu.setTitle(_tr("DocxReport"));
+    _pdfExport->setText(_tr("PdfReport"));
     setTexts();
     if (!_docxExportMenu.actions().isEmpty())
-        _docxExportMenu.actions().at(0)->setText(tr("Modèle conducteö par défaut"));
+        _docxExportMenu.actions().at(0)->setText(tr("Defaultc2dReport"));
     update();
 }
 
@@ -201,7 +201,7 @@ void Report::statesChanged()
         _docxExportMenu.clear();
 
         // Add default docx template.
-        QAction *default_template=_docxExportMenu.addAction(_tr("Modèle conducteö par défaut"));
+        QAction *default_template=_docxExportMenu.addAction(_tr("Defaultc2dReport"));
         connect(default_template,&QAction::triggered, &_report, &ReportContent::onDocxExport, Qt::UniqueConnection);
 
         std::string docx=LocalData::instance()->getParameter("docx-templates");

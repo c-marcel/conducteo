@@ -48,6 +48,10 @@ install(FILES ${tutorial_data} DESTINATION ./examples COMPONENT application)
 # Conducteo databases.
 install(FILES ${CMAKE_SOURCE_DIR}/install/data/rt2012.db DESTINATION . COMPONENT application)
 
+# Translations.
+file(GLOB_RECURSE translations "${CMAKE_SOURCE_DIR}/install/translations/*.json")
+install(FILES ${translations} DESTINATION ./translations COMPONENT application)
+
 # Examples.
 file(GLOB_RECURSE c2d_examples "${CMAKE_SOURCE_DIR}/install/examples/*.c2d")
 install(FILES ${c2d_examples} DESTINATION ./examples COMPONENT application)

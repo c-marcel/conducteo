@@ -53,8 +53,8 @@ void ReportContent::exportDocx(const std::string &model)
 {
 	std::string modelFilename = StatesManager::instance()->modelFilename();
 
-    QFileDialog fileDialog(this, _tr("Exporter un rapport DocX"));
-    fileDialog.setNameFilter(_tr("document DocX (*.docx)"));
+    QFileDialog fileDialog(this, _tr("ExportDocxReport"));
+    fileDialog.setNameFilter(_tr("DocxReportPattern"));
     fileDialog.setDefaultSuffix("docx");
     fileDialog.setAcceptMode(QFileDialog::AcceptSave);
     fileDialog.setFileMode(QFileDialog::AnyFile);
@@ -100,8 +100,8 @@ void ReportContent::exportDocx(const std::string &model)
     if (code!=Errors::NoError)
     {
         QMessageBox dialog;
-        dialog.setWindowTitle(_tr("Export du rapport DocX"));
-        dialog.setText(_tr("Le modèle de rapport DocX n'est pas supporté conducteö."));
+        dialog.setWindowTitle(_tr("DocxExportDialogTitle"));
+        dialog.setText(_tr("UnsupportedDocx"));
         dialog.setWindowModality(Qt::ApplicationModal);
         QIcon icon(":/images/icon.png");
         dialog.setWindowIcon(icon);
@@ -118,8 +118,8 @@ void ReportContent::exportDocx(const std::string &model)
     if (code!=Errors::NoError)
     {
         QMessageBox dialog;
-        dialog.setWindowTitle(_tr("Export du rapport DocX"));
-        dialog.setText(_tr("L'export du rapport DocX a échoué."));
+        dialog.setWindowTitle(_tr("DocxExportDialogTitle"));
+        dialog.setText(_tr("DocxExportFailed"));
         dialog.setWindowModality(Qt::ApplicationModal);
         QIcon icon(":/images/icon.png");
         dialog.setWindowIcon(icon);

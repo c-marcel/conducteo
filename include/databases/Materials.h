@@ -20,13 +20,15 @@
 #define MATERIALS_H
 
 #include <tools/Singleton.h>
+#include <Translatable.h>
 #include <vector>
 #include <string>
 
 class MaterialsObserver;
 class Material;
 
-class Materials: public Singleton<Materials>
+class Materials: public Singleton<Materials>,
+                 public Translatable
 {
 
 public:
@@ -54,6 +56,8 @@ public:
 
     std::vector<std::string> materialIdList() const;
 	std::vector<Material*> materialListFromCategory(const std::string &category) const;
+
+    void translate() override;
 
 private:
 

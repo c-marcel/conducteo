@@ -62,7 +62,7 @@ MaterialProperties::MaterialProperties(QWidget *parent):
     f.setPixelSize(10);
     setFont(f);
     
-    QTableWidgetItem *item_0=new QTableWidgetItem(_tr("Nom"));
+    QTableWidgetItem *item_0=new QTableWidgetItem(_tr("Name"));
     item_0->setFlags(Qt::ItemIsEnabled);
     setItem(0, 0, item_0);
 
@@ -82,7 +82,7 @@ MaterialProperties::MaterialProperties(QWidget *parent):
     item_4->setFlags(Qt::ItemIsEnabled);
     setItem(4, 0, item_4);
 
-    QTableWidgetItem *item_5=new QTableWidgetItem(_tr("Couleur"));
+    QTableWidgetItem *item_5=new QTableWidgetItem(_tr("Color"));
     item_5->setFlags(Qt::ItemIsEnabled);
     setItem(5, 0, item_5);
 
@@ -303,7 +303,7 @@ void MaterialProperties::onCellDoubleClicked(int row, int column)
 
         QColorDialog dialog(this);
         dialog.setCurrentColor(currentColor);
-        dialog.setWindowTitle(_tr("Couleur du matériau"));
+        dialog.setWindowTitle(_tr("MaterialColor"));
         connect(&dialog,
                 &QColorDialog::currentColorChanged,
                 this,
@@ -322,8 +322,8 @@ void MaterialProperties::onCurrentSelectedColorChanged(const QColor &color)
 
 void MaterialProperties::translate()
 {
-    item(0, 0)->setText(_tr("Nom"));
+    item(0, 0)->setText(_tr("Name"));
     item(1, 0)->setText(_tr("Description"));
-    item(5, 0)->setText(_tr("Couleur"));
+    item(5, 0)->setText(_tr("Color"));
     update();
 }

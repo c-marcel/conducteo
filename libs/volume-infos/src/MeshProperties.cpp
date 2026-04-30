@@ -143,9 +143,9 @@ void MeshProperties::radioButton3Toggled(bool checked)
 void MeshProperties::translate()
 {
     _catchUserInputs=false;
-    _radio_1.setText(_tr("par défaut (25 mm)"));
-    _radio_2.setText(_tr("sol (200 mm)"));
-    _radio_3.setText(_tr("personnalisé"));
+    _radio_1.setText(_tr("CellSizeDefault"));
+    _radio_2.setText(_tr("CellSizeGround"));
+    _radio_3.setText(_tr("CellSizeCustom"));
     _catchUserInputs=true;
     update();
 }

@@ -918,95 +918,95 @@ QString En13370Interface::toString(double value) const
 
 void En13370Interface::translate()
 {
-    _floorDimensionsLabel.setText(_tr("Dimensions du plancher"));
-    _floorWidth.setText(_tr("Largeur :"));
-    _floorAreaAndPerimeter.setText(_tr("Aire :"));
-    _floorPerimeter.setText(_tr("Périmètre :"));
-    _modelFloorWidth.setText(_tr("Largeur de plancher modélisée :"));
-    _groundProperties.setText(_tr("Propriétés thermiques du sol"));
-    _groundMaterial.setText(_tr("choix d'un matériau :"));
-    _groundConductivity.setText(_tr("conductivité thermique :"));
-    _conditionsTitle.setText(_tr("Ambiances thermiques"));
-    _intTempTitle.setText(_tr("Température intérieure :"));
-    _extTempTitle.setText(_tr("Température extérieure :"));
-    _intEnvTitle.setText(_tr("Ambiance thermique intérieure :"));
-    _extEnvTitle.setText(_tr("Ambiance thermique extérieure :"));
-    _typeTitle.setText(_tr("Type de plancher bas :"));
+    _floorDimensionsLabel.setText(_tr("GroundDim"));
+    _floorWidth.setText(_tr("WidthTitle"));
+    _floorAreaAndPerimeter.setText(_tr("AreaTitle"));
+    _floorPerimeter.setText(_tr("PerimeterTitle"));
+    _modelFloorWidth.setText(_tr("GndWidthTitle"));
+    _groundProperties.setText(_tr("GndThermPropTitle"));
+    _groundMaterial.setText(_tr("MaterialChoiceTitle"));
+    _groundConductivity.setText(_tr("ThermCondTitle"));
+    _conditionsTitle.setText(_tr("ThermEnvTitle"));
+    _intTempTitle.setText(_tr("IntTempTitle"));
+    _extTempTitle.setText(_tr("ExtTempTitle"));
+    _intEnvTitle.setText(_tr("IntThermEnvTitle"));
+    _extEnvTitle.setText(_tr("ExtThermEnvTitle"));
+    _typeTitle.setText(_tr("GroundTypeTitle"));
 
     _typeValue.clear();
-    _typeValue.addItem(_tr("Plancher bas sur terre-plein"), En13370Plugin::Median);
-    _typeValue.addItem(_tr("Vide sanitaire"), En13370Plugin::CrawlSpace);
-    _typeValue.addItem(_tr("Sous-sol"), En13370Plugin::HeatedUnderground);
+    _typeValue.addItem(_tr("GndMedian"), En13370Plugin::Median);
+    _typeValue.addItem(_tr("GndCrawlSpace"), En13370Plugin::CrawlSpace);
+    _typeValue.addItem(_tr("GndHeatedUnderground"), En13370Plugin::HeatedUnderground);
 
-    _resultsTitle.setText(_tr("Flux de chaleur sortant :"));
-    _wallThicknessTitle.setText(_tr("Epaisseur totale du mur :"));
-    _groundFloorTitle.setText(_tr("Plancher au contact du sol"));
-    _groundRsiTitle.setText(_tr("Résistance superficielle intérieure :"));
-    _groundRTitle.setText(_tr("Résistance thermique du plancher :"));
-    _groundRseTitle.setText(_tr("Résistance superficielle extérieure :"));
+    _resultsTitle.setText(_tr("OutFluxTitle"));
+    _wallThicknessTitle.setText(_tr("WallThickTotTitle"));
+    _groundFloorTitle.setText(_tr("GndWithContact"));
+    _groundRsiTitle.setText(_tr("IntSRTitle"));
+    _groundRTitle.setText(_tr("GndThermResTitle"));
+    _groundRseTitle.setText(_tr("ExtSRTitle"));
 
-    _insulationTitle.setText(_tr("Isolation périphérique"));
-    _hInsThickTitle.setText(_tr("Epaisseur de l'isolation :"));
-    _vInsThickTitle.setText(_tr("Epaisseur de l'isolation :"));
-    _hInsResTitle.setText(_tr("Résistance thermique de l'isolation :"));
-    _vInsResTitle.setText(_tr("Résistance thermique de l'isolation :"));
-    _hInsLenTitle.setText(_tr("Longueur de l'isolation :"));
-    _vInsLenTitle.setText(_tr("Hauteur de l'isolation :"));
-    _enableHInsulation.setText(_tr("inclure une isolation périphérique horizontale"));
-    _enableVInsulation.setText(_tr("inclure une isolation périphérique verticale"));
+    _insulationTitle.setText(_tr("PeriphericalInsulation"));
+    _hInsThickTitle.setText(_tr("InsulationThickness"));
+    _vInsThickTitle.setText(_tr("InsulationThickness"));
+    _hInsResTitle.setText(_tr("InsulationThermR"));
+    _vInsResTitle.setText(_tr("InsulationThermR"));
+    _hInsLenTitle.setText(_tr("InsulationLength"));
+    _vInsLenTitle.setText(_tr("InsulationHeight"));
+    _enableHInsulation.setText(_tr("IncludePeriphVertInsulation"));
+    _enableVInsulation.setText(_tr("IncludePeriphHorizInsulation"));
 
-    _crawlTitle1.setText(_tr("Hauteur du vide sanitaire par rapport au sol :"));
-    _crawlTitle10.setText(_tr("Résistance thermique du plafond du vide sanitaire :"));
-    _crawlTitle2.setText(_tr("Résistance thermique du mur donnant sur l'extérieur :"));
-    _crawlTitle3.setText(_tr("Aire des ouvertures de ventilation divisée par le périmètre du vide sanitaire :"));
-    _crawlTitle4.setText(_tr("Vitesse moyenne du vent à 10 m de hauteur :"));
-    _crawlTitle5.setText(_tr("Facteur de protection au vent :"));
-    _crawlTitle6.setText(_tr("Profondeur moyenne du vide sanitaire :"));
-    _crawlTitle7.setText(_tr("Résistance superficielle intérieure du mur donnant sur le sol :"));
-    _crawlTitle8.setText(_tr("Résistance thermique du mur donnant sur le sol :"));
-    _crawlTitle9.setText(_tr("Résistance superficielle extérieure du mur donnant sur le sol :"));
+    _crawlTitle1.setText(_tr("CrawlHeight"));
+    _crawlTitle10.setText(_tr("CrawlCeilThermR"));
+    _crawlTitle2.setText(_tr("CrawlWallThermR"));
+    _crawlTitle3.setText(_tr("CrawlAirAreaSize"));
+    _crawlTitle4.setText(_tr("MeanWindSpeed"));
+    _crawlTitle5.setText(_tr("WindProtecFactor"));
+    _crawlTitle6.setText(_tr("MeanCrawlDeep"));
+    _crawlTitle7.setText(_tr("GndWallIntSR"));
+    _crawlTitle8.setText(_tr("GndWallThermR"));
+    _crawlTitle9.setText(_tr("GndWallExtSR"));
 
-    _defaultWindTitle.setText(_tr("valeur par défaut :"));
-    _userWindTitle.setText(_tr("valeur fixe :"));
+    _defaultWindTitle.setText(_tr("DefaultValueTitle"));
+    _userWindTitle.setText(_tr("FixedValueTitle"));
 
     _defaultWindValue.clear();
-    _defaultWindValue.addItem(_tr("Abritée - Centre ville (0,02)"), 0.02);
-    _defaultWindValue.addItem(_tr("Moyenne - Banlieue (0,05)"), 0.05);
-    _defaultWindValue.addItem(_tr("Exposée - Milieu rural (0,10)"), 0.1);
+    _defaultWindValue.addItem(_tr("WindSpeed1"), 0.02);
+    _defaultWindValue.addItem(_tr("WindSpeed2"), 0.05);
+    _defaultWindValue.addItem(_tr("WindSpeed3"), 0.1);
 
-    _basementTitle1.setText(_tr("Profondeur du sous-sol :"));
-    _basementTitle2.setText(_tr("Résistance superficielle intérieure :"));
-    _basementTitle3.setText(_tr("Résistance superficielle extérieure :"));
-    _basementTitle4.setText(_tr("Résistance thermique du mur :"));
-    _basementTitle5.setText(_tr("Surface chauffée :"));
-    _basementTitle6.setText(_tr("Surface non chauffée :"));
-    _basementTitle7.setText(_tr("Résistance thermique du plafond du sous-sol :"));
-    _basementTitle8.setText(_tr("Hauteur :"));
-    _basementTitle9.setText(_tr("Résistance thermique :"));
-    _basementTitle10.setText(_tr("Hauteur moyenne du sous-sol :"));
-    _basementTitle11.setText(_tr("Taux de renouvellement d'air :"));
+    _basementTitle1.setText(_tr("BasementDepth"));
+    _basementTitle2.setText(_tr("BasementRsi"));
+    _basementTitle3.setText(_tr("BasementRse"));
+    _basementTitle4.setText(_tr("BasementWallThermR"));
+    _basementTitle5.setText(_tr("BasementHeatedArea"));
+    _basementTitle6.setText(_tr("BasementUnheatedArea"));
+    _basementTitle7.setText(_tr("BasementCeilThermR"));
+    _basementTitle8.setText(_tr("HeightTitle"));
+    _basementTitle9.setText(_tr("ThermRTitle"));
+    _basementTitle10.setText(_tr("BasementMeanHeight"));
+    _basementTitle11.setText(_tr("BasementAirRenewRate"));
 
-    _wallBasementLabel.setText(_tr("Mur du sous-sol"));
-    _basementHeatingType.setText(_tr("Chauffage du sous-sol :"));
+    _wallBasementLabel.setText(_tr("BasementWall"));
+    _basementHeatingType.setText(_tr("BasementHeating"));
 
-    _basementHeating1.setText(_tr("sous-sol non chauffé"));
-    _basementHeating2.setText(_tr("sous-sol chauffé"));
-    _basementHeating3.setText(_tr("sous-sol partiellement chauffé"));
-    _basementExtWallTitle.setText(_tr("Mur du sous-sol donnant sur l'extérieur"));
+    _basementHeating1.setText(_tr("UnheatedBasement"));
+    _basementHeating2.setText(_tr("HeatedBasement"));
+    _basementHeating3.setText(_tr("PartHeatedBasement"));
+    _basementExtWallTitle.setText(_tr("BasementWallOutside"));
 
     _intEnvValue.clear();
-    _intEnvValue.addItem(_tr("Ambiance non définie"));
-    _intEnvValue.addItem(_tr("Ambiance thermique 1"));
-    _intEnvValue.addItem(_tr("Ambiance thermique 2"));
-    _intEnvValue.addItem(_tr("Ambiance thermique 3"));
-    _intEnvValue.addItem(_tr("Ambiance thermique 4"));
+    _intEnvValue.addItem(_tr("NotDefThermEnv"));
+    _intEnvValue.addItem(_tr("ThermEnv1"));
+    _intEnvValue.addItem(_tr("ThermEnv2"));
+    _intEnvValue.addItem(_tr("ThermEnv3"));
+    _intEnvValue.addItem(_tr("ThermEnv4"));
 
     _extEnvValue.clear();
-    _extEnvValue.addItem(_tr("Ambiance non définie"));
-    _extEnvValue.addItem(_tr("Ambiance thermique 1"));
-    _extEnvValue.addItem(_tr("Ambiance thermique 2"));
-    _extEnvValue.addItem(_tr("Ambiance thermique 3"));
-    _extEnvValue.addItem(_tr("Ambiance thermique 4"));
+    _extEnvValue.addItem(_tr("NotDefThermEnv"));
+    _extEnvValue.addItem(_tr("ThermEnv1"));
+    _extEnvValue.addItem(_tr("ThermEnv2"));
+    _extEnvValue.addItem(_tr("ThermEnv3"));
+    _extEnvValue.addItem(_tr("ThermEnv4"));
 }
 
 void En13370Interface::applyTheme()

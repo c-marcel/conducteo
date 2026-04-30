@@ -42,19 +42,18 @@ public:
 
     void registerObject(Translatable *object);
     void unregisterObject(Translatable *object);
+    
+    void changeLanguage(Language language);
+    QString translate(const QString &text) const;
 
     Language currentLanguage() const;
     std::string languageToString() const;
-    void changeLanguage(Language language);
-
-    QString translate(const QString &text);
 
 private:
-
-    void loadEnglish();
+    void loadTranslations(const QString& language);
 
     std::vector<Translatable*>  _objects;
-    std::map<QString, QString>  _english;
+    std::map<QString, QString>  _translations;
     Language                    _currentLanguage;
 
 };

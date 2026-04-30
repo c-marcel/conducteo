@@ -201,17 +201,17 @@ void SurfaceProperties::paintEvent(QPaintEvent *event)
     qp.setFont(f);
 
     qp.setPen(Qt::black);
-    qp.drawText(10+2*left+pixmap.width(), 10, rec2.width()-2*left-pixmap.width(), rec2.height(), Qt::AlignVCenter, _tr("Condition à la limite"));
+    qp.drawText(10+2*left+pixmap.width(), 10, rec2.width()-2*left-pixmap.width(), rec2.height(), Qt::AlignVCenter, _tr("BoundaryCondition"));
 }
 
 void SurfaceProperties::translate()
 {
-    _fluxTitle.setText(_tr("Flux de chaleur :"));
-    _minTemperatureTitle.setText(_tr("Température min. :"));
-    _maxTemperatureTitle.setText(_tr("Température max. :"));
-    _lengthTitle.setText(_tr("Longueur :"));
-    _rhMinTitle.setText(_tr("Humidité min. :"));
-    _rhMaxTitle.setText(_tr("Humidité max. :"));
+    _fluxTitle.setText(_tr("HeatFluxTitle"));
+    _minTemperatureTitle.setText(_tr("MinTempTitle"));
+    _maxTemperatureTitle.setText(_tr("MaxTempTitle"));
+    _lengthTitle.setText(_tr("LengthTitle"));
+    _rhMinTitle.setText(_tr("MinHumidityTitle"));
+    _rhMaxTitle.setText(_tr("MaxHumidityTitle"));
 
     update();
 }

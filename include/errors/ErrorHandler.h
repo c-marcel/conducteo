@@ -118,7 +118,7 @@ public:
     std::string context() const;
     std::string details() const;
 
-    static std::string codeToString(ErrorCode code, const std::string &language="FR");
+    static std::string codeToString(ErrorCode code, const std::string &language = "fr");
 
 private:
 

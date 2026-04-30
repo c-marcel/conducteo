@@ -105,18 +105,18 @@ void ComputationReporter::setRefinementType(Model::CallbackType type)
 
     _type=type;
     if (type==Model::PhysicalFlux)
-        _refinementTypeTitle.setText(_tr("Calcul des flux thermiques"));
+        _refinementTypeTitle.setText(_tr("ComputationType1"));
     else if (type==Model::CouplingCoefficients)
-        _refinementTypeTitle.setText(_tr("Calcul des coefficients de couplage"));
+        _refinementTypeTitle.setText(_tr("ComputationType2"));
     else if (type == Model::WithoutTBFlux)
-        _refinementTypeTitle.setText(_tr("Calcul de la modélisation sans pont thermique"));
+        _refinementTypeTitle.setText(_tr("ComputationType3"));
     else if (type == Model::GlaserComputation)
-        _refinementTypeTitle.setText(_tr("Calcul des flux d'humidité"));
+        _refinementTypeTitle.setText(_tr("ComputationType4"));
 
     if (type==Model::CouplingCoefficients)
-        _levelTitle.setText(_tr("Simulation :"));
+        _levelTitle.setText(_tr("SimulationTitle"));
     else
-        _levelTitle.setText(_tr("Niveau de raffinement :"));
+        _levelTitle.setText(_tr("RefinementTitle"));
 
     _levelTitle.setVisible(type != Model::GlaserComputation);
     _levelValue.setVisible(type != Model::GlaserComputation);
@@ -151,9 +151,9 @@ void ComputationReporter::onLinkActivated(const QString &link)
 
 void ComputationReporter::translate()
 {
-    _levelTitle.setText(_tr("Niveau de raffinement :"));
+    _levelTitle.setText(_tr("RefinementTitle"));
 
-    _cancel.setText("<a href=\"conducteo:computation/cancel\" style=\"color: #324b9b;\">" + _tr("Annuler") + "</a>");
+    _cancel.setText("<a href=\"conducteo:computation/cancel\" style=\"color: #324b9b;\">" + _tr("Cancel") + "</a>");
 
     update();
 }
@@ -165,7 +165,7 @@ void ComputationReporter::statesChanged()
 
 void ComputationReporter::applyTheme()
 {
-    _cancel.setText("<a href=\"conducteo:computation/cancel\" style=\"color: #324b9b;\">" + _tr("Annuler") + "</a>");
+    _cancel.setText("<a href=\"conducteo:computation/cancel\" style=\"color: #324b9b;\">" + _tr("Cancel") + "</a>");
 
     update();
 }

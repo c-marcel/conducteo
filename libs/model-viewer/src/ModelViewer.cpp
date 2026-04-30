@@ -829,8 +829,8 @@ void ModelViewer::customContextMenuRequested(const QPoint &pos)
 
         QAction *update_text = 0;
         if (annotation->type() == Annotation::AnnotationText)
-            update_text = menu.addAction(_tr("Modifier le texte"));
-        QAction *delete_annotation = menu.addAction(_tr("Supprimer l'annotation"));
+            update_text = menu.addAction(_tr("UpdateText"));
+        QAction *delete_annotation = menu.addAction(_tr("DeleteAnnotation"));
 
         QAction *choice = menu.exec(globalPos);
 
@@ -895,7 +895,7 @@ void ModelViewer::customContextMenuRequested(const QPoint &pos)
     {
         QMenu menu(this);
         QPoint globalPos=mapToGlobal(pos);
-        QAction *delete_point=menu.addAction(_tr("Supprimer le point"));
+        QAction *delete_point=menu.addAction(_tr("DeletePoint"));
         QAction *choice=menu.exec(globalPos);
         if (choice==delete_point)
             deletePointRequested(volumes.at(0), corner);
@@ -906,13 +906,13 @@ void ModelViewer::customContextMenuRequested(const QPoint &pos)
     {
         QMenu menu(this);
         QPoint globalPos=mapToGlobal(pos);
-        QAction *copy=menu.addAction(_tr("Copier"));
-        QAction *cut=menu.addAction(_tr("Couper"));
+        QAction *copy=menu.addAction(_tr("Copy"));
+        QAction *cut=menu.addAction(_tr("Paste"));
         menu.addSeparator();
-        QAction *rotate = menu.addAction(_tr("Tourner la sélection"));
+        QAction *rotate = menu.addAction(_tr("RotateSelection"));
         menu.addSeparator();
 
-        QAction *remove=menu.addAction(_tr("Supprimer"));
+        QAction *remove=menu.addAction(_tr("Delete"));
 
         QAction *choice=menu.exec(globalPos);
         if (choice==copy)
@@ -937,9 +937,9 @@ void ModelViewer::customContextMenuRequested(const QPoint &pos)
         {
             QMenu menu(this);
             QPoint globalPos=mapToGlobal(pos);
-            QAction *set_scale=menu.addAction(_tr("Définir l'échelle"));
+            QAction *set_scale=menu.addAction(_tr("DefineScale"));
             menu.addSeparator();
-            QAction *remove=menu.addAction(_tr("Supprimer"));
+            QAction *remove=menu.addAction(_tr("Delete"));
 
             QAction *choice=menu.exec(globalPos);
             if (choice==remove)
@@ -964,7 +964,7 @@ void ModelViewer::customContextMenuRequested(const QPoint &pos)
             {
                 QMenu menu(this);
                 QPoint globalPos=mapToGlobal(pos);
-                QAction *import_elements=menu.addAction(_tr("Importer un volume"));
+                QAction *import_elements=menu.addAction(_tr("ImportVolume"));
 
                 QAction *choice=menu.exec(globalPos);
                 if (choice==import_elements)
@@ -982,7 +982,7 @@ void ModelViewer::customContextMenuRequested(const QPoint &pos)
                 {
                     QMenu menu(this);
                     QPoint globalPos=mapToGlobal(pos);
-                    QAction *remove=menu.addAction(_tr("Supprimer"));
+                    QAction *remove=menu.addAction(_tr("Delete"));
 
                     QAction *choice=menu.exec(globalPos);
                     if (choice==remove)
@@ -1067,9 +1067,9 @@ void ModelViewer::initScaleDefinition()
     _imageScale.clear();
 
     QMessageBox dialog;
-    dialog.setWindowTitle(_tr("Définition de l'échelle de l'image"));
+    dialog.setWindowTitle(_tr("DefineImageScale"));
 
-    QString text=_tr("Définissez une longueur connue sur l'image en sélectionnant 2 points.");
+    QString text=_tr("DefineImageScaleWith2Points");
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
 
@@ -1112,7 +1112,7 @@ void ModelViewer::finalizeScaleDefinition()
     if (length > 1.0e-8)
     {
         // Ask user to input physical distance.
-        QString s_physicalLength = QInputDialog::getText(this, _tr("Longueur"), _tr("Longueur (en mètres) :"), QLineEdit::Normal, "1,0");
+        QString s_physicalLength = QInputDialog::getText(this, _tr("Length"), _tr("LengthMeters"), QLineEdit::Normal, "1,0");
         double physicalLength = ToolBox::convertStringToDouble(s_physicalLength.toStdString());
 
         if (physicalLength > 1.0e-6)
@@ -1658,8 +1658,8 @@ void ModelViewer::finalizePolyline()
     if (polylineIntersection(x, y))
     {
         QMessageBox dialog;
-        dialog.setWindowTitle(_tr("Dessin de contour fermé"));
-        QString text=_tr("Impossible de fermer automatiquement le contour fermé dessiné.<br/>Intersection détectée.");
+        dialog.setWindowTitle(_tr("ClosedPathInsertion"));
+        QString text=_tr("ClosedPathInterDetected");
         dialog.setText(text);
         dialog.setWindowModality(Qt::ApplicationModal);
         QIcon icon(":/images/icon.png");
@@ -1899,7 +1899,7 @@ void ModelViewer::updateText(Annotation *annotation)
     if (!model)
         return;
 
-    QString text=QInputDialog::getText(this, _tr("Annotation textuelle"), _tr("Texte :"), QLineEdit::Normal, annotation->text().c_str());
+    QString text=QInputDialog::getText(this, _tr("TextAnnotation"), _tr("TextTitle"), QLineEdit::Normal, annotation->text().c_str());
     if (text.isEmpty())
         return;
 
@@ -3238,7 +3238,7 @@ void ModelViewer::drawSurfaces(Model *model, QPainter &painter, ImageOptions opt
         }
         else
         {
-            setToolTip("<b>"+_tr("Adiabatique")+"</b>");
+            setToolTip("<b>"+_tr("Adiabatic")+"</b>");
         }
     }
     else
@@ -3954,8 +3954,8 @@ void ModelViewer::importSelectedElements()
     if (action->canceledAction())
     {
         QMessageBox dialog;
-        dialog.setWindowTitle(_tr("Import de volumes à partir d'éléments Dxf"));
-        QString text=_tr("Les éléments Dxf sélectionnés ne peuvent pas être convertis en volumes : ceux-ci ne définissent pas un ensemble de volumes fermés et ne se coupant pas eux-mêmes.");
+        dialog.setWindowTitle(_tr("VolumeImportFromDxf"));
+        QString text=_tr("VolumeImportFromDxfErrorText");
         dialog.setText(text);
         dialog.setWindowModality(Qt::ApplicationModal);
         QIcon icon(":/images/icon.png");
@@ -4040,8 +4040,8 @@ void ModelViewer::setPhysicFromSelection()
 
     QPoint globalPos = mapToGlobal(pos);
 
-    QAction *applyMaterial = menu.addAction(_tr("Appliquer le matériau aux volumes"));
-    QAction *applyBoundary = menu.addAction(_tr("Appliquer la condition limite aux surfaces"));
+    QAction *applyMaterial = menu.addAction(_tr("ApplyVolumeMaterial"));
+    QAction *applyBoundary = menu.addAction(_tr("ApplyVolumeBC"));
 
     QAction *choice = menu.exec(globalPos);
 
@@ -4222,7 +4222,7 @@ void ModelViewer::drawEn13370Results(Model *model, QPainter &painter, int height
     QLocale locale;
     painter.setPen(Qt::black);
 
-    QString string=_tr("Flux traversant le plancher bas (EN 13370) : ")
+    QString string=_tr("EN13370GndFlux")
         +locale.toString(flux, 'f', 3)+" W/m";
     painter.drawText(10, height-20, width-10, 20, 0, string);
 }
@@ -4744,7 +4744,7 @@ void ModelViewer::addText(const QPoint &point)
     if (!model)
         return;
 
-    QString text=QInputDialog::getText(this, _tr("Annotation textuelle"), _tr("Texte :"));
+    QString text=QInputDialog::getText(this, _tr("TextAnnotation"), _tr("TextTitle"));
     if (text.isEmpty())
         return;
 

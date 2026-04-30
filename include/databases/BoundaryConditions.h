@@ -20,13 +20,15 @@
 #define BOUNDARY_CONDITIONS_H
 
 #include <tools/Singleton.h>
+#include <Translatable.h>
 #include <vector>
 #include <string>
 
 class BoundaryConditionsObserver;
 class BoundaryCondition;
 
-class BoundaryConditions: public Singleton<BoundaryConditions>
+class BoundaryConditions: public Singleton<BoundaryConditions>,
+                          public Translatable
 {
 
 public:
@@ -47,10 +49,11 @@ public:
     BoundaryCondition *bcFromTemperatureAndResistance(double temperature, double resistance) const;
     BoundaryCondition *duplicate(BoundaryCondition *bc) const;
 
-private:
+    void translate() override;
 
+private:
     void boundaryConditionDeleted(const std::string &id);
-    void boundaryConditionAdded(const std::string &id);
+    void boundaryConditionAdded(const std::string& id);
 
     std::vector<BoundaryCondition*>             _standard;
     std::vector<BoundaryCondition*>             _user;

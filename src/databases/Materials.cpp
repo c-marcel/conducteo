@@ -21,6 +21,9 @@
 #include <physics/Material.h>
 #include <tools/ToolBox.h>
 
+#define UnventilatedAirCavityIdentifier         "106D6720-211C-4090-8C60-7CED671C8580"
+#define PartiallyVentilatedAirCavityIdentifier  "0BB7BBC8-79A2-4E71-A92F-F8E9033A630B"
+
 Materials::Materials():
     _informObservers(true)
 {
@@ -30,16 +33,29 @@ void Materials::loadDefaultMaterials()
 {
     // Create air materials.
     Material *material1=new Material;
-    material1->setName("Vide d'air non ventilé (encadrements et coffres de volets roulants)");
+    material1->setName(_tr("UnventilatedAirCavity").toStdString());
     material1->setColor(158, 217, 255);
-    material1->setId("106D6720-211C-4090-8C60-7CED671C8580");
+    material1->setId(UnventilatedAirCavityIdentifier);
     addMaterialToUserDb(material1);
 
     Material *material2=new Material;
-    material2->setName("Vide d'air partiellement ventilé (encadrements et coffres de volets roulants)");
+    material2->setName(_tr("PartVentilatedAirCavity").toStdString());
     material2->setColor(17, 112, 255);
-    material2->setId("0BB7BBC8-79A2-4E71-A92F-F8E9033A630B");
+    material2->setId(PartiallyVentilatedAirCavityIdentifier);
     addMaterialToUserDb(material2);
+}
+
+void Materials::translate()
+{
+    Material* material1 = materialFromId(UnventilatedAirCavityIdentifier);
+    if (material1)
+        material1->setName(_tr("UnventilatedAirCavity").toStdString());
+    materialModified(UnventilatedAirCavityIdentifier);
+
+    Material* material2 = materialFromId(PartiallyVentilatedAirCavityIdentifier);
+    if (material2)
+        material2->setName(_tr("PartVentilatedAirCavity").toStdString());
+    materialModified(PartiallyVentilatedAirCavityIdentifier);
 }
 
 Materials::~Materials()

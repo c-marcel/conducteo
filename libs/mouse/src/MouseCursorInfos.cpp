@@ -155,7 +155,7 @@ void MouseCursorInfos::paintEvent(QPaintEvent *event)
     f.setPixelSize(12);
     qp.setFont(f);
     qp.setPen(Qt::black);
-    qp.drawText(10+2*left+pixmap.width(), 10, rec2.width()-2*left-pixmap.width(), rec2.height(), Qt::AlignVCenter, _tr("Souris"));
+    qp.drawText(10+2*left+pixmap.width(), 10, rec2.width()-2*left-pixmap.width(), rec2.height(), Qt::AlignVCenter, _tr("Mouse"));
 }
 
 void MouseCursorInfos::setPosition(double x, double y)

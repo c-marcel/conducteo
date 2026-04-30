@@ -92,7 +92,7 @@ void HumidityDisplayer::paintEvent(QPaintEvent *event)
     qp.setFont(f);
 
     qp.setPen(Qt::black);
-    qp.drawText(10+2*left+_pixmap.width(), 10, rec2.width()-2*left-_pixmap.width(), rec2.height(), Qt::AlignVCenter, _tr("Humidité"));
+    qp.drawText(10+2*left+_pixmap.width(), 10, rec2.width()-2*left-_pixmap.width(), rec2.height(), Qt::AlignVCenter, _tr("Humidity"));
 }
 
 void HumidityDisplayer::setHumidity(double temperature, double humidity)

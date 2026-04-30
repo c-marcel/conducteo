@@ -202,10 +202,10 @@ void PsiReporter::paintEvent(QPaintEvent *event)
 
 void PsiReporter::translate()
 {
-    _fluxTitle.setText(_tr("Flux sortant"));
-    _1DfluxTitle.setText(_tr("Sans pont thermique :"));
-    _2DfluxTitle.setText(_tr("Avec pont thermique :"));
-    _psiTitle.setText(_tr("Coefficient ψ :"));
+    _fluxTitle.setText(_tr("OutFlux"));
+    _1DfluxTitle.setText(_tr("OutFluxWOThermBridge"));
+    _2DfluxTitle.setText(_tr("OutFluxWithThermBridge"));
+    _psiTitle.setText(_tr("PsiCoeff"));
 
     _condensationTitle.setText(_tr("Condensation"));
     _condensationValue.setText(_tr(_condensation));
@@ -215,11 +215,11 @@ void PsiReporter::translate()
     if (model)
     {
         if (model->computationType()==Model::Flux || model->computationType() == Model::GlaserCondensation)
-            _2DfluxTitle.setText(_tr("Modélisation :"));
+            _2DfluxTitle.setText(_tr("ModelTitle"));
         if (model->computationType() == Model::EquivalentThermalConductivity)
-            _2DfluxTitle.setText(_tr("Conductivité équivalente :"));
+            _2DfluxTitle.setText(_tr("EquivCondTitle"));
         if (model->computationType()==Model::ThermalTransmission)
-            _psiTitle.setText(_tr("Coefficient U :"));
+            _psiTitle.setText(_tr("UCoeff"));
     }
 
     update();

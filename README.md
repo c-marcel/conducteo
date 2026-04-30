@@ -37,6 +37,7 @@ conducteo uses the following dependencies:
     - tinyxml: https://sourceforge.net/projects/tinyxml
     - zlib: https://zlib.net/
     - libzip: https://github.com/nih-at/libzip
+    - nlohmann-json: https://github.com/nlohmann/json
     
 2. Extract dependencies
 
@@ -49,3 +50,4 @@ conducteo uses the following dependencies:
     - DXFLIB_ROOT_DIRECTORY: directory containing dxflib
     - TINYXML_ROOT_DIRECTORY: directory containing tinyxml
     - LIBZIP_ROOT_DIRECTORY: directory containing libzip Release outputs
+    - JSON_ROOT_DIRECTORY: directory containing nlohmann-json (must contain nlohmann/json.hpp)

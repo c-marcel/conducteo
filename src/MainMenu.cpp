@@ -426,77 +426,77 @@ MainMenu::~MainMenu()
 
 void MainMenu::translate()
 {
-    _fileMenu.setTitle(_tr("Fichier"));
-    _editMenu.setTitle(_tr("Edition"));
-    _viewMenu.setTitle(_tr("Affichage"));
-    _projectMenu.setTitle(_tr("Projet"));
-    _helpMenu.setTitle(_tr("Aide"));
+    _fileMenu.setTitle(_tr("MenuFile"));
+    _editMenu.setTitle(_tr("MenuEdit"));
+    _viewMenu.setTitle(_tr("MenuDisplay"));
+    _projectMenu.setTitle(_tr("MenuProject"));
+    _helpMenu.setTitle(_tr("MenuHelp"));
 
-    _newDocumentAction.setText(_tr("Nouveau"));
-    _openDocumentAction.setText(_tr("Ouvrir..."));
-    _openLastAction.setText(_tr("Fichiers récents"));
-    _openExampleAction.setText(_tr("Exemples"));
-    _saveDocumentAction.setText(_tr("Enregistrer"));
-    _saveDocumentAsAction.setText(_tr("Enregistrer sous..."));
-    _quitAction.setText(_tr("Quitter"));
+    _newDocumentAction.setText(_tr("MenuFileNew"));
+    _openDocumentAction.setText(_tr("MenuFileOpen"));
+    _openLastAction.setText(_tr("MenuFileRecents"));
+    _openExampleAction.setText(_tr("MenuFileExamples"));
+    _saveDocumentAction.setText(_tr("MenuFileSave"));
+    _saveDocumentAsAction.setText(_tr("MenuFileSaveAs"));
+    _quitAction.setText(_tr("MenuFileQuit"));
 
-    _cutAction.setText(_tr("Couper"));
-    _copyAction.setText(_tr("Copier"));
-    _pasteAction.setText(_tr("Coller"));
-    _undoAction.setText(_tr("Annuler"));
-    _redoAction.setText(_tr("Refaire"));
-    _selectAll.setText(_tr("Sélectionner tout"));
-    _delete.setText(_tr("Supprimer"));
-    _preferencesAction.setText(_tr("Préférences"));
+    _cutAction.setText(_tr("MenuEditCut"));
+    _copyAction.setText(_tr("MenuEditCopy"));
+    _pasteAction.setText(_tr("MenuEditPaste"));
+    _undoAction.setText(_tr("MenuEditUndo"));
+    _redoAction.setText(_tr("MenuEditRedo"));
+    _selectAll.setText(_tr("MenuEditSelectAll"));
+    _delete.setText(_tr("MenuEditDelete"));
+    _preferencesAction.setText(_tr("MenuEditSettings"));
 
-    _selectionModeAction.setText(_tr("Sélection"));
-    _addRectangleModeAction.setText(_tr("Dessiner un rectangle"));
+    _selectionModeAction.setText(_tr("ActionSelection"));
+    _addRectangleModeAction.setText(_tr("ActionDrawRect"));
 
-    _getMaterialModeAction.setText(_tr("Sélectionner un matériau"));
-    _setPhysicModeAction.setText(_tr("Matériaux et conditions aux limites"));
-    _setEnvironmentModeAction.setText(_tr("Ambiances thermiques"));
-    _fitAction.setText(_tr("Ajuster le zoom"));
-    _zoomInAction.setText(_tr("Augmenter le zoom"));
-    _zoomOutAction.setText(_tr("Réduire le zoom"));
+    _getMaterialModeAction.setText(_tr("ActionSelectMaterial"));
+    _setPhysicModeAction.setText(_tr("ActionSetPhysic"));
+    _setEnvironmentModeAction.setText(_tr("ActionSetEnv"));
+    _fitAction.setText(_tr("ActionFitZoom"));
+    _zoomInAction.setText(_tr("ActionZoomIn"));
+    _zoomOutAction.setText(_tr("ActionZoomOut"));
 
-    _computeAction.setText(_tr("Lancer la simulation"));
+    _computeAction.setText(_tr("ActionStartSimulation"));
     
-    _help.setText(_tr("Manuel d'utilisation"));
-    _tutorial.setText(_tr("Modéliser les ponts thermiques"));
-    _quickstart.setText(_tr("Guide de démarrage"));
-    _aboutAction.setText(_tr("A propos"));
-    _documentationAction.setText(_tr("Documentation"));
-    _validationsReport.setText(_tr("Dossier de validation"));
+    _help.setText(_tr("HelpManual"));
+    _tutorial.setText(_tr("HelpTutorial"));
+    _quickstart.setText(_tr("HelpQuickStart"));
+    _aboutAction.setText(_tr("ActionAbout"));
+    _documentationAction.setText(_tr("ActionDocumentation"));
+    _validationsReport.setText(_tr("ActionValidationReport"));
 
-    _copy2DModelTo1DModel.setText(_tr("Dupliquer la modélisation"));
-    _toogleEn13370.setText(_tr("Intégrer les pertes des planchers bas"));
+    _copy2DModelTo1DModel.setText(_tr("DuplicateModel"));
+    _toogleEn13370.setText(_tr("ToogleEN13370"));
 
-    _modelTypeAction.setText(_tr("Type de calcul"));
-    _modelTypeThermalBridgeAction.setText(_tr("Pont thermique linéique"));
-    _modelTypeThermalFluxAction.setText(_tr("Flux de chaleur"));
-    _modelTypeThermalTransmissionAction.setText(_tr("Transmission thermique"));
-    _modelTypeThermalConductivityAction.setText(_tr("Conductivité thermique équivalente"));
-    _modelTypeGlaserCondensationAction.setText(_tr("Condensation - méthode de Glaser"));
+    _modelTypeAction.setText(_tr("ComputationType"));
+    _modelTypeThermalBridgeAction.setText(_tr("ThermBridgeCompType"));
+    _modelTypeThermalFluxAction.setText(_tr("ThermFluxCompType"));
+    _modelTypeThermalTransmissionAction.setText(_tr("ThermUCompType"));
+    _modelTypeThermalConductivityAction.setText(_tr("EquivThermCondCompType"));
+    _modelTypeGlaserCondensationAction.setText(_tr("CondGlaserCompType"));
 
-    _modelLengthAction.setText(_tr("Longueur de modélisation"));
-    _modelLengthFullAction.setText(_tr("Longueur totale"));
-    _modelLengthXAction.setText(_tr("Longueur projetée selon X"));
-    _modelLengthYAction.setText(_tr("Longueur projetée selon Y"));
-    _modelEqConductivityAction.setText(_tr("Conductivité équivalente"));
+    _modelLengthAction.setText(_tr("ModelLength"));
+    _modelLengthFullAction.setText(_tr("TotalLength"));
+    _modelLengthXAction.setText(_tr("LengthOnX"));
+    _modelLengthYAction.setText(_tr("LengthOnY"));
+    _modelEqConductivityAction.setText(_tr("EquivCond"));
 
-    _addImageAction.setText(_tr("Importer une image"));
-    _addDxfAction.setText(_tr("Importer un fichier Dxf"));
-    _addPolyline.setText(_tr("Dessiner un contour fermé"));
-    _addPoint.setText(_tr("Ajouter un point"));
-    _addCircleModeAction.setText(_tr("Dessiner un cercle"));
-    _addEllipseModeAction.setText(_tr("Dessiner une ellipse"));
-    _getLength.setText(_tr("Mesurer une longueur"));
-    _getAngle.setText(_tr("Mesurer un angle"));
-    _addText.setText(_tr("Ajouter une annotation textuelle"));
-    _addArrow.setText(_tr("Ajouter une annotation fléchée"));
+    _addImageAction.setText(_tr("ImportImage"));
+    _addDxfAction.setText(_tr("ImportDxf"));
+    _addPolyline.setText(_tr("DrawClosedPath"));
+    _addPoint.setText(_tr("AddPoint"));
+    _addCircleModeAction.setText(_tr("DrawCircle"));
+    _addEllipseModeAction.setText(_tr("DrawEllipse"));
+    _getLength.setText(_tr("LengthMeasure"));
+    _getAngle.setText(_tr("AngleMeasure"));
+    _addText.setText(_tr("AddTextAnnotation"));
+    _addArrow.setText(_tr("AddArrowAnnotation"));
 
-    _modelClearAllBc.setText(_tr("Effacer les conditions limites"));
-    _modelClearAllEnv.setText(_tr("Effacer les ambiances thermiques"));
+    _modelClearAllBc.setText(_tr("ClearBCs"));
+    _modelClearAllEnv.setText(_tr("ClearThermEnvs"));
 
     updateImagesVisibility();
     updateUpgradeAction();
@@ -526,11 +526,11 @@ void MainMenu::updateUpgradeAction()
     LOG_INFO("Update upgrade state.");
 
     if (StatesManager::instance()->upgradeState()==StatesManager::DownloadDone)
-        _upgradeDownloadAction.setText(_tr("Installer la mise à jour"));
+        _upgradeDownloadAction.setText(_tr("InstallUpgrade"));
     else if (StatesManager::instance()->upgradeState()==StatesManager::Downloading)
-        _upgradeDownloadAction.setText(_tr("Téléchargement de la mise à jour")+QString(" (")+ToolBox::intToString(StatesManager::instance()->upgradePercent()).c_str()+QString("%)"));
+        _upgradeDownloadAction.setText(_tr("DownloadingUpgrade")+QString(" (")+ToolBox::intToString(StatesManager::instance()->upgradePercent()).c_str()+QString("%)"));
     else
-        _upgradeDownloadAction.setText(_tr("Télécharger la mise à jour"));
+        _upgradeDownloadAction.setText(_tr("DownloadUpgrade"));
 
     // Update icon.
     if (StatesManager::instance()->upgradeState()==StatesManager::Downloading)
@@ -616,9 +616,9 @@ void MainMenu::updateImagesVisibility()
         _imagesVisibilityAction.setIcon(QIcon(":/images/orange-blue/image_visibility_off.png"));
 
     if (StatesManager::instance()->showImages())
-        _imagesVisibilityAction.setText(_tr("Masquer les images"));
+        _imagesVisibilityAction.setText(_tr("HideImages"));
     else
-        _imagesVisibilityAction.setText(_tr("Afficher les images"));
+        _imagesVisibilityAction.setText(_tr("ShowImages"));
 
     if (StatesManager::instance()->showDxf())
         _dxfVisibilityAction.setIcon(QIcon(":/images/orange-blue/dxf_visibility_on.png"));
@@ -626,9 +626,9 @@ void MainMenu::updateImagesVisibility()
         _dxfVisibilityAction.setIcon(QIcon(":/images/orange-blue/dxf_visibility_off.png"));
 
     if (StatesManager::instance()->showDxf())
-        _dxfVisibilityAction.setText(_tr("Masquer les fichiers Dxf"));
+        _dxfVisibilityAction.setText(_tr("HideDxf"));
     else
-        _dxfVisibilityAction.setText(_tr("Afficher les fichiers Dxf"));
+        _dxfVisibilityAction.setText(_tr("ShowDxf"));
 }
 
 void MainMenu::installOnWindow()
@@ -743,63 +743,63 @@ void MainMenu::loadExamples()
     _examplesMenu.clear();
 
     // Add sub-menus.
-    QMenu *simple       = addMenu(&_examplesMenu, "Exemples simples");
-    QMenu *repartition  = addMenu(&_examplesMenu, "Ponts thermiques répartis");
-    QMenu *ground_floor = addMenu(&_examplesMenu, "Planchers bas");
+    QMenu *simple       = addMenu(&_examplesMenu, "SimpleExamples");
+    QMenu *repartition  = addMenu(&_examplesMenu, "SplittedExamples");
+    QMenu *ground_floor = addMenu(&_examplesMenu, "GroundExamples");
 
-    QMenu *windows = addMenu(&_examplesMenu, "Menuiseries");
-    QMenu *tutorial = addMenu(&_examplesMenu, "Exemples du tutoriel");
+    QMenu *windows = addMenu(&_examplesMenu, "WindowsExamples");
+    QMenu *tutorial = addMenu(&_examplesMenu, "TutorialExamples");
 
-    QMenu *validations  = addMenu(&_examplesMenu, "Exemples du dossier de validation");
+    QMenu *validations  = addMenu(&_examplesMenu, "ValidationsExamples");
 
     // Simple
-    addExample(simple, "Angle entrant",                         "Exemple_2.c2d");
-    addExample(simple, "Angle sortant",                         "Exemple_4.c2d");
-    addExample(simple, "Angle sortant avec parement plâtre",    "Exemple_3.c2d");
-    addExample(simple, "Acrotère",                              "Exemple_1.c2d");
+    addExample(simple, "Example_1", "Exemple_2.c2d");
+    addExample(simple, "Example_2", "Exemple_4.c2d");
+    addExample(simple, "Example_3", "Exemple_3.c2d");
+    addExample(simple, "Example_4", "Exemple_1.c2d");
 
     // Repartition.
-    addExample(repartition, "Plancher intermédiaire isolé",         "Exemple_8.c2d");
-    addExample(repartition, "Plancher intermédiaire",               "Exemple_9.c2d");
-    addExample(repartition, "Renfort d'isolation par l'extérieur",  "Exemple_10.c2d");
+    addExample(repartition, "Example_8",   "Exemple_8.c2d");
+    addExample(repartition, "Example_9",   "Exemple_9.c2d");
+    addExample(repartition, "Example_10",  "Exemple_10.c2d");
 
     // Ground floor.
-    addExample(ground_floor, "Plancher bas sur terre plein (EN 13370) - Option A", "Exemple_6.c2d");
-    addExample(ground_floor, "Plancher bas sur terre plein - Option B", "Exemple_7.c2d");
+    addExample(ground_floor, "Example_6", "Exemple_6.c2d");
+    addExample(ground_floor, "Example_7", "Exemple_7.c2d");
 
     // Windows.
-    addExample(windows, "Menuiserie en aluminium (EN 10077-2)", "Exemple_5.c2d");
+    addExample(windows, "Example_5", "Exemple_5.c2d");
 
     // Tutorial.
-    QMenu *cat1  = addMenu(tutorial, "Bâtiment de référence");
-    QMenu *cat2  = addMenu(tutorial, "Plancher intermédiaire");
-    QMenu *cat3  = addMenu(tutorial, "Plancher haut");
-    QMenu *cat4  = addMenu(tutorial, "Angle de mur");
-    QMenu *cat5  = addMenu(tutorial, "Mur avec tasseaux");
-    QMenu *cat6  = addMenu(tutorial, "Acrotère");
-    QMenu *cat7  = addMenu(tutorial, "Plancher intermédiaire ψ₁ – ψ₂");
-    QMenu *cat8  = addMenu(tutorial, "Plancher bas sur terre-plein");
-    QMenu *cat9  = addMenu(tutorial, "Plancher bas sur terre-plein sous le niveau du sol");
-    QMenu *cat10 = addMenu(tutorial, "Plancher bas surélevé sur terre-plein");
-    QMenu *cat11 = addMenu(tutorial, "Plancher bas sur vide sanitaire");
-    QMenu *cat12 = addMenu(tutorial, "Plancher bas en sous-sol");
-    QMenu *cat13 = addMenu(tutorial, "Mur de refend");
-    QMenu *cat14 = addMenu(tutorial, "Cadre de menuiserie");
-    QMenu *cat15 = addMenu(tutorial, "Jonction vitrage - menuiserie");
-    QMenu *cat16 = addMenu(tutorial, "Mise en œuvre de menuiserie");
+    QMenu *cat1  = addMenu(tutorial, "ExamplesCat1");
+    QMenu *cat2  = addMenu(tutorial, "ExamplesCat2");
+    QMenu *cat3  = addMenu(tutorial, "ExamplesCat3");
+    QMenu *cat4  = addMenu(tutorial, "ExamplesCat4");
+    QMenu *cat5  = addMenu(tutorial, "ExamplesCat5");
+    QMenu *cat6  = addMenu(tutorial, "ExamplesCat6");
+    QMenu *cat7  = addMenu(tutorial, "ExamplesCat7");
+    QMenu *cat8  = addMenu(tutorial, "ExamplesCat8");
+    QMenu *cat9  = addMenu(tutorial, "ExamplesCat9");
+    QMenu *cat10 = addMenu(tutorial, "ExamplesCat10");
+    QMenu *cat11 = addMenu(tutorial, "ExamplesCat11");
+    QMenu *cat12 = addMenu(tutorial, "ExamplesCat12");
+    QMenu *cat13 = addMenu(tutorial, "ExamplesCat13");
+    QMenu *cat14 = addMenu(tutorial, "ExamplesCat14");
+    QMenu *cat15 = addMenu(tutorial, "ExamplesCat15");
+    QMenu *cat16 = addMenu(tutorial, "ExamplesCat16");
 
     // Cat 1.
-    addExample(cat1, "Bâtiment entier", "Tutorial_4.c2d");
-    addExample(cat1, "Moitié de bâtiment", "Tutorial_3.c2d");
+    addExample(cat1, "Tutorial_4", "Tutorial_4.c2d");
+    addExample(cat1, "Tutorial_3", "Tutorial_3.c2d");
 
     // Cat 2.
-    addExample(cat2, "Modèle complet", "Tutorial_9.c2d");
-    addExample(cat2, "Modèle extrait", "Tutorial_10.c2d");
+    addExample(cat2, "Tutorial_9", "Tutorial_9.c2d");
+    addExample(cat2, "Tutorial_10", "Tutorial_10.c2d");
 
     // Cat 3.
-    addExample(cat3, "Modèle complet", "Tutorial_6.c2d");
-    addExample(cat3, "Modèle extrait - dimensions intérieures", "Tutorial_7.c2d");
-    addExample(cat3, "Modèle extrait - dimensions extérieures", "Tutorial_8.c2d");
+    addExample(cat3, "Tutorial_6", "Tutorial_6.c2d");
+    addExample(cat3, "Tutorial_7", "Tutorial_7.c2d");
+    addExample(cat3, "Tutorial_8", "Tutorial_8.c2d");
 
     // Cat 4.
     addExample(cat4, "Dimensions intérieures", "Tutorial_25.c2d");
@@ -849,9 +849,9 @@ void MainMenu::loadExamples()
     addExample(cat16, "Mise en œuvre de menuiserie", "Tutorial_30.c2d");
 
     // Validations.
-    QMenu *en10211  = addMenu(validations, "Norme EN 10211");
-    QMenu *en10077 = addMenu(validations, "Norme EN 10077-2");
-    QMenu *internal = addMenu(validations, "Autres tests");
+    QMenu *en10211  = addMenu(validations, "ExamplesCat10211");
+    QMenu *en10077 = addMenu(validations, "ExamplesCat10077");
+    QMenu *internal = addMenu(validations, "ExamplesCatInternal");
 
     // EN 10211.
     addExample(en10211, "Cas n°1", "cas_1.c2d");
@@ -1219,7 +1219,7 @@ void MainMenu::rotationRequested(double x, double y)
         return;
 
     bool ok;
-    double angle = QInputDialog::getDouble(this, _tr("Tourner la sélection"), _tr("Angle de rotation (en °) :"), 0.0, -360.0, 360.0, 2, &ok);
+    double angle = QInputDialog::getDouble(this, _tr("RotateSelection"), _tr("RotationAngleDegrees"), 0.0, -360.0, 360.0, 2, &ok);
 
     if (!ok)
         return;
@@ -1302,7 +1302,7 @@ void MainMenu::onAddImageRequested()
 
     QString path=LocalData::instance()->getParameter("last-image-path").c_str();
 
-    QString filename=QFileDialog::getOpenFileName(this, _tr("Importer une image"), path, _tr("images (*.jpg *.jpeg *.bmp *.svg *.png *.gif)") );
+    QString filename=QFileDialog::getOpenFileName(this, _tr("ImportImage"), path, _tr("ImageImportPattern") );
     if (filename.isEmpty())
         return;
 
@@ -1354,7 +1354,7 @@ void MainMenu::onAddDxfRequested()
 
     QString path=LocalData::instance()->getParameter("last-dxf-path").c_str();
 
-    QString filename=QFileDialog::getOpenFileName(this, _tr("Importer un fichier Dxf"), path, _tr("fichier Dxf (*.dxf)") );
+    QString filename=QFileDialog::getOpenFileName(this, _tr("ImportDxf"), path, _tr("DxfImportPattern") );
     if (filename.isEmpty())
         return;
 
@@ -1516,7 +1516,7 @@ void MainMenu::updateCustomLength()
 {
     LOG_INFO("Update custom length.");
 
-    _modelLengthCustomAction.setText(_tr("Longueur fixée"));
+    _modelLengthCustomAction.setText(_tr("FixedLength"));
 
     Model *model=StatesManager::instance()->currentModelView();
     if (!model)
@@ -1529,7 +1529,7 @@ void MainMenu::updateCustomLength()
 
     QLocale locale;
     QString customLength=locale.toString(model->transmissionCoefficientLength()*1000.0, 'f', 1);
-    _modelLengthCustomAction.setText(_tr("Longueur fixée :")+" "+customLength+_tr(" mm"));
+    _modelLengthCustomAction.setText(_tr("FixedLengthTitle")+" "+customLength+_tr("LengthMM"));
 }
 
 void MainMenu::updateConductivityData()
@@ -1549,9 +1549,9 @@ void MainMenu::updateConductivityData()
     QString thick = locale.toString(model->getEquivalentConductivityThickness() * 1000.0, 'f', 1);
     QString res   = locale.toString(model->getEquivalentConductivityResistanceSum(), 'f', 3);
 
-    _modelConductivityWidth.setText(_tr("Largeur :") + " " + width + _tr(" mm"));
-    _modelConductivityThickness.setText(_tr("Epaisseur :") + " " + thick + _tr(" mm"));
-    _modelConductivityResistance.setText(_tr("Résistances superficielles :") + " " + res + _tr(" °C.m²/W"));
+    _modelConductivityWidth.setText(_tr("WidthTitle") + " " + width + _tr("LengthMM"));
+    _modelConductivityThickness.setText(_tr("ThicknessTitle") + " " + thick + _tr("LengthMM"));
+    _modelConductivityResistance.setText(_tr("SuperResistancesTitle") + " " + res + _tr("ResistancesUnits"));
 }
 
 void MainMenu::updateFrontBack()
@@ -1570,10 +1570,10 @@ void MainMenu::updateFrontBack()
 
     if (StatesManager::instance()->selectedVolumes().size()==1)
     {
-        _frontAction.setText(_tr("Avancer le volume"));
-        _backAction.setText(_tr("Reculer le volume"));
-        _frontOneShotAction.setText(_tr("Mettre le volume au premier plan"));
-        _backOneShotAction.setText(_tr("Mettre le volume à l'arrière-plan"));
+        _frontAction.setText(_tr("FrontVolume"));
+        _backAction.setText(_tr("BackVolume"));
+        _frontOneShotAction.setText(_tr("VolumeOnTop"));
+        _backOneShotAction.setText(_tr("VolumeOnBottom"));
 
         if (model->std::vector<Volume*>::size()>1)
         {
@@ -1594,10 +1594,10 @@ void MainMenu::updateFrontBack()
 
     else if (StatesManager::instance()->selectedImages().size()==1)
     {
-        _frontAction.setText(_tr("Avancer l'image"));
-        _backAction.setText(_tr("Reculer l'image"));
-        _frontOneShotAction.setText(_tr("Mettre l'image au premier plan"));
-        _backOneShotAction.setText(_tr("Mettre l'image à l'arrière-plan"));
+        _frontAction.setText(_tr("FrontImage"));
+        _backAction.setText(_tr("BackImage"));
+        _frontOneShotAction.setText(_tr("ImageOnTop"));
+        _backOneShotAction.setText(_tr("ImageOnBottom"));
 
         if (model->std::vector<Image*>::size()>1)
         {
@@ -1622,10 +1622,10 @@ void MainMenu::updateFrontBack()
         _backAction.setEnabled(false);
         _frontOneShotAction.setEnabled(false);
         _backOneShotAction.setEnabled(false);
-        _frontAction.setText(_tr("Avancer"));
-        _backAction.setText(_tr("Reculer"));
-        _frontOneShotAction.setText(_tr("Mettre au premier plan"));
-        _backOneShotAction.setText(_tr("Mettre à l'arrière-plan"));
+        _frontAction.setText(_tr("ToFront"));
+        _backAction.setText(_tr("ToBack"));
+        _frontOneShotAction.setText(_tr("OnTop"));
+        _backOneShotAction.setText(_tr("OnBottom"));
     }
 }
 
@@ -1811,11 +1811,11 @@ void MainMenu::exceptionCaught(ErrorHandler::ErrorCode code)
     LOG_INFO("Exception caught.");
 
     QMessageBox dialog;
-    dialog.setWindowTitle(_tr("Simulation impossible"));
-    QString text=_tr("Une erreur irrécupérable est survenue durant la simulation.");
+    dialog.setWindowTitle(_tr("SimulationError"));
+    QString text=_tr("SimulationErrorText");
 
     if (code!=ErrorHandler::NoError)
-        text+="<br/><br/><b>"+_tr("Détails de l'erreur :")+"</b><br/> "+QString(ErrorHandler::codeToString(code, LinguistManager::instance()->languageToString()).c_str())+".";
+        text+="<br/><br/><b>"+_tr("SimulationErrorDetails")+"</b><br/> "+QString(ErrorHandler::codeToString(code, LinguistManager::instance()->languageToString()).c_str())+".";
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
     QIcon icon(":/images/icon.png");
@@ -2031,7 +2031,7 @@ void MainMenu::setLengthCustom()
         return;
 
     bool ok;
-    double length=QInputDialog::getDouble(this, _tr("Longueur"), _tr("Longueur (en mm) :"), model->transmissionCoefficientLength()*1000.0, 0.0, 10000.0, 3, &ok);
+    double length=QInputDialog::getDouble(this, _tr("Length"), _tr("LengthMM"), model->transmissionCoefficientLength()*1000.0, 0.0, 10000.0, 3, &ok);
 
     if (ok && length>0.0)
         model->setTransmissionCoefficientLength(length/1000.0);
@@ -2050,7 +2050,7 @@ void MainMenu::setCustomWidth()
         return;
 
     bool ok;
-    double width = QInputDialog::getDouble(this, _tr("Largeur"), _tr("Largeur (en mm) :"), model->getEquivalentConductivityWidth() * 1000.0, 0.0, 10000.0, 3, &ok);
+    double width = QInputDialog::getDouble(this, _tr("Width"), _tr("WidthMM"), model->getEquivalentConductivityWidth() * 1000.0, 0.0, 10000.0, 3, &ok);
 
     if (ok && width > 0.0)
         model->setEquivalentConductivityWidth(width / 1000.0);
@@ -2068,7 +2068,7 @@ void MainMenu::setCustomThickness()
         return;
 
     bool ok;
-    double thickness = QInputDialog::getDouble(this, _tr("Epaisseur"), _tr("Epaisseur (en mm) :"), model->getEquivalentConductivityThickness() * 1000.0, 0.0, 10000.0, 3, &ok);
+    double thickness = QInputDialog::getDouble(this, _tr("Thickness"), _tr("ThicknessMM"), model->getEquivalentConductivityThickness() * 1000.0, 0.0, 10000.0, 3, &ok);
 
     if (ok && thickness > 0.0)
         model->setEquivalentConductivityThickness(thickness / 1000.0);
@@ -2086,7 +2086,7 @@ void MainMenu::setCustomResistances()
         return;
 
     bool ok;
-    double res = QInputDialog::getDouble(this, _tr("Résistances superficielles"), _tr("Résistances superficielles (en °C.m²/W) :"), model->getEquivalentConductivityResistanceSum(), 0.0, 10000.0, 3, &ok);
+    double res = QInputDialog::getDouble(this, _tr("SuperResistances"), _tr("SuperResistancesWithUnit"), model->getEquivalentConductivityResistanceSum(), 0.0, 10000.0, 3, &ok);
 
     if (ok && res >= 0.0)
         model->setEquivalentConductivityResistanceSum(res);

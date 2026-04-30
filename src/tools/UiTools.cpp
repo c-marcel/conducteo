@@ -122,3 +122,11 @@ QString UiTools::getTemplatesDir()
 #endif
 }
 
+QString UiTools::getTranslationsDir()
+{
+#ifdef WIN32
+    return QApplication::applicationDirPath() + "/translations";
+#else
+    return "/usr/share/conducteo/translations";
+#endif
+}

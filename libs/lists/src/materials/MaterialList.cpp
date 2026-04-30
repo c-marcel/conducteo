@@ -364,7 +364,7 @@ void MaterialList::addExtrusionMaterial()
 
     _extrusion = new MaterialCustomItem;
 
-    _extrusion->setTitle(_tr("Extruder la modélisation"));
+    _extrusion->setTitle(_tr("ExtrudeModel"));
     _extrusion->setExtrusion(true);
 
     _list.addTopLevelItem(_extrusion);
@@ -480,11 +480,11 @@ void MaterialList::customContextMenuRequested(const QPoint &pos)
         QMenu menu(this);
         QPoint globalPos=_list.mapToGlobal(pos);
         globalPos.setY(globalPos.y()+_headers.height());
-        QAction *add=menu.addAction(_tr("Ajouter un matériau"));
-        QAction *addCategory=menu.addAction(_tr("Ajouter une catégorie"));
+        QAction *add=menu.addAction(_tr("AddMaterial"));
+        QAction *addCategory=menu.addAction(_tr("AddCategory"));
         menu.addSeparator();
-        QAction *exportMaterialDb=menu.addAction(_tr("Exporter la bibliothèque personnelle"));
-        QAction *importMaterialDb=menu.addAction(_tr("Importer des matériaux"));
+        QAction *exportMaterialDb=menu.addAction(_tr("ExportCustomLibrary"));
+        QAction *importMaterialDb=menu.addAction(_tr("ImportMaterial"));
         QAction *choice=menu.exec(globalPos);
         if (choice==add)
             addNewMaterial(item);
@@ -519,8 +519,8 @@ void MaterialList::customContextMenuRequested(const QPoint &pos)
                 QMenu menu(this);
                 QPoint globalPos=_list.mapToGlobal(pos);
                 globalPos.setY(globalPos.y()+_headers.height());
-                QAction *remove=menu.addAction(_tr("Supprimer le matériau"));
-                QAction *modify=menu.addAction(_tr("Modifier le matériau"));
+                QAction *remove=menu.addAction(_tr("DeleteMaterial"));
+                QAction *modify=menu.addAction(_tr("UpdateMaterial"));
                 QAction *choice=menu.exec(globalPos);
                 if (choice==remove)
                 {
@@ -551,11 +551,11 @@ void MaterialList::customContextMenuRequested(const QPoint &pos)
             QMenu menu(this);
             QPoint globalPos=_list.mapToGlobal(pos);
             globalPos.setY(globalPos.y()+_headers.height());
-            QAction *add_material=menu.addAction(_tr("Ajouter un matériau"));
+            QAction *add_material=menu.addAction(_tr("AddMaterial"));
             menu.addSeparator();
-            QAction *add=menu.addAction(_tr("Ajouter une catégorie"));
-            QAction *remove=menu.addAction(_tr("Supprimer la catégorie"));
-            QAction *modify=menu.addAction(_tr("Renommer la catégorie"));
+            QAction *add=menu.addAction(_tr("AddCategory"));
+            QAction *remove=menu.addAction(_tr("DeleteCategory"));
+            QAction *modify=menu.addAction(_tr("RenameCategory"));
             QAction *choice=menu.exec(globalPos);
 
             if (choice==add)
@@ -640,11 +640,12 @@ DeleteCategory *MaterialList::createDeleteCategory(MaterialCategory *category) c
 
 void MaterialList::translate()
 {
-    _headers.setTitle(_tr("Matériaux"));
-    _lastMaterialNode.setText(0, _tr("Derniers utilisés"));
-    _userMaterialNode.setText(0, _tr("Bibliothèque personnelle"));
-    _rtMaterialNode.setText(0, _tr("Bibliothèque RE 2020"));
-    _airMaterialNode.setText(0, _tr("Cavités d'air"));
+    _headers.setTitle(_tr("MaterialListTitle"));
+    _lastMaterialNode.setText(0, _tr("LastUsed"));
+    _userMaterialNode.setText(0, _tr("CustomListTitle"));
+    _rtMaterialNode.setText(0, _tr("ThermRegTitle"));
+    _airMaterialNode.setText(0, _tr("AirCavities"));
+    _extrusion->setTitle(_tr("ExtrudeModel"));
 }
 
 void MaterialList::applyTheme()
@@ -764,8 +765,8 @@ void MaterialList::expandUserChildren(QTreeWidgetItem *root_node, QTreeWidgetIte
 
 void MaterialList::exportUserMaterialDatabase()
 {
-    QFileDialog fileDialog(this, _tr("Exporter des matériaux"));
-    fileDialog.setNameFilter(_tr("Matériaux conducteö (*.db)"));
+    QFileDialog fileDialog(this, _tr("ExportMaterials"));
+    fileDialog.setNameFilter(_tr("c2dMaterialsFilePattern"));
     fileDialog.setDefaultSuffix("db");
     fileDialog.setAcceptMode(QFileDialog::AcceptSave);
     fileDialog.setFileMode(QFileDialog::AnyFile);
@@ -785,8 +786,8 @@ void MaterialList::exportUserMaterialDatabase()
 
 void MaterialList::importMaterials()
 {
-    QFileDialog fileDialog(this, _tr("Importer des matériaux"));
-    fileDialog.setNameFilter(_tr("Matériaux conducteö (*.db)"));
+    QFileDialog fileDialog(this, _tr("ImportMaterial"));
+    fileDialog.setNameFilter(_tr("c2dMaterialsFilePattern"));
     fileDialog.setDefaultSuffix("db");
     fileDialog.setAcceptMode(QFileDialog::AcceptOpen);
     fileDialog.setFileMode(QFileDialog::ExistingFile);
@@ -1111,7 +1112,7 @@ void MaterialList::categoryAdded(const std::string &id, const std::string &paren
     new_cat->setId(id.c_str());
     QString title=name.c_str();
     if (title.isEmpty())
-        title=_tr("Nouvelle catégorie");
+        title=_tr("NewCategory");
     new_cat->setTitle(title);
     sortListRequested();
     saveUserDatabase();

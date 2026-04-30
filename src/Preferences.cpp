@@ -861,30 +861,30 @@ void Preferences::dxfCategoryChanged(int idx)
 void Preferences::translate()
 {
     catchUserInputs=false;
-    setWindowTitle(_tr("Préférences"));
-    label->setText(_tr("Langue de l'interface :"));
-    label_compute_on_quit->setText(_tr("Calcul de la modélisation :"));
-    checkBox_compute_on_quit->setText(_tr("proposer lors de la fermeture"));
-    tabWidget->setTabText(tabWidget->indexOf(tab), _tr("Général"));
-    label_5->setText(_tr("Modèles de rapport DocX :"));
-    pushButton_2->setText(_tr("Ajouter"));
+    setWindowTitle(_tr("Settings"));
+    label->setText(_tr("SettingsLanguage"));
+    label_compute_on_quit->setText(_tr("ComputeSimulation"));
+    checkBox_compute_on_quit->setText(_tr("ProposeAtExit"));
+    tabWidget->setTabText(tabWidget->indexOf(tab), _tr("General"));
+    label_5->setText(_tr("DocxTemplates"));
+    pushButton_2->setText(_tr("Add"));
 
-    label_6->setText(_tr("Contenu des images exportées :"));
-    label_7->setText(_tr("Modélisation avec pont thermique :"));
-    label_11->setText(_tr("Modélisation sans pont thermique :"));
-    label_12->setText(_tr("Champ de températures :"));
-    label_13->setText(_tr("Ambiances thermiques :"));
+    label_6->setText(_tr("ExportedImagesContent"));
+    label_7->setText(_tr("WithTBModel"));
+    label_11->setText(_tr("WoTBModel"));
+    label_12->setText(_tr("TempField"));
+    label_13->setText(_tr("ThermEnvs"));
     label_8->setText(_tr("Annotations"));
     label_9->setText(_tr("Images"));
     label_10->setText(_tr("Dxf"));
-	label_dxf_materials->setText(_tr("Matériaux DXF :"));
+	label_dxf_materials->setText(_tr("DxfMaterials"));
 
-    tabWidget->setTabText(tabWidget->indexOf(tab_2), _tr("Note de calcul"));
-    label_c1->setText(_tr("Importer les matériaux dans :"));
+    tabWidget->setTabText(tabWidget->indexOf(tab_2), _tr("ComputationReport"));
+    label_c1->setText(_tr("ImportMaterialsInto"));
 
     comboBox->clear();
-    comboBox->addItem(_tr("Français"), LinguistManager::French);
-    comboBox->addItem(_tr("Anglais"), LinguistManager::English);
+    comboBox->addItem("Français", LinguistManager::French);
+    comboBox->addItem("English", LinguistManager::English);
 
     catchUserInputs=true;
 }
@@ -1018,7 +1018,7 @@ void Preferences::installDocxTemplateRequested()
 {
     QString path=LocalData::instance()->getParameter("last-docx-path").c_str();
 
-    QString filename=QFileDialog::getOpenFileName(this, _tr("Ajouter un modèle de rapport DocX"), path, _tr("document DocX (*.docx)") );
+    QString filename=QFileDialog::getOpenFileName(this, _tr("AddDocxTemplate"), path, _tr("DocxPattern") );
     if (filename.isEmpty())
         return;
 
@@ -1057,8 +1057,8 @@ void Preferences::customContextMenuRequested(const QPoint &pos)
 
     QMenu menu(this);
     QPoint globalPos=listWidget->mapToGlobal(pos);
-    QAction *modify=menu.addAction(_tr("Modifier"));
-    QAction *remove=menu.addAction(_tr("Supprimer"));
+    QAction *modify=menu.addAction(_tr("Modify"));
+    QAction *remove=menu.addAction(_tr("Delete"));
     QAction *choice=menu.exec(globalPos);
 
     if (choice==modify)

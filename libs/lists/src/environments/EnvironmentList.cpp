@@ -66,7 +66,7 @@ EnvironmentList::EnvironmentList(QWidget *parent):
 
     // Add environments.
     EnvironmentCustomItem *environment0=new EnvironmentCustomItem;
-    environment0->setTitle(_tr("Ambiance non définie"));
+    environment0->setTitle(_tr("ThermEnvNotDefined"));
     environment0->setId("");
     environment0->setColor(Qt::black);
     _environmentsNode.addChild(environment0);
@@ -126,8 +126,8 @@ void EnvironmentList::currentItemChanged(QTreeWidgetItem *item, QTreeWidgetItem 
 
 void EnvironmentList::translate()
 {
-    _headers.setTitle(_tr("Ambiances thermiques"));
-    _environmentsNode.setText(0, _tr("Ambiances thermiques"));
+    _headers.setTitle(_tr("ThermEnvTitle"));
+    _environmentsNode.setText(0, _tr("ThermEnvTitle"));
     update();
 }
 
@@ -203,7 +203,7 @@ void EnvironmentList::customContextMenuRequested(const QPoint &pos)
     QPoint globalPos=_list.mapToGlobal(pos);
     globalPos.setY(globalPos.y() + _headers.height());
 
-    QAction *rename = menu.addAction(_tr("Renommer"));
+    QAction *rename = menu.addAction(_tr("Rename"));
     QAction *choice = menu.exec(globalPos);
 
     if (choice != rename)
@@ -211,7 +211,7 @@ void EnvironmentList::customContextMenuRequested(const QPoint &pos)
 
     QString title = envItem->title();
 
-    QString text = QInputDialog::getText(this, _tr("Renommer une ambiance thermique"), _tr("Nom :"), QLineEdit::Normal, title);
+    QString text = QInputDialog::getText(this, _tr("RenameThermEnv"), _tr("NameTitle"), QLineEdit::Normal, title);
     if (text.isEmpty())
         return;
 

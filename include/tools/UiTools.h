@@ -31,6 +31,7 @@ public:
     static QString getDocumentationDir();
     static QString getExamplesDir();
     static QString getTemplatesDir();
+    static QString getTranslationsDir();
 };
 
 #endif

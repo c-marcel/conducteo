@@ -153,12 +153,12 @@ void VolumeProperties::paintEvent(QPaintEvent *event)
 
 void VolumeProperties::translate()
 {
-    _materialTitle.setText(_tr("Matériau"));
-    _meshTitle.setText(_tr("Maillage"));
-    _geometryTitle.setText(_tr("Géométrie"));
+    _materialTitle.setText(_tr("Material"));
+    _meshTitle.setText(_tr("Mesh"));
+    _geometryTitle.setText(_tr("Geometry"));
     _title=_tr("Volume");
     if (!_material.isVisible())
-        _title=_tr("Maillages");
+        _title=_tr("Meshes");
     repaint();
 }
 

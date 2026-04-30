@@ -157,18 +157,18 @@ void ButtonTabs::meshButtonClicked()
 
 void ButtonTabs::translate()
 {
-    _modelButton.setText(_tr("Modélisation"));
-    _1DModelButton.setText(_tr("Modélisation sans pont thermique"));
-    _resultsButton.setTitle(_tr("Résultats"));
-    _reportButton.setText(_tr("Note de calcul"));
-    _meshButton.setText(_tr("Maillage"));
+    _modelButton.setText(_tr("ModelButton"));
+    _1DModelButton.setText(_tr("Model1DButton"));
+    _resultsButton.setTitle(_tr("ResultsButton"));
+    _reportButton.setText(_tr("ReportButton"));
+    _meshButton.setText(_tr("MeshButton"));
 
-    _display2d->setText(_tr("Modélisation avec pont thermique"));
-    _display1d->setText(_tr("Modélisation sans pont thermique"));
+    _display2d->setText(_tr("Display2DText"));
+    _display1d->setText(_tr("Display1DText"));
 
-    _glaserTemperatures->setText(_tr("Températures"));
-    _glaserHumidity->setText(_tr("Taux d'humidité"));
-    _glaserCondensation->setText(_tr("Risques de condensation"));
+    _glaserTemperatures->setText(_tr("GlaserTemperatures"));
+    _glaserHumidity->setText(_tr("GlaserHumidity"));
+    _glaserCondensation->setText(_tr("GlaserCondensation"));
 }
 
 void ButtonTabs::applyTheme()

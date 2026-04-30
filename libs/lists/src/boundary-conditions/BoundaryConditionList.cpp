@@ -106,7 +106,7 @@ void BoundaryConditionList::customContextMenuRequested(const QPoint &pos)
         QMenu menu(this);
         QPoint globalPos=_list.mapToGlobal(pos);
         globalPos.setY(globalPos.y()+_headers.height());
-        QAction *add=menu.addAction(_tr("Ajouter une condition à la limite"));
+        QAction *add=menu.addAction(_tr("AddBC"));
         QAction *choice=menu.exec(globalPos);
         if (choice==add)
             addNewBoundaryCondition(&_userBCNode);
@@ -118,8 +118,8 @@ void BoundaryConditionList::customContextMenuRequested(const QPoint &pos)
         QMenu menu(this);
         QPoint globalPos=_list.mapToGlobal(pos);
         globalPos.setY(globalPos.y()+_headers.height());
-        QAction *remove=menu.addAction(_tr("Supprimer la condition à la limite"));
-        QAction *modify=menu.addAction(_tr("Modifier la condition à la limite"));
+        QAction *remove=menu.addAction(_tr("DeleteBC"));
+        QAction *modify=menu.addAction(_tr("UpdateBC"));
         QAction *choice=menu.exec(globalPos);
         if (choice==remove)
         {
@@ -148,7 +148,7 @@ void BoundaryConditionList::customContextMenuRequested(const QPoint &pos)
         QMenu menu(this);
         QPoint globalPos=_list.mapToGlobal(pos);
         globalPos.setY(globalPos.y()+_headers.height());
-        QAction *modify=menu.addAction(_tr("Déplier la condition à la limite"));
+        QAction *modify=menu.addAction(_tr("ExpandBC"));
         QAction *choice=menu.exec(globalPos);
         
         if (choice==modify)
@@ -191,9 +191,9 @@ void BoundaryConditionList::expandChildren(QTreeWidgetItem &root_node, QTreeWidg
 
 void BoundaryConditionList::translate()
 {
-    _headers.setTitle(_tr("Conditions limites"));
-    _standardBCNode.setText(0, _tr("Bibliothèque standard"));
-    _userBCNode.setText(0, _tr("Bibliothèque personnelle"));
+    _headers.setTitle(_tr("BCListTitle"));
+    _standardBCNode.setText(0, _tr("StdListTitle"));
+    _userBCNode.setText(0, _tr("CustomListTitle"));
 }
 
 void BoundaryConditionList::applyTheme()

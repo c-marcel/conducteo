@@ -62,11 +62,11 @@ RectangleGeometricalProperties::RectangleGeometricalProperties(QWidget *parent):
     item_1->setFlags(Qt::ItemIsEnabled);
     setItem(1, 0, item_1);
 
-    QTableWidgetItem *item_2=new QTableWidgetItem(_tr("Largeur"));
+    QTableWidgetItem *item_2=new QTableWidgetItem(_tr("Width"));
     item_2->setFlags(Qt::ItemIsEnabled);
     setItem(2, 0, item_2);
 
-    QTableWidgetItem *item_3=new QTableWidgetItem(_tr("Hauteur"));
+    QTableWidgetItem *item_3=new QTableWidgetItem(_tr("Height"));
     item_3->setFlags(Qt::ItemIsEnabled);
     setItem(3, 0, item_3);
 
@@ -177,8 +177,8 @@ void RectangleGeometricalProperties::onCellChanged(int row, int column)
 void RectangleGeometricalProperties::translate()
 {
     _catchUserInputs=false;
-    item(2, 0)->setText(_tr("Largeur"));
-    item(3, 0)->setText(_tr("Hauteur"));
+    item(2, 0)->setText(_tr("Width"));
+    item(3, 0)->setText(_tr("Height"));
     _catchUserInputs=true;
     update();
 }

@@ -205,7 +205,7 @@ void BoundaryConditionProperties::cellDoubleClicked(int row, int column)
 
         QColorDialog dialog(this);
         dialog.setCurrentColor(currentColor);
-        dialog.setWindowTitle(_tr("Couleur de la condition à la limite"));
+        dialog.setWindowTitle(_tr("BCColor"));
         connect(&dialog,
                 &QColorDialog::currentColorChanged,
                 this,
@@ -283,7 +283,7 @@ void BoundaryConditionProperties::createGrid()
     setRowHeight(4, ROW_HEIGHT);
 
     int idx=0;
-    QTableWidgetItem *item_0=new QTableWidgetItem(_tr("Nom"));
+    QTableWidgetItem *item_0=new QTableWidgetItem(_tr("Name"));
     item_0->setFlags(Qt::ItemIsEnabled);
     setItem(idx, 0, item_0);
 
@@ -296,7 +296,7 @@ void BoundaryConditionProperties::createGrid()
     QTableWidgetItem *item_1=new QTableWidgetItem;
 
     if (_resistance > 0.0)
-        item_1->setText(_tr("Température"));
+        item_1->setText(_tr("Temperature"));
 
     item_1->setFlags(Qt::ItemIsEnabled);
     setItem(idx, 0, item_1);
@@ -309,7 +309,7 @@ void BoundaryConditionProperties::createGrid()
     setItem(idx, 1, item_1);
     idx++;
 
-    QTableWidgetItem *item_2=new QTableWidgetItem(_tr("Résistance"));
+    QTableWidgetItem *item_2=new QTableWidgetItem(_tr("Resistance"));
     item_2->setFlags(Qt::ItemIsEnabled);
     setItem(idx, 0, item_2);
 
@@ -324,7 +324,7 @@ void BoundaryConditionProperties::createGrid()
     QTableWidgetItem *item_3=new QTableWidgetItem();
 
     if (_resistance > 0.0)
-        item_3->setText(_tr("Température"));
+        item_3->setText(_tr("Temperature"));
 
     item_3->setFlags(Qt::ItemIsEnabled);
     setItem(idx, 0, item_3);
@@ -337,7 +337,7 @@ void BoundaryConditionProperties::createGrid()
     setItem(idx, 1, item_3);
     idx++;
     
-    QTableWidgetItem *item_4=new QTableWidgetItem(_tr("Couleur"));
+    QTableWidgetItem *item_4=new QTableWidgetItem(_tr("Color"));
     item_4->setFlags(Qt::ItemIsEnabled);
     setItem(idx, 0, item_4);
 
@@ -370,21 +370,21 @@ void BoundaryConditionProperties::translate()
     else
         item(0, 1)->setText(_name);
 
-    item(0, 0)->setText(_tr("Nom"));
+    item(0, 0)->setText(_tr("Name"));
 
     if (_resistance > 0.0)
-        item(1, 0)->setText(_tr("Température"));
+        item(1, 0)->setText(_tr("Temperature"));
     else
         item(1, 0)->setText("");
 
-    item(2, 0)->setText(_tr("Résistance"));
+    item(2, 0)->setText(_tr("Resistance"));
 
     if (useCondensation && _resistance > 0.0)
-        item(3, 0)->setText(_tr("Humidité"));
+        item(3, 0)->setText(_tr("Humidity"));
     else
         item(3, 0)->setText("");
 
-    item(4, 0)->setText(_tr("Couleur"));
+    item(4, 0)->setText(_tr("Color"));
 
     update();
 }

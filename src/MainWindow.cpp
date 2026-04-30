@@ -308,7 +308,7 @@ void MainWindow::importDxfContent(const std::string &filename)
     {
         StatesManager::instance()->deleteCurrentModel();
         StatesManager::instance()->createModel();
-        displayErrorMessage(_tr("Erreur d'import DXF"), _tr("Aucune catégorie de matériaux n'est définie pour l'import DXF !"), 0);
+        displayErrorMessage(_tr("DxfImportError"), _tr("NoMaterialCategoryForDxf"), 0);
 
         return;
     }
@@ -320,7 +320,7 @@ void MainWindow::importDxfContent(const std::string &filename)
     {
         StatesManager::instance()->deleteCurrentModel();
         StatesManager::instance()->createModel();
-        displayErrorMessage(_tr("Erreur d'import DXF"), _tr("La catégorie des matériaux d'import DXF est vide !"), 0);
+        displayErrorMessage(_tr("DxfImportError"), _tr("EmptyMatCatForDxf"), 0);
 
         return;
     }
@@ -365,7 +365,7 @@ void MainWindow::importDxfContent(const std::string &filename)
     {
         StatesManager::instance()->deleteCurrentModel();
         StatesManager::instance()->createModel();
-        displayErrorMessage(_tr("Erreur d'import DXF"), _tr("Le fichier DXF ne contient aucun calque !"), 0);
+        displayErrorMessage(_tr("DxfImportError"), _tr("DxfHasNoLayer"), 0);
 
         return;
     }
@@ -442,7 +442,7 @@ void MainWindow::importDxfContent(const std::string &filename)
     {
         StatesManager::instance()->deleteCurrentModel();
         StatesManager::instance()->createModel();
-        displayErrorMessage(_tr("Erreur d'import DXF"), _tr("Le fichier DXF ne contient aucune Polyligne fermée ne se recoupant pas elle-même !"), 0);
+        displayErrorMessage(_tr("DxfImportError"), _tr("DxfHasNoValidPolyline"), 0);
 
         return;
     }
@@ -501,7 +501,7 @@ void MainWindow::loadModel(const std::string &filename)
 
             StatesManager::instance()->deleteCurrentModel();
             StatesManager::instance()->createModel();
-            displayErrorMessage(_tr("Fichier incorrect"), _tr("Le fichier sélectionné comporte des erreurs qui empêchent son ouverture."), &error);
+            displayErrorMessage(_tr("BadFile"), _tr("BadFileDetails"), &error);
         }
         else
         {
@@ -525,7 +525,7 @@ void MainWindow::displayErrorMessage(const QString &title, const QString &messag
     QString text=message;
 
     if (error && error->code()!=ErrorHandler::NoError)
-        text+="<br/><br/><b>"+_tr("Détails de l'erreur :")+"</b><br/> "+QString(ErrorHandler::codeToString(error->code(), LinguistManager::instance()->languageToString()).c_str())+".";
+        text+="<br/><br/><b>"+_tr("DetailsError")+"</b><br/> "+QString(ErrorHandler::codeToString(error->code(), LinguistManager::instance()->languageToString()).c_str())+".";
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
     QIcon icon(":/images/icon.png");
@@ -537,17 +537,17 @@ void MainWindow::displayErrorMessage(const QString &title, const QString &messag
 void MainWindow::aboutRequested()
 {
     QMessageBox dialog;
-    dialog.setWindowTitle(_tr("A propos de conducteö"));
-    QString text="<b>conducteö version "+UiTools::getSoftwareVersion()+"</b><br/><br/>";
-    text+=_tr("Logiciel de simulation numérique des ponts thermiques linéiques.")+"<br/><br/>";
-    text+=_tr("<b>Référentiel normatif :</b>")+"<br/><br/>";
-    text+="&nbsp;&nbsp;&nbsp;• "+_tr("norme <b>EN 10211:2018</b> - simulation numérique des ponts thermiques")+"<br/>";
-    text+="&nbsp;&nbsp;&nbsp;• "+_tr("norme <b>EN 10077-2:2012</b> - simulation numérique des menuiseries")+"<br/>";
-    text+="&nbsp;&nbsp;&nbsp;• "+_tr("norme <b>EN 13370:2007</b> - transfert de chaleur par le sol")+"<br/>";
-    text+="&nbsp;&nbsp;&nbsp;• "+_tr("norme <b>EN 6946:2007</b> - coefficients de transmission thermique")+"<br/>";
-    text+="&nbsp;&nbsp;&nbsp;• "+_tr("<b>RT 2005, 2012 et RE 2020</b> - hypothèses complémentaires de modélisation")+"<br/><br/>";
-    text+=_tr("<b>Auteur :</b> Clément MARCEL<br/>");
-    text+=_tr("<b>Site internet :</b> <a href=\"https://conducteo.sourceforge.io\">https://conducteo.sourceforge.io</a><br/>");
+    dialog.setWindowTitle(_tr("AboutSoftware"));
+    QString text="<b>conducteo version "+UiTools::getSoftwareVersion()+"</b><br/><br/>";
+    text+=_tr("AboutText1")+"<br/><br/>";
+    text+=_tr("AboutText2")+"<br/><br/>";
+    text+="&nbsp;&nbsp;&nbsp;• "+_tr("AboutText3")+"<br/>";
+    text+="&nbsp;&nbsp;&nbsp;• "+_tr("AboutText4")+"<br/>";
+    text+="&nbsp;&nbsp;&nbsp;• "+_tr("AboutText5")+"<br/>";
+    text+="&nbsp;&nbsp;&nbsp;• "+_tr("AboutText6")+"<br/>";
+    text+="&nbsp;&nbsp;&nbsp;• "+_tr("AboutText7")+"<br/><br/>";
+    text+=_tr("AboutText8");
+    text+=_tr("AboutText9");
     text+="<br/>Copyright 2009-2026";
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
@@ -559,7 +559,7 @@ void MainWindow::aboutRequested()
 
 void MainWindow::updateWindowTitle()
 {
-    QString title = _tr("conducteö - calcul détaillé des ponts thermiques linéiques - version ") + UiTools::getSoftwareVersion();
+    QString title = _tr("SoftwareTitle") + UiTools::getSoftwareVersion();
     std::string filename=StatesManager::instance()->modelFilename();
     if (!filename.empty())
     {
@@ -612,9 +612,9 @@ void MainWindow::openRequested()
     // Get last used path.
     QString path=LocalData::instance()->getParameter("last-path").c_str();
 
-    QString filetype="Fichiers supportés (*.c2d *.THM *.dxf);;conducteö (*.c2d);;Therm 7.3 (*.THM);;Fichier DXF (*.dxf)";
+    QString filetype=_tr("OpenModelFilePattern");
 
-    QString filename=QFileDialog::getOpenFileName(this, _tr("Ouvrir une modélisation"), path, filetype);
+    QString filename=QFileDialog::getOpenFileName(this, _tr("OpenModel"), path, filetype);
     if (filename.isEmpty())
         return;
 
@@ -631,12 +631,12 @@ bool MainWindow::userAcceptToStopSimulation()
         return true;
 
     QMessageBox dialog;
-    dialog.setWindowTitle(_tr("Simulation en cours"));
-    dialog.setText(_tr("Souhaitez-vous annuler la simulation ?"));
+    dialog.setWindowTitle(_tr("ComputationInProgress"));
+    dialog.setText(_tr("ComputationStop"));
     dialog.setWindowModality(Qt::ApplicationModal);
     dialog.setIcon(QMessageBox::Question);
-    QAbstractButton *yes=dialog.addButton(_tr("Oui"), QMessageBox::YesRole);
-    QAbstractButton *no=dialog.addButton(_tr("Non"), QMessageBox::NoRole);
+    QAbstractButton *yes=dialog.addButton(_tr("Yes"), QMessageBox::YesRole);
+    QAbstractButton *no=dialog.addButton(_tr("No"), QMessageBox::NoRole);
     QIcon icon(":/images/icon.png");
     dialog.setWindowIcon(icon);
     dialog.exec();
@@ -677,12 +677,12 @@ bool MainWindow::userWantToRecalculateModel()
         return false;
 
     QMessageBox dialog;
-    dialog.setWindowTitle(_tr("Modélisation non calculée"));
-    dialog.setText(_tr("Souhaitez-vous recalculer la modélisation ?"));
+    dialog.setWindowTitle(_tr("NotComputedModel"));
+    dialog.setText(_tr("RecomputeModel"));
     dialog.setWindowModality(Qt::ApplicationModal);
     dialog.setIcon(QMessageBox::Question);
-    QAbstractButton *yes=dialog.addButton(_tr("Oui"), QMessageBox::YesRole);
-    QAbstractButton *no=dialog.addButton(_tr("Non"), QMessageBox::NoRole);
+    QAbstractButton *yes=dialog.addButton(_tr("Yes"), QMessageBox::YesRole);
+    QAbstractButton *no=dialog.addButton(_tr("No"), QMessageBox::NoRole);
     QIcon icon(":/images/icon.png");
     dialog.setWindowIcon(icon);
     dialog.exec();
@@ -703,13 +703,13 @@ bool MainWindow::userAcceptToCloseCurrentModel()
         return true;
 
     QMessageBox dialog;
-    dialog.setWindowTitle(_tr("Modélisation non enregistrée"));
-    dialog.setText(_tr("Souhaitez-vous enregistrer la modélisation ?"));
+    dialog.setWindowTitle(_tr("UnsavedModel"));
+    dialog.setText(_tr("SaveModel"));
     dialog.setWindowModality(Qt::ApplicationModal);
     dialog.setIcon(QMessageBox::Question);
-    QAbstractButton *yes=dialog.addButton(_tr("Oui"), QMessageBox::YesRole);
-    QAbstractButton *no=dialog.addButton(_tr("Non"), QMessageBox::NoRole);
-    QAbstractButton *cancel=dialog.addButton(_tr("Annuler"), QMessageBox::RejectRole);
+    QAbstractButton *yes=dialog.addButton(_tr("Yes"), QMessageBox::YesRole);
+    QAbstractButton *no=dialog.addButton(_tr("No"), QMessageBox::NoRole);
+    QAbstractButton *cancel=dialog.addButton(_tr("Cancel"), QMessageBox::RejectRole);
     QIcon icon(":/images/icon.png");
     dialog.setWindowIcon(icon);
     dialog.exec();
@@ -741,7 +741,7 @@ void MainWindow::saveRequested()
     {
         LOG_INFO("Error while saving model. Error code: " << error.code());
         StatesManager::instance()->deleteCurrentModel();
-        displayErrorMessage(_tr("Erreur d'enregistrement"), _tr("Une erreur dans la modélisation empêche son enregistrement."), &error);
+        displayErrorMessage(_tr("SaveError"), _tr("SaveErrorDetails"), &error);
         return;
     }
 
@@ -764,8 +764,8 @@ void MainWindow::saveAsRequested()
     // Get last used path.
     QString path=LocalData::instance()->getParameter("last-path").c_str();
 
-    QFileDialog fileDialog(this, _tr("Enregistrer sous..."));
-    fileDialog.setNameFilter("conducteö (*.c2d)");
+    QFileDialog fileDialog(this, _tr("SaveAs"));
+    fileDialog.setNameFilter("conducteo (*.c2d)");
     fileDialog.setDefaultSuffix("c2d");
     fileDialog.setAcceptMode(QFileDialog::AcceptSave);
     fileDialog.setFileMode(QFileDialog::AnyFile);
@@ -902,14 +902,14 @@ void MainWindow::validateSoftware()
 void MainWindow::showQuickStart()
 {
     QMessageBox dialog(this);
-    dialog.setWindowTitle(_tr("Guide de démarrage"));
-    dialog.setText(_tr("C'est votre premier démarrage de conducteö.<br/><br/>Souhaitez-vous afficher le guide de démarrage rapide pour modéliser votre premier pont thermique en moins de 10 minutes ?"));
+    dialog.setWindowTitle(_tr("FirstLaunch"));
+    dialog.setText(_tr("FirstLaunchQuestion"));
 
-    QPushButton *yes = dialog.addButton(_tr("Oui"), QMessageBox::AcceptRole);
-    QPushButton *no  = dialog.addButton(_tr("Non"), QMessageBox::RejectRole);
+    QPushButton *yes = dialog.addButton(_tr("Yes"), QMessageBox::AcceptRole);
+    QPushButton *no  = dialog.addButton(_tr("No"), QMessageBox::RejectRole);
 
     QCheckBox *checkbox = new QCheckBox;
-    checkbox->setText(_tr("ne plus me proposer à l'avenir"));
+    checkbox->setText(_tr("FirstLaunchQuestionHide"));
     dialog.setCheckBox(checkbox);
 
     int choice = dialog.exec();

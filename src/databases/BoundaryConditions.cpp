@@ -20,12 +20,18 @@
 #include <databases/BoundaryConditionsObserver.h>
 #include <physics/BoundaryCondition.h>
 
+#define ExteriorBoundaryConditionIdentifier                     "BEB3A51D-800D-42A4-94E1-CA053B844276"
+#define InteriorHorizontalBoundaryConditionIdentifier           "9D7B0B22-6578-42EE-9989-FAF7C0B1B37B"
+#define InteriorReducedHorizontalBoundaryConditionIdentifier    "9DRB0B67-6578-42EE-CAF1-FAF7C0B1B37B"
+#define InteriorVerticalAscendingBoundaryConditionIdentifier    "B33C4F4E-2749-4A14-A022-FCEB5F4A713C"
+#define InteriorVerticalDescendingBoundaryConditionIdentifier   "10F097B9-6864-42CC-9E9B-C7BBD07371B0"
+
 BoundaryConditions::BoundaryConditions():
     _informObservers(true)
 {
     // Create default boundary conditions.
     BoundaryCondition *bc0=new BoundaryCondition;
-    bc0->setName("Adiabatique");
+    bc0->setName(_tr("Adiabatic").toStdString());
     bc0->setResistance(InfiniteResistance, 0);
     bc0->setTemperature(0.0);
     bc0->setColor(0, 0, 0);
@@ -33,44 +39,65 @@ BoundaryConditions::BoundaryConditions():
     _standard.push_back(bc0);
 
     BoundaryCondition *bc1=new BoundaryCondition;
-    bc1->setName("Extérieur");
+    bc1->setName(_tr("Exterior").toStdString());
     bc1->setResistance(0.04, 0);
     bc1->setTemperature(0.0);
     bc1->setColor(0, 0, 255);
-    bc1->setId("BEB3A51D-800D-42A4-94E1-CA053B844276");
+    bc1->setId(ExteriorBoundaryConditionIdentifier);
     _standard.push_back(bc1);
 
     BoundaryCondition *bc2=new BoundaryCondition;
-    bc2->setName("Intérieur (flux horizontal)");
+    bc2->setName(_tr("InteriorHorizFlux").toStdString());
     bc2->setResistance(0.13, 0);
     bc2->setTemperature(20.0);
     bc2->setColor(223, 109, 20);
-    bc2->setId("9D7B0B22-6578-42EE-9989-FAF7C0B1B37B");
+    bc2->setId(InteriorHorizontalBoundaryConditionIdentifier);
     _standard.push_back(bc2);
 
     BoundaryCondition *bc3=new BoundaryCondition;
-    bc3->setName("Intérieur (flux horizontal réduit)");
+    bc3->setName(_tr("InteriorHorizReducedFlux").toStdString());
     bc3->setResistance(0.20, 0);
     bc3->setTemperature(20.0);
     bc3->setColor(246, 229, 8);
-    bc3->setId("9DRB0B67-6578-42EE-CAF1-FAF7C0B1B37B");
+    bc3->setId(InteriorReducedHorizontalBoundaryConditionIdentifier);
     _standard.push_back(bc3);
 
     BoundaryCondition *bc4=new BoundaryCondition;
-    bc4->setName("Intérieur (flux descendant)");
+    bc4->setName(_tr("IntVertAscFlux").toStdString());
     bc4->setResistance(0.17, 0);
     bc4->setTemperature(20.0);
     bc4->setColor(225, 206, 154);
-    bc4->setId("B33C4F4E-2749-4A14-A022-FCEB5F4A713C");
+    bc4->setId(InteriorVerticalAscendingBoundaryConditionIdentifier);
     _standard.push_back(bc4);
 
     BoundaryCondition *bc5=new BoundaryCondition;
-    bc5->setName("Intérieur (flux ascendant)");
+    bc5->setName(_tr("IntVertDescFlux").toStdString());
     bc5->setResistance(0.10, 0);
     bc5->setTemperature(20.0);
     bc5->setColor(115, 8, 0);
-    bc5->setId("10F097B9-6864-42CC-9E9B-C7BBD07371B0");
+    bc5->setId(InteriorVerticalDescendingBoundaryConditionIdentifier);
     _standard.push_back(bc5);
+}
+
+void BoundaryConditions::translate()
+{
+    BoundaryCondition* bc0 = bcFromId("");
+    bc0->setName(_tr("Adiabatic").toStdString());
+
+    BoundaryCondition* bc1 = bcFromId(ExteriorBoundaryConditionIdentifier);
+    bc1->setName(_tr("Exterior").toStdString());
+
+    BoundaryCondition* bc2 = bcFromId(InteriorHorizontalBoundaryConditionIdentifier);
+    bc2->setName(_tr("InteriorHorizFlux").toStdString());
+
+    BoundaryCondition* bc3 = bcFromId(InteriorReducedHorizontalBoundaryConditionIdentifier);
+    bc3->setName(_tr("InteriorHorizReducedFlux").toStdString());
+
+    BoundaryCondition* bc4 = bcFromId(InteriorVerticalAscendingBoundaryConditionIdentifier);
+    bc4->setName(_tr("IntVertAscFlux").toStdString());
+
+    BoundaryCondition* bc5 = bcFromId(InteriorVerticalDescendingBoundaryConditionIdentifier);
+    bc5->setName(_tr("IntVertDescFlux").toStdString());
 }
 
 BoundaryConditions::~BoundaryConditions()

@@ -69,6 +69,19 @@ if (WIN32)
     endif()
 endif()
 
+# nlohmann-json.
+if (UNIX AND NOT APPLE)
+    find_package(nlohmann_json REQUIRED)
+else()
+    set(JSON_ROOT_DIRECTORY "" CACHE PATH "Path to nlohmann-json")
+    
+    if (NOT JSON_ROOT_DIRECTORY)
+        message(FATAL_ERROR "JSON_ROOT_DIRECTORY is not set. Please set it to your nlohmann-json path.")
+    endif()
+    
+    include_directories("${JSON_ROOT_DIRECTORY}")
+endif()
+
 # Software version.
 file(READ "${CMAKE_SOURCE_DIR}/VERSION" VERSION_STRING)
 string(STRIP "${VERSION_STRING}" VERSION_STRING)
@@ -164,7 +177,7 @@ if (WIN32)
 endif()
 
 if (UNIX AND NOT APPLE)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml Eigen3::Eigen ${DXFLIB_LIBRARY})
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml Eigen3::Eigen ${DXFLIB_LIBRARY} nlohmann_json::nlohmann_json)
 endif()
 
 if (APPLE)

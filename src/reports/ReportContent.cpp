@@ -331,8 +331,8 @@ void ReportContent::onPdfExport()
 
 	std::string modelFilename = StatesManager::instance()->modelFilename();
 
-    QFileDialog fileDialog(this, _tr("Exporter un rapport PDF"));
-    fileDialog.setNameFilter(_tr("document PDF (*.pdf)"));
+    QFileDialog fileDialog(this, _tr("ExportPdfReport"));
+    fileDialog.setNameFilter(_tr("PdfPattern"));
     fileDialog.setDefaultSuffix("pdf");
     fileDialog.setAcceptMode(QFileDialog::AcceptSave);
     fileDialog.setFileMode(QFileDialog::AnyFile);
@@ -440,19 +440,19 @@ void ReportContent::drawReport(QPainter *painter, int width)
     painter->setPen(Qt::black);
     painter->setFont(title_1_font);
     QRect title_rec(_margins, _margins, width-2*_margins, 40);
-    painter->drawText(title_rec, _tr("Note de calcul"), centered_text);
+    painter->drawText(title_rec, _tr("ComputationReport"), centered_text);
     
-    QString subtitle = _tr("pont thermique linéique");
+    QString subtitle = _tr("ReportType1");
     
     Model *model = StatesManager::instance()->currentModel();
     if (model && model->computationType() == Model::Flux)
-        subtitle = _tr("flux de chaleur");
+        subtitle = _tr("ReportType2");
     else if (model && model->computationType() == Model::ThermalTransmission)
-        subtitle = _tr("transmission thermique");
+        subtitle = _tr("ReportType3");
     else if (model && model->computationType() == Model::EquivalentThermalConductivity)
-        subtitle = _tr("conductivité thermique équivalente");
+        subtitle = _tr("ReportType4");
     else if (model && model->computationType() == Model::GlaserCondensation)
-        subtitle = _tr("risques de condensation");
+        subtitle = _tr("ReportType5");
 
     QRect subtitle_rec(_margins, _margins+title_rec.height(), width-2*_margins, 40);
     painter->drawText(subtitle_rec, subtitle, centered_text);
@@ -462,31 +462,31 @@ void ReportContent::drawReport(QPainter *painter, int width)
 
     painter->setFont(big_font);
     QRect owner_rec(_margins, subtitle_rec.y()+subtitle_rec.height()+30, width-2*_margins, 20);
-    painter->drawText(owner_rec, _tr("Note de calcul réalisée par : "), o);
+    painter->drawText(owner_rec, _tr("ReportAuthor"), o);
 
     // Date.
     LOG_INFO("Adding date.");
 
     QRect date_rec(_margins+185, owner_rec.y()+25, width-2*_margins, 50);
-    painter->drawText(date_rec, _tr("le ")+UiTools::getCurrentDate()+_tr(" - conducteö version ")+UiTools::getSoftwareVersion(), justified_text);
+    painter->drawText(date_rec, _tr("le ")+UiTools::getCurrentDate()+_tr("ReportSoftwareVersion")+UiTools::getSoftwareVersion(), justified_text);
 
     // Software 10211 standart compliance.
     LOG_INFO("Adding compliance.");
 
     painter->setFont(f);
     QRect compliance_rec(_margins, owner_rec.y()+owner_rec.height()+40, width-2*_margins, 50);
-    painter->drawText(compliance_rec, _tr("Le logiciel conducteö est conforme à la norme EN 10211 et aux tests de validation de cette même norme et est ainsi classé comme méthode bidimensionnelle en régime permanent de haute précision. Le logiciel conducteö est également conforme aux hypothèses complémentaires de la RT 2005, RT 2012 et RE 2020. Le logiciel conducteö est conforme à la norme 10077-2 et aux tests de validation de cette même norme et peut ainsi être utilisé à des fins de calcul concernant les menuiseries."), justified_text);
+    painter->drawText(compliance_rec, _tr("ReportSoftwareCompliance"), justified_text);
 
     // Create legends.
     LOG_INFO("Adding legends.");
 
     QRect material_legend_title(_margins, _header_height, _legend_width, 20);
     painter->setFont(title_2_font);
-    painter->drawText(material_legend_title, _tr("Matériaux"), o);
+    painter->drawText(material_legend_title, _tr("MaterialListTitle"), o);
     painter->drawImage(_margins, _header_height+material_legend_title.height(), _materialLegend);
 
     QRect bc_legend_title(_margins, _header_height+material_legend_title.height()+_materialLegend.height()+_margins, _legend_width, 20);
-    painter->drawText(bc_legend_title, _tr("Conditions aux limites"), o);
+    painter->drawText(bc_legend_title, _tr("BoundariesConditions"), o);
     painter->drawImage(_margins, _header_height+material_legend_title.height()+_materialLegend.height()+_margins+bc_legend_title.height(), _boundaryConditionLegend);
 
     // Create 2D model view.
@@ -501,7 +501,7 @@ void ReportContent::drawReport(QPainter *painter, int width)
         painter->drawImage(2*_margins+_boundaryConditionLegend.width(), _header_height+_model.height()+10, _1Dmodel);
 
         // 1D model title.
-        QString text1D=_tr("Modélisation sans pont thermique");
+        QString text1D=_tr("Display1DText");
         QRect rect_1D_title(_margins, _header_height+_model.height(), _legend_width, _1Dmodel.height());
         painter->drawText(rect_1D_title, text1D, o);
     }
@@ -512,7 +512,7 @@ void ReportContent::drawReport(QPainter *painter, int width)
         painter->drawImage(2*_margins+_boundaryConditionLegend.width(), _header_height+_model.height()+10, _condensation);
 
         // 1D model title.
-        QString text1D=_tr("Zones de condensation");
+        QString text1D=_tr("CondensationArea");
         QRect rect_1D_title(_margins, _header_height+_model.height(), _legend_width, _condensation.height());
         painter->drawText(rect_1D_title, text1D, o);
     }
@@ -522,17 +522,17 @@ void ReportContent::drawReport(QPainter *painter, int width)
 
     painter->setFont(title_2_font);
     QRect convergency_rec(_margins, _header_height+_model.height()+_1Dmodel.height()+_condensation.height()+30, width-2*_margins, 25);
-    painter->drawText(convergency_rec, _tr("Convergence de la simulation"), o);
+    painter->drawText(convergency_rec, _tr("SimulationConvergency"), o);
 
     painter->setFont(big_font);
     QRect convergency_rec_1(_margins, convergency_rec.y()+convergency_rec.height()+20, width-2*_margins, 20);
-    painter->drawText(convergency_rec_1, _tr("Nombre de noeuds : ")+QString::number(_nodes), o);
+    painter->drawText(convergency_rec_1, _tr("CellNumber")+QString::number(_nodes), o);
 
     QRect convergency_rec_2(_margins, convergency_rec_1.y()+convergency_rec_1.height(), width-2*_margins, 20);
-    painter->drawText(convergency_rec_2, _tr("Variation relative des flux : ")+locale.toString(_fluxVariation, 'f', 4)+" %", o);
+    painter->drawText(convergency_rec_2, _tr("FluxVariation")+locale.toString(_fluxVariation, 'f', 4)+" %", o);
 
     QRect convergency_rec_3(_margins, convergency_rec_2.y()+convergency_rec_2.height(), width-2*_margins, 20);
-    painter->drawText(convergency_rec_3, _tr("Somme des flux / Flux total : ")+locale.toString(_ratio, 'f', 6), o);
+    painter->drawText(convergency_rec_3, _tr("FluxSum")+locale.toString(_ratio, 'f', 6), o);
 
     // Fluxes & psi coefficient outputs.
     LOG_INFO("Adding fluxes & coefficients outputs.");
@@ -543,13 +543,13 @@ void ReportContent::drawReport(QPainter *painter, int width)
     if (model)
     {
         if (model->computationType()==Model::ThermalBridge)
-            painter->drawText(results_rec, _tr("Coefficient ψ"), o);
+            painter->drawText(results_rec, _tr("PsiCoeff"), o);
         else if (model->computationType()==Model::Flux)
-            painter->drawText(results_rec, _tr("Flux de chaleur"), o);
+            painter->drawText(results_rec, _tr("ThermFluxCompType"), o);
         else if (model->computationType()==Model::ThermalTransmission)
-            painter->drawText(results_rec, _tr("Coefficient U"), o);
+            painter->drawText(results_rec, _tr("UCoeff"), o);
         else if (model->computationType()==Model::EquivalentThermalConductivity)
-            painter->drawText(results_rec, _tr("Conductivité équivalente"), o);
+            painter->drawText(results_rec, _tr("EquivCond"), o);
         else if (model->computationType()==Model::GlaserCondensation)
             painter->drawText(results_rec, _tr("Condensation"), o);
     }
@@ -557,18 +557,18 @@ void ReportContent::drawReport(QPainter *painter, int width)
     painter->setFont(big_font);
     QRect results_rec_1(width/2, results_rec.y()+results_rec.height()+20, width/2-_margins, 20);
     if (model && model->computationType()!=Model::Flux && model->computationType()!=Model::EquivalentThermalConductivity)
-        painter->drawText(results_rec_1, _tr("Flux 2D : ")+locale.toString(_2DFlux, 'f', 3)+" W/m", o);
+        painter->drawText(results_rec_1, _tr("Flux2D")+locale.toString(_2DFlux, 'f', 3)+" W/m", o);
     else if(model && model->computationType() == Model::Flux)
-        painter->drawText(results_rec_1, _tr("Flux : ")+locale.toString(_2DFlux, 'f', 3)+" W/m", o);
+        painter->drawText(results_rec_1, _tr("Flux")+locale.toString(_2DFlux, 'f', 3)+" W/m", o);
     else if(model && model->computationType() == Model::EquivalentThermalConductivity)
-        painter->drawText(results_rec_1, _tr("λ équivalent : ")+locale.toString(_lambda, 'f', 3)+" W/(m.°C)", o);
+        painter->drawText(results_rec_1, _tr("EquivLambda")+locale.toString(_lambda, 'f', 3)+" W/(m.°C)", o);
 
     int dy=results_rec_1.y()+results_rec_1.height();
     if (model && model->computationType()!=Model::Flux && model->computationType() != Model::EquivalentThermalConductivity && model->computationType() != Model::GlaserCondensation)
     {
         QRect results_rec_2(width/2, results_rec_1.y()+results_rec_1.height(), width/2-_margins, 20);
         dy=results_rec_2.y()+results_rec_2.height();
-        painter->drawText(results_rec_2, _tr("Flux 1D : ")+locale.toString(_1DFlux, 'f', 3)+" W/m", o);
+        painter->drawText(results_rec_2, _tr("Flux1D")+locale.toString(_1DFlux, 'f', 3)+" W/m", o);
     }
     
     else if (model && model->computationType() == Model::GlaserCondensation)
@@ -576,11 +576,11 @@ void ReportContent::drawReport(QPainter *painter, int width)
         QRect results_rec_2(width/2, results_rec_1.y()+results_rec_1.height(), width/2-_margins, 20);
         dy = results_rec_2.y()+results_rec_2.height();
         
-        QString value = _tr("Non");
+        QString value = _tr("No");
         if (model->getCondensation())
-            value = _tr("Oui");
+            value = _tr("Yes");
         
-        painter->drawText(results_rec_2, _tr("Condensation :") + " " + value, o);
+        painter->drawText(results_rec_2, _tr("CondensationTitle") + " " + value, o);
     }
 
     painter->setFont(red_big_font);
@@ -589,9 +589,9 @@ void ReportContent::drawReport(QPainter *painter, int width)
     if (model)
     {
         if (model->computationType()==Model::ThermalBridge)
-            painter->drawText(results_rec_3, _tr("Coefficient ψ : ")+_psi+" W/(m.°C)", o);
+            painter->drawText(results_rec_3, _tr("CoeffPsiTitle")+_psi+" W/(m.°C)", o);
         else if (model->computationType()==Model::ThermalTransmission)
-            painter->drawText(results_rec_3, _tr("Coefficient U : ")+_psi+" W/(m².°C)", o);
+            painter->drawText(results_rec_3, _tr("CoeffUTitle")+_psi+" W/(m².°C)", o);
     }
 
     // Reset default fonts.
@@ -641,16 +641,16 @@ void ReportContent::drawReport_page2(QPainter *painter, int width, int offset)
     painter->setFont(bold_big_font);
 
     QRect min_rect_title(left, title_offset, (width-left-m)/4, 2*h);
-    painter->drawText(min_rect_title, _tr("Température\nminimale"), centered_text);
+    painter->drawText(min_rect_title, _tr("MinLBTemperature"), centered_text);
 
     QRect max_rect_title(left+(width-left-m)/4, title_offset, (width-left-m)/4, 2*h);
-    painter->drawText(max_rect_title, _tr("Température\nmaximale"), centered_text);
+    painter->drawText(max_rect_title, _tr("MaxLBTemperature"), centered_text);
 
     QRect minf_rect_title(left+2*(width-left-m)/4, title_offset, (width-left-m)/4, 2*h);
-    painter->drawText(minf_rect_title, _tr("Facteur de\ntempérature\nminimale"), centered_text);
+    painter->drawText(minf_rect_title, _tr("MinTempFactor"), centered_text);
 
     QRect maxf_rect_title(left+3*(width-left-m)/4, title_offset, (width-left-m)/4, 2*h);
-    painter->drawText(maxf_rect_title, _tr("Facteur de\ntempérature\nmaximale"), centered_text);
+    painter->drawText(maxf_rect_title, _tr("MaxTempFactor"), centered_text);
 
     // Draw boundary conditions data.
     for (unsigned int i=0 ; i<_bc.size() ; i++)
@@ -754,7 +754,7 @@ void ReportContent::drawReport_page3(QPainter *painter, int width, int offset)
 
     // Environments legend.
     QRect env_legend_title(_margins, _header_height+_margins+offset, _legend_width, 20);
-    painter->drawText(env_legend_title, _tr("Ambiances thermiques"), o);
+    painter->drawText(env_legend_title, _tr("ThermEnvTitle"), o);
     painter->drawImage(_margins, _header_height+env_legend_title.height()+_margins+offset, _environmentsLegend);
 
     // Draw environments view.
@@ -764,7 +764,7 @@ void ReportContent::drawReport_page3(QPainter *painter, int width, int offset)
     // Results.
     painter->setFont(bold_big_font);
     QRect env_results_title(_margins, _header_height/3+offset+size.height(), width, 25);
-    painter->drawText(env_results_title, _tr("Répartition du pont thermique par ambiance thermique"), o);
+    painter->drawText(env_results_title, _tr("ThermBridgeRepartition"), o);
 
     for (unsigned int i=0 ; i<_environmentsResults.size() ; i++)
     {
