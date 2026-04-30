@@ -35,6 +35,18 @@ endif()
 
 include_directories(${DXFLIB_INCLUDE_DIR})
 
+# tinyxml.
+if (WIN32)
+    set(TINYXML_ROOT_DIRECTORY "" CACHE PATH "Path to tinyxml root directory")
+    
+    if (NOT TINYXML_ROOT_DIRECTORY)
+        message(FATAL_ERROR "TINYXML_ROOT_DIRECTORY is not set. Please set it to your tinyxml directory.")
+    endif()
+    
+    file(GLOB_RECURSE tinyxml_src "${TINYXML_ROOT_DIRECTORY}/tiny*.cpp")
+    include_directories("${TINYXML_ROOT_DIRECTORY}")
+endif()
+
 # Software version.
 file(READ "${CMAKE_SOURCE_DIR}/VERSION" VERSION_STRING)
 string(STRIP "${VERSION_STRING}" VERSION_STRING)
@@ -84,7 +96,6 @@ include_directories("libs/xml-parser/include")
 if (WIN32)
     include_directories("libs_win32/zip/include")
     include_directories("libs_win32/zip/include/win32")
-    include_directories("libs_win32/tinyxml/include")
 endif()
 
 set(rccs "resources/resources.qrc")
@@ -132,7 +143,7 @@ if (APPLE)
     include(MacInstaller.cmake)
 endif()
 
-qt_add_executable(conducteo MANUAL_FINALIZATION MACOSX_BUNDLE ${MACOSXResources} ${libs} ${libs_win32} ${sources} ${sources_c} ${headers} ${headers_libs} ${moc} ${rccs} ${WIN32Resources} ${dxflib_src})
+qt_add_executable(conducteo MANUAL_FINALIZATION MACOSX_BUNDLE ${MACOSXResources} ${libs} ${libs_win32} ${sources} ${sources_c} ${headers} ${headers_libs} ${moc} ${rccs} ${WIN32Resources} ${dxflib_src} ${tinyxml_src})
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if (WIN32)
