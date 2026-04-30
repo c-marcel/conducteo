@@ -14,8 +14,15 @@ if (NOT DXFLIB_INCLUDE_DIR OR NOT DXFLIB_LIBRARY)
 endif()
 include_directories(${DXFLIB_INCLUDE_DIR})
 
-# Software version definition.
-include("${CMAKE_SOURCE_DIR}/Versions.cmake")
+# Software version.
+file(READ "${CMAKE_SOURCE_DIR}/VERSION" VERSION_STRING)
+string(STRIP "${VERSION_STRING}" VERSION_STRING)
+
+string(REPLACE "." ";" VERSION_LIST ${VERSION_STRING})
+
+list(GET VERSION_LIST 0 CONDUCTEO_VERSION_MAJOR)
+list(GET VERSION_LIST 1 CONDUCTEO_VERSION_MINOR)
+list(GET VERSION_LIST 2 CONDUCTEO_VERSION_PATCH)
 
 # Add preprocessing options for software version.
 if (WIN32)
