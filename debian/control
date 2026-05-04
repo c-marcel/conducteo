@@ -2,16 +2,29 @@ Source: conducteo
 Section: science
 Priority: optional
 Maintainer: C. Marcel <clement.marcel@nwanda.fr>
-Build-Depends: debhelper-compat (= 13), cmake, qt6-base-dev, libzip-dev, uuid-dev, libtinyxml-dev, libeigen3-dev, libdxf-dev
+Build-Depends: debhelper-compat (= 13), cmake, qt6-base-dev, libzip-dev, uuid-dev, libtinyxml-dev, libeigen3-dev, libdxflib-dev
 Standards-Version: 4.7.2
 Homepage: https://sourceforge.net/projects/conducteo
 
 Package: conducteo
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: 2D thermal bridge simulation software
- Conducteo is a finite volume solver dedicated to the
- simulation of linear thermal bridges in building physics.
+Description: thermal bridge simulation software (EN 10211)
+ conducteo is a software package for numerical simulation of linear thermal bridges
+ according to EN 10211.
  .
- It allows modelling and analysis of 2D heat transfer
- problems.
+ It provides detailed thermal analysis of building components, including heat
+ flow calculations, temperature fields, thermal bridge coefficients (ψ-values),
+ U-values, and equivalent thermal conductivity.
+ .
+ Features include:
+  - 2D steady-state thermal simulation
+  - Computes heat flows, ψ-values, U-values, and equivalent thermal conductivity
+  - Support for distributed thermal bridges by thermal environment
+  - Condensation risk analysis using the Glaser method
+  - Imports THERM models
+  - Imports DXF files for geometry
+  - Exports calculation reports (PDF and DocX)
+ .
+ The documentation and materials database are currently mainly available in
+ French, which may limit usability for non-French-speaking users.
