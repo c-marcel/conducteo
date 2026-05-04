@@ -1650,7 +1650,11 @@ void MainMenu::tutorialRequested()
 void MainMenu::quickStartRequested()
 {
     LOG_INFO("Quickstart requested.");
-    QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/quickstart.pdf"));
+
+    if (LinguistManager::instance()->currentLanguage() == LinguistManager::English)
+        QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/quickstart_en.pdf"));
+    else
+        QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/quickstart.pdf"));
 }
 
 void MainMenu::onOpenExample()
