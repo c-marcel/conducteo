@@ -179,7 +179,7 @@ void VolumeProperties::statesChanged()
 
     _title=_tr("Volume");
     if (!_material.isVisible())
-        _title=_tr("Maillages");
+        _title=_tr("Meshes");
 
     // Volume is a rectangle.
     bool rectangle=false;
