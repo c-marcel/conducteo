@@ -802,51 +802,51 @@ void MainMenu::loadExamples()
     addExample(cat3, "Tutorial_8", "Tutorial_8.c2d");
 
     // Cat 4.
-    addExample(cat4, "Dimensions intérieures", "Tutorial_25.c2d");
-    addExample(cat4, "Dimensions extérieures", "Tutorial_24.c2d");
+    addExample(cat4, "Tutorial_25", "Tutorial_25.c2d");
+    addExample(cat4, "Tutorial_24", "Tutorial_24.c2d");
 
     // Cat 5.
-    addExample(cat5, "Mur avec tasseaux", "Tutorial_26.c2d");
+    addExample(cat5, "Tutorial_26", "Tutorial_26.c2d");
 
     // Cat 6.
-    addExample(cat6, "Dimensions intérieures", "Tutorial_2.c2d");
-    addExample(cat6, "Dimensions extérieures", "Tutorial_1.c2d");
+    addExample(cat6, "Tutorial_2", "Tutorial_2.c2d");
+    addExample(cat6, "Tutorial_1", "Tutorial_1.c2d");
 
     // Cat 7.
-    addExample(cat7, "Dimensions intérieures", "Tutorial_12.c2d");
-    addExample(cat7, "Dimensions extérieures", "Tutorial_11.c2d");
+    addExample(cat7, "Tutorial_12", "Tutorial_12.c2d");
+    addExample(cat7, "Tutorial_11", "Tutorial_11.c2d");
 
     // Cat 8.
-    addExample(cat8, "Option A - EN 13370", "Tutorial_18.c2d");
-    addExample(cat8, "Option B", "Tutorial_19.c2d");
+    addExample(cat8, "Tutorial_18", "Tutorial_18.c2d");
+    addExample(cat8, "Tutorial_19", "Tutorial_19.c2d");
 
     // Cat 9.
-    addExample(cat9, "Option A - EN 13370", "Tutorial_14.c2d");
-    addExample(cat9, "Option B", "Tutorial_13.c2d");
-    addExample(cat9, "Option B (modifiée)", "Tutorial_15.c2d");
+    addExample(cat9, "Tutorial_14", "Tutorial_14.c2d");
+    addExample(cat9, "Tutorial_13", "Tutorial_13.c2d");
+    addExample(cat9, "Tutorial_15", "Tutorial_15.c2d");
 
     // Cat 10.
-    addExample(cat10, "Option A - EN 13370", "Tutorial_20.c2d");
-    addExample(cat10, "Option B", "Tutorial_21.c2d");
+    addExample(cat10, "Tutorial_20", "Tutorial_20.c2d");
+    addExample(cat10, "Tutorial_21", "Tutorial_21.c2d");
 
     // Cat 11.
-    addExample(cat11, "Option B", "Tutorial_5.c2d");
+    addExample(cat11, "Tutorial_5", "Tutorial_5.c2d");
 
     // Cat 12.
-    addExample(cat12, "Option A - EN 13370", "Tutorial_16.c2d");
-    addExample(cat12, "Option B", "Tutorial_17.c2d");
+    addExample(cat12, "Tutorial_16", "Tutorial_16.c2d");
+    addExample(cat12, "Tutorial_17", "Tutorial_17.c2d");
 
     // Cat 13.
-    addExample(cat13, "Mur de refend", "Tutorial_22.c2d");
+    addExample(cat13, "Tutorial_22", "Tutorial_22.c2d");
 
     // Cat 14.
-    addExample(cat14, "Cadre de menuiserie", "Tutorial_28.c2d");
+    addExample(cat14, "Tutorial_28", "Tutorial_28.c2d");
 
     // Cat 15.
-    addExample(cat15, "Jonction vitrage - menuiserie", "Tutorial_29.c2d");
+    addExample(cat15, "Tutorial_29", "Tutorial_29.c2d");
 
     // Cat 16.
-    addExample(cat16, "Mise en œuvre de menuiserie", "Tutorial_30.c2d");
+    addExample(cat16, "Tutorial_30", "Tutorial_30.c2d");
 
     // Validations.
     QMenu *en10211  = addMenu(validations, "ExamplesCat10211");
@@ -854,20 +854,20 @@ void MainMenu::loadExamples()
     QMenu *internal = addMenu(validations, "ExamplesCatInternal");
 
     // EN 10211.
-    addExample(en10211, "Cas n°1", "cas_1.c2d");
-    addExample(en10211, "Cas n°2", "cas_2.c2d");
+    addExample(en10211, "cas_1", "cas_1.c2d");
+    addExample(en10211, "cas_2", "cas_2.c2d");
 
     // EN 10077.
-    addExample(en10077, "Cas D.1", "cas_D1.c2d");
-    addExample(en10077, "Cas D.2", "cas_D2.c2d");
-    addExample(en10077, "Cas D.3", "cas_D3.c2d");
-    addExample(en10077, "Cas D.4", "cas_D4.c2d");
-    addExample(en10077, "Cas D.5", "cas_D5.c2d");
-    addExample(en10077, "Cas D.6", "cas_D6.c2d");
-    addExample(en10077, "Cas D.7", "cas_D7.c2d");
-    addExample(en10077, "Cas D.8", "cas_D8.c2d");
-    addExample(en10077, "Cas D.9", "cas_D9.c2d");
-    addExample(en10077, "Cas D.10", "cas_D10.c2d");
+    addExample(en10077, "cas_D1", "cas_D1.c2d");
+    addExample(en10077, "cas_D2", "cas_D2.c2d");
+    addExample(en10077, "cas_D3", "cas_D3.c2d");
+    addExample(en10077, "cas_D4", "cas_D4.c2d");
+    addExample(en10077, "cas_D5", "cas_D5.c2d");
+    addExample(en10077, "cas_D6", "cas_D6.c2d");
+    addExample(en10077, "cas_D7", "cas_D7.c2d");
+    addExample(en10077, "cas_D8", "cas_D8.c2d");
+    addExample(en10077, "cas_D9", "cas_D9.c2d");
+    addExample(en10077, "cas_D10", "cas_D10.c2d");
 
     // Internal.
     for (unsigned int i=1 ; i<=32 ; i++)
