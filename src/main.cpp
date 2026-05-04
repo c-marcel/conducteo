@@ -135,11 +135,6 @@ int main(int argc, char *argv[])
     Environments::instance()->kill();
     ActionsManager::instance()->kill();
 
-#ifdef ENABLE_PROFILER
-    Profiler::instance()->writeReport();
-    Profiler::instance()->kill();
-#endif
-
     LOG_INFO("Quit main function.");
 
     return rc;
