@@ -14,7 +14,7 @@ git -C ${NAME}-${VERSION} archive \
   --format=tar.gz \
   --prefix=${NAME}-${VERSION}/ \
   v${VERSION} \
-  -- . ':(exclude)debian' ':(exclude)install/windows' \
+  -- . ':(exclude)install/windows' \
   > ${NAME}_${VERSION}.orig.tar.gz
 
 echo "Build Debian"
