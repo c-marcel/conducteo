@@ -175,7 +175,7 @@ void Report::translate()
     _pdfExport->setText(_tr("PdfReport"));
     setTexts();
     if (!_docxExportMenu.actions().isEmpty())
-        _docxExportMenu.actions().at(0)->setText(tr("Defaultc2dReport"));
+        _docxExportMenu.actions().at(0)->setText(_tr("Defaultc2dReport"));
     update();
 }
 
