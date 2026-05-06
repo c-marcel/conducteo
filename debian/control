@@ -12,16 +12,17 @@ Package: conducteo
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: thermal bridge simulation software (EN 10211)
- conducteo is a software package for numerical simulation of linear thermal bridges
- according to EN 10211.
+ conducteo is a software package for numerical simulation of linear thermal
+ bridges according to EN 10211.
  .
  It provides detailed thermal analysis of building components, including heat
- flow calculations, temperature fields, thermal bridge coefficients (ψ-values),
- U-values, and equivalent thermal conductivity.
+ flow calculations, temperature fields, thermal bridge coefficients
+ (ψ-values), U-values, and equivalent thermal conductivity.
  .
  Features include:
   - 2D steady-state thermal simulation
-  - Computes heat flows, ψ-values, U-values, and equivalent thermal conductivity
+  - Computes heat flows, ψ-values, U-values, and equivalent thermal
+    conductivity
   - Support for distributed thermal bridges by thermal environment
   - Condensation risk analysis using the Glaser method
   - Imports THERM models
