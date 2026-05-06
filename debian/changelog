@@ -5,8 +5,10 @@ conducteo (5.0.1-2) unstable; urgency=medium
     - Remove Eigen source code: use system library
     - Remove libdxf source code: use system library
     - Use english as default language for Linux
-    - Install doc into /usr/share/doc/conducteo (runtime docs are installed into /usr/share/conducteo/docs)
+    - Install doc into /usr/share/doc/conducteo
+      (runtime docs are installed into /usr/share/conducteo/docs)
+    - Change icon set to open source MIT license
 
   * Initial release. (Closes: #1135142)
 
- -- C. Marcel <clement.marcel@nwanda.fr>  Tue, 30 Apr 2026 09:00:00 +0200
+ -- C. Marcel <clement.marcel@nwanda.fr>  Thu, 30 Apr 2026 09:00:00 +0200
