@@ -40,8 +40,3 @@ void StatesObserver::zoomChanged()
 {
     // Do nothing.
 }
-
-void StatesObserver::upgradeStateChanged()
-{
-    // Do nothing.
-}

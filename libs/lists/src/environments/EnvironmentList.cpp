@@ -133,7 +133,7 @@ void EnvironmentList::translate()
 
 void EnvironmentList::applyTheme()
 {
-    _headers.setIcon(QPixmap(":/images/orange-blue/environments.png"));
+    _headers.setIcon(QIcon(":/icons/layout-collage.svg").pixmap(16, 16));
 
     QColor themedColor = QColor(199, 229, 245);
 

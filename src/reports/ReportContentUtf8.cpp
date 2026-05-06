@@ -103,7 +103,7 @@ void ReportContent::exportDocx(const std::string &model)
         dialog.setWindowTitle(_tr("DocxExportDialogTitle"));
         dialog.setText(_tr("UnsupportedDocx"));
         dialog.setWindowModality(Qt::ApplicationModal);
-        QIcon icon(":/images/icon.png");
+        QIcon icon(":/icon.png");
         dialog.setWindowIcon(icon);
         dialog.setIcon(QMessageBox::Critical);
         dialog.exec();
@@ -121,7 +121,7 @@ void ReportContent::exportDocx(const std::string &model)
         dialog.setWindowTitle(_tr("DocxExportDialogTitle"));
         dialog.setText(_tr("DocxExportFailed"));
         dialog.setWindowModality(Qt::ApplicationModal);
-        QIcon icon(":/images/icon.png");
+        QIcon icon(":/icon.png");
         dialog.setWindowIcon(icon);
         dialog.setIcon(QMessageBox::Critical);
         dialog.exec();

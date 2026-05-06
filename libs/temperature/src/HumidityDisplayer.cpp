@@ -113,7 +113,7 @@ void HumidityDisplayer::translate()
 
 void HumidityDisplayer::applyTheme()
 {
-    _pixmap = QPixmap(":/images/orange-blue/boundary.png");
+    _pixmap = QIcon(":/icons/droplets.svg").pixmap(16, 16);
     update();
 }
 

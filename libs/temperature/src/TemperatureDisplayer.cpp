@@ -49,7 +49,7 @@ TemperatureDisplayer::TemperatureDisplayer(QWidget *parent):
     translate();
     statesChanged();
 
-    _pixmap=QPixmap(":/images/orange-blue/boundary.png");
+    _pixmap = QIcon(":/icons/temperature-sun.svg").pixmap(16, 16);
 }
 
 TemperatureDisplayer::~TemperatureDisplayer()
@@ -60,6 +60,9 @@ void TemperatureDisplayer::paintEvent(QPaintEvent *event)
 {
     // Background.
     QPainter qp(this);
+    qp.setRenderHint(QPainter::Antialiasing, true);
+    qp.setRenderHint(QPainter::SmoothPixmapTransform, true);
+
     QRect rec(9, 9, width()-18, height()-18);
     QBrush brush(Qt::white);
     qp.setBrush(brush);

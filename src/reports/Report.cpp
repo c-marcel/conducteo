@@ -69,9 +69,9 @@ Report::~Report()
 
 void Report::setIcons()
 {
-    _export.setIcon(QIcon(":/images/orange-blue/export.png"));
-    _pdfExport->setIcon(QIcon(":/images/orange-blue/pdf.png"));
-    _exportMenuAction->setIcon(QIcon(":/images/orange-blue/docx.png"));
+    _export.setIcon(QIcon(":/icons/report.svg"));
+    _pdfExport->setIcon(QIcon(":/icons/file-type-pdf.svg"));
+    _exportMenuAction->setIcon(QIcon(":/icons/file-type-docx.svg"));
     _export.setIconSize(QSize(24, 24));
 }
 

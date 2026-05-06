@@ -173,15 +173,15 @@ void ButtonTabs::translate()
 
 void ButtonTabs::applyTheme()
 {
-    _modelButton.setIcon(QIcon(":/images/orange-blue/psi.png"));
+    _modelButton.setIcon(QIcon(":/icons/blocks.svg"));
     _modelButton.setIconSize(QSize(24, 24));
-    _1DModelButton.setIcon(QIcon(":/images/orange-blue/mesh.png"));
+    _1DModelButton.setIcon(QIcon(":/icons/blocks-backslash.svg"));
     _1DModelButton.setIconSize(QSize(24, 24));
-    _resultsButton.setIcon(QIcon(":/images/orange-blue/temperatures.png"));
+    _resultsButton.setIcon(QIcon(":/icons/temperature-sun.svg"));
     _resultsButton.setIconSize(QSize(24, 24));
-    _reportButton.setIcon(QIcon(":/images/orange-blue/report.png"));
+    _reportButton.setIcon(QIcon(":/icons/report.svg"));
     _reportButton.setIconSize(QSize(24, 24));
-    _meshButton.setIcon(QIcon(":/images/orange-blue/numeric.png"));
+    _meshButton.setIcon(QIcon(":/icons/mesh.svg"));
     _meshButton.setIconSize(QSize(24, 24));
 }
 

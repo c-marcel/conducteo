@@ -117,7 +117,6 @@ MainMenu::MainMenu(QWidget *parent):
     _backAction(this),
     _frontOneShotAction(this),
     _backOneShotAction(this),
-    _upgradeDownloadAction(this),
     _computationThread(new ComputationThread(this)),
     _showHideImagesAndDxf(Qt::Key_F5, this),
     _dxfVisibilityAction(this),
@@ -281,11 +280,6 @@ MainMenu::MainMenu(QWidget *parent):
     _stackToolBar.addAction(&_frontOneShotAction);
     _stackToolBar.addAction(&_backOneShotAction);
 
-    _upgradeToolbar.setIconSize(QSize(32, 32));
-    _upgradeToolbar.setMovable(false);
-    _upgradeToolbar.addAction(&_upgradeDownloadAction);
-    _upgradeToolbar.hide();
-
     // Update dynamic contents.
     _preferences.updateDocxTemplateLists();
 
@@ -343,8 +337,6 @@ MainMenu::MainMenu(QWidget *parent):
     connect(&_fitAction, &QAction::triggered, this, &MainMenu::fitViewRequested);
     connect(&_zoomInAction, &QAction::triggered, this, &MainMenu::zoomInRequested);
     connect(&_zoomOutAction, &QAction::triggered, this, &MainMenu::zoomOutRequested);
-
-    connect(&_upgradeDownloadAction, &QAction::triggered, this, &MainMenu::downloadOrInstallUpgrade);
 
     connect(&_computeAction, &QAction::triggered, this, &MainMenu::computationRequested);
     connect(&_copy2DModelTo1DModel, &QAction::triggered, this, &MainMenu::copy2DModelTo1DModel);
@@ -499,7 +491,6 @@ void MainMenu::translate()
     _modelClearAllEnv.setText(_tr("ClearThermEnvs"));
 
     updateImagesVisibility();
-    updateUpgradeAction();
     updateFrontBack();
     updateCustomLength();
     updateConductivityData();
@@ -521,99 +512,64 @@ void MainMenu::translate()
     }
 }
 
-void MainMenu::updateUpgradeAction()
-{
-    LOG_INFO("Update upgrade state.");
-
-    if (StatesManager::instance()->upgradeState()==StatesManager::DownloadDone)
-        _upgradeDownloadAction.setText(_tr("InstallUpgrade"));
-    else if (StatesManager::instance()->upgradeState()==StatesManager::Downloading)
-        _upgradeDownloadAction.setText(_tr("DownloadingUpgrade")+QString(" (")+ToolBox::intToString(StatesManager::instance()->upgradePercent()).c_str()+QString("%)"));
-    else
-        _upgradeDownloadAction.setText(_tr("DownloadUpgrade"));
-
-    // Update icon.
-    if (StatesManager::instance()->upgradeState()==StatesManager::Downloading)
-        _upgradeDownloadAction.setIcon(getProgressIcon(StatesManager::instance()->upgradePercent()));
-    else if (StatesManager::instance()->upgradeState()==StatesManager::DownloadDone)
-        _upgradeDownloadAction.setIcon(QIcon(":/images/orange-blue/install.png"));
-    else
-        _upgradeDownloadAction.setIcon(QIcon(":/images/orange-blue/upgrade.png"));
-
-    // Visibility.
-    bool show_button=false;
-    if (StatesManager::instance()->upgradeState()==StatesManager::OutOfDate)
-        show_button=true;
-    else if (StatesManager::instance()->upgradeState()==StatesManager::Downloading)
-        show_button=true;
-    else if (StatesManager::instance()->upgradeState()==StatesManager::DownloadDone)
-        show_button=true;
-    else if (StatesManager::instance()->upgradeState()==StatesManager::UpgradeInProgress)
-        show_button=true;
-
-    _upgradeToolbar.setVisible(show_button);
-    _upgradeToolbar.setEnabled(StatesManager::instance()->simulationState()!=StatesManager::InProgress);
-}
-
 void MainMenu::applyTheme()
 {
-    _newDocumentAction.setIcon(QIcon(":/images/orange-blue/new_document.png"));
-    _openDocumentAction.setIcon(QIcon(":/images/orange-blue/open_document.png"));
-    _saveDocumentAction.setIcon(QIcon(":/images/orange-blue/save_document.png"));
-    _saveDocumentAsAction.setIcon(QIcon(":/images/orange-blue/save_document_as.png"));
-    _cutAction.setIcon(QIcon(":/images/orange-blue/cut.png"));
-    _copyAction.setIcon(QIcon(":/images/orange-blue/copy.png"));
-    _pasteAction.setIcon(QIcon(":/images/orange-blue/paste.png"));
-    _undoAction.setIcon(QIcon(":/images/orange-blue/undo.png"));
-    _redoAction.setIcon(QIcon(":/images/orange-blue/redo.png"));
-    _aboutAction.setIcon(QIcon(":/images/orange-blue/about.png"));
+    _newDocumentAction.setIcon(QIcon(":/icons/file.svg"));
+    _openDocumentAction.setIcon(QIcon(":/icons/folder-open.svg"));
+    _saveDocumentAction.setIcon(QIcon(":/icons/device-floppy.svg"));
+    _saveDocumentAsAction.setIcon(QIcon(":/icons/save-as.svg"));
+    _cutAction.setIcon(QIcon(":/icons/cut.svg"));
+    _copyAction.setIcon(QIcon(":/icons/copy.svg"));
+    _pasteAction.setIcon(QIcon(":/icons/clipboard.svg"));
+    _undoAction.setIcon(QIcon(":/icons/arrow-back-up.svg"));
+    _redoAction.setIcon(QIcon(":/icons/arrow-forward-up.svg"));
+    _aboutAction.setIcon(QIcon(":/icons/info-circle.svg"));
 
-    _selectionModeAction.setIcon(QIcon(":/images/orange-blue/selection.png"));
-    _addRectangleModeAction.setIcon(QIcon(":/images/orange-blue/add_rectangle.png"));
+    _selectionModeAction.setIcon(QIcon(":/icons/pointer.svg"));
+    _addRectangleModeAction.setIcon(QIcon(":/icons/rectangle.svg"));
 
-    _getMaterialModeAction.setIcon(QIcon(":/images/orange-blue/pipette.png"));
-    _setPhysicModeAction.setIcon(QIcon(":/images/orange-blue/set.png"));
-    _setEnvironmentModeAction.setIcon(QIcon(":/images/orange-blue/environments.png"));
+    _getMaterialModeAction.setIcon(QIcon(":/icons/color-picker.svg"));
+    _setPhysicModeAction.setIcon(QIcon(":/icons/bucket-droplet.svg"));
+    _setEnvironmentModeAction.setIcon(QIcon(":/icons/layout-collage.svg"));
 
-    _computeAction.setIcon(QIcon(":/images/orange-blue/play.png"));
+    _computeAction.setIcon(QIcon(":/icons/player-play.svg"));
 
-    _frontAction.setIcon(QIcon(":/images/orange-blue/front.png"));
-    _backAction.setIcon(QIcon(":/images/orange-blue/back.png"));
+    _frontAction.setIcon(QIcon(":/icons/stack-front.svg"));
+    _backAction.setIcon(QIcon(":/icons/stack-back.svg"));
 
-    _frontOneShotAction.setIcon(QIcon(":/images/orange-blue/front_one_shot.png"));
-    _backOneShotAction.setIcon(QIcon(":/images/orange-blue/back_one_shot.png"));
+    _frontOneShotAction.setIcon(QIcon(":/icons/stack-forward.svg"));
+    _backOneShotAction.setIcon(QIcon(":/icons/stack-backward.svg"));
 
-    _fitAction.setIcon(QIcon(":/images/orange-blue/fit.png"));
-    _zoomInAction.setIcon(QIcon(":/images/orange-blue/zoom_in.png"));
-    _zoomOutAction.setIcon(QIcon(":/images/orange-blue/zoom_out.png"));
+    _fitAction.setIcon(QIcon(":/icons/zoom-scan.svg"));
+    _zoomInAction.setIcon(QIcon(":/icons/zoom-in.svg"));
+    _zoomOutAction.setIcon(QIcon(":/icons/zoom-out.svg"));
 
-    _copy2DModelTo1DModel.setIcon(QIcon(":/images/orange-blue/from2d.png"));
-    _toogleEn13370.setIcon(QIcon(":/images/orange-blue/en13370.png"));
+    _copy2DModelTo1DModel.setIcon(QIcon(":/icons/restore.svg"));
+    _toogleEn13370.setIcon(QIcon(":/icons/calculator.svg"));
     
-    _addPolyline.setIcon(QIcon(":/images/orange-blue/polyline.png"));
-    _addPoint.setIcon(QIcon(":/images/orange-blue/add_point.png"));
-    _addCircleModeAction.setIcon(QIcon(":/images/orange-blue/add_circle.png"));
-    _addEllipseModeAction.setIcon(QIcon(":/images/orange-blue/add_ellipse.png"));
+    _addPolyline.setIcon(QIcon(":/icons/polygon.svg"));
+    _addPoint.setIcon(QIcon(":/icons/transform-point-bottom-left.svg"));
+    _addCircleModeAction.setIcon(QIcon(":/icons/circle.svg"));
+    _addEllipseModeAction.setIcon(QIcon(":/icons/ellipse.svg"));
 
-    _addImageAction.setIcon(QIcon(":/images/orange-blue/add_image.png"));
-    _addDxfAction.setIcon(QIcon(":/images/orange-blue/add_dxf.png"));
+    _addImageAction.setIcon(QIcon(":/icons/photo.svg"));
+    _addDxfAction.setIcon(QIcon(":/icons/photo-code.svg"));
 
-    _getLength.setIcon(QIcon(":/images/orange-blue/get_length.png"));
-    _getAngle.setIcon(QIcon(":/images/orange-blue/get_angle.png"));
+    _getLength.setIcon(QIcon(":/icons/ruler-3.svg"));
+    _getAngle.setIcon(QIcon(":/icons/angle.svg"));
 
-    _addText.setIcon(QIcon(":/images/orange-blue/text.png"));
-    _addArrow.setIcon(QIcon(":/images/orange-blue/arrow.png"));
+    _addText.setIcon(QIcon(":/icons/text-color.svg"));
+    _addArrow.setIcon(QIcon(":/icons/arrow-bear-right.svg"));
 
     updateImagesVisibility();
-    updateUpgradeAction();
 }
 
 void MainMenu::updateImagesVisibility()
 {
     if (StatesManager::instance()->showImages())
-        _imagesVisibilityAction.setIcon(QIcon(":/images/orange-blue/image_visibility_on.png"));
+        _imagesVisibilityAction.setIcon(QIcon(":/icons/image-on.svg"));
     else
-        _imagesVisibilityAction.setIcon(QIcon(":/images/orange-blue/image_visibility_off.png"));
+        _imagesVisibilityAction.setIcon(QIcon(":/icons/image-off.svg"));
 
     if (StatesManager::instance()->showImages())
         _imagesVisibilityAction.setText(_tr("HideImages"));
@@ -621,9 +577,9 @@ void MainMenu::updateImagesVisibility()
         _imagesVisibilityAction.setText(_tr("ShowImages"));
 
     if (StatesManager::instance()->showDxf())
-        _dxfVisibilityAction.setIcon(QIcon(":/images/orange-blue/dxf_visibility_on.png"));
+        _dxfVisibilityAction.setIcon(QIcon(":/icons/dxf-on.svg"));
     else
-        _dxfVisibilityAction.setIcon(QIcon(":/images/orange-blue/dxf_visibility_off.png"));
+        _dxfVisibilityAction.setIcon(QIcon(":/icons/dxf-off.svg"));
 
     if (StatesManager::instance()->showDxf())
         _dxfVisibilityAction.setText(_tr("HideDxf"));
@@ -640,7 +596,6 @@ void MainMenu::installOnWindow()
 
     // Top.
     window->addToolBar(Qt::TopToolBarArea, &_menuToolBar);
-    window->addToolBar(Qt::TopToolBarArea, &_upgradeToolbar);
 
     // Right.
     window->addToolBar(Qt::RightToolBarArea, &_zoomToolBar);
@@ -878,11 +833,6 @@ void MainMenu::loadExamples()
     }
 }
 
-void MainMenu::upgradeStateChanged()
-{
-    updateUpgradeAction();
-}
-
 void MainMenu::statesChanged()
 {
     LOG_INFO("State has changed.");
@@ -1075,8 +1025,6 @@ void MainMenu::statesChanged()
     _saveDocumentAction.setEnabled(!StatesManager::instance()->saved());
     _computeAction.setEnabled(StatesManager::instance()->simulationState()!=StatesManager::InProgress);
 
-    updateUpgradeAction();
-
     updateImagesVisibility();
     updateFrontBack();
     updatePasteIcon();
@@ -1229,26 +1177,6 @@ void MainMenu::rotationRequested(double x, double y)
 
     RotateVolumes *action = new RotateVolumes(model, x, y, angle);
     ActionsManager::instance()->exec(action);
-}
-
-QIcon MainMenu::getProgressIcon(int percent) const
-{
-    QImage base(":/images/orange-blue/progress_earth.png");
-    QPainter painter;
-    painter.begin(&base);
-
-    QColor themedColor = QColor(236, 145, 16);
-
-    QBrush brush(themedColor);
-    QPen pen(themedColor);
-    painter.setBrush(brush);
-    painter.setPen(pen);
-
-    QRect r(23, 30, 19*percent/100.0, 5);
-    painter.drawRect(r);
-    painter.end();
-    QPixmap p=QPixmap::fromImage(base);
-    return QIcon(p);
 }
 
 void MainMenu::computationRequested()
@@ -1822,9 +1750,9 @@ void MainMenu::exceptionCaught(ErrorHandler::ErrorCode code)
         text+="<br/><br/><b>"+_tr("SimulationErrorDetails")+"</b><br/> "+QString(ErrorHandler::codeToString(code, LinguistManager::instance()->languageToString()).c_str())+".";
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
-    QIcon icon(":/images/icon.png");
+    QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
-    dialog.setIconPixmap(QPixmap(":/images/orange-blue/warning.png"));
+    dialog.setIconPixmap(QIcon(":/icons/alert-circle.svg").pixmap(16, 16));
     dialog.exec();
 }
 

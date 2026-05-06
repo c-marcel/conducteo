@@ -27,7 +27,6 @@ public:
 
     virtual void statesChanged();
     virtual void zoomChanged();
-    virtual void upgradeStateChanged();
 };
 
 #endif

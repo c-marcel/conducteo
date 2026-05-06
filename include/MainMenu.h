@@ -44,7 +44,6 @@ public:
     void translate();
     void applyTheme();
     void statesChanged();
-    void upgradeStateChanged();
     void zoomChanged();
 
     void addLastProject(QString filename);
@@ -152,13 +151,11 @@ public slots:
 private:
     void updateSubMenus();
     void installOnWindow();
-    void updateUpgradeAction();
     void updateImagesVisibility();
 
     void updateFrontBack();
     void updateCustomLength();
     void updateConductivityData();
-    QIcon getProgressIcon(int percent) const;
 
     void updatePasteIcon();
     void deleteSelectedVolumes();
@@ -271,10 +268,6 @@ private:
     QAction    _backAction;
     QAction    _frontOneShotAction;
     QAction    _backOneShotAction;
-
-    // Upgrade toolbar.
-    QToolBar   _upgradeToolbar;
-    QAction    _upgradeDownloadAction;
 
     // Computation.
     ComputationThread  *_computationThread;

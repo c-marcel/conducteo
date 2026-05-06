@@ -67,13 +67,13 @@ void TranslationBoard::applyTheme()
 {
     if (_direction==Vertical)
     {
-        _increase.setIcon(QIcon(":/images/orange-blue/up.png"));
-        _decrease.setIcon(QIcon(":/images/orange-blue/down.png"));
+        _increase.setIcon(QIcon(":/icons/arrow-narrow-up.svg"));
+        _decrease.setIcon(QIcon(":/icons/arrow-narrow-down.svg"));
     }
 
     else if (_direction==Horizontal)
     {
-        _decrease.setIcon(QIcon(":/images/orange-blue/left.png"));
-        _increase.setIcon(QIcon(":/images/orange-blue/right.png"));
+        _decrease.setIcon(QIcon(":/icons/arrow-narrow-left.svg"));
+        _increase.setIcon(QIcon(":/icons/arrow-narrow-right.svg"));
     }
 }

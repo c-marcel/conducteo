@@ -60,7 +60,6 @@ public:
     void loadModel(const std::string &filename);
 
     void translate();
-    void upgradeStateChanged();
 
     std::vector<MaterialCategory *> categories() const;
 

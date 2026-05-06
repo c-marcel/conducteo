@@ -432,7 +432,7 @@ void ReportContent::drawReport(QPainter *painter, int width)
     
     // Software logo.
     LOG_INFO("Adding logo.");
-    QImage logo(":/images/logo.png");
+    QImage logo(":/logo.png");
     painter->drawImage(width - _margins - logo.width(), _margins, logo);
 
     // Report title & subtitle.

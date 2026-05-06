@@ -62,7 +62,7 @@ MainWindow::MainWindow(QWidget *parent):
 {
     setAcceptDrops(true);
     setContextMenuPolicy(Qt::NoContextMenu);
-    setWindowIcon(QIcon(":/images/icon.png"));
+    setWindowIcon(QIcon(":/icon.png"));
 
     // Initialize linguist manager.
     std::string current_language=LocalData::instance()->getParameter("language");
@@ -256,20 +256,6 @@ MainWindow::MainWindow(QWidget *parent):
 
 MainWindow::~MainWindow()
 {
-}
-
-void MainWindow::upgradeStateChanged()
-{
-    LOG_INFO("Upgrade state changed.");
-
-    if (StatesManager::instance()->upgradeState()!=StatesManager::UpgradeInProgress)
-        return;
-
-    if (exitRequested())
-        return;
-
-    // User wont to exit.
-    StatesManager::instance()->setUpgradeState(StatesManager::DownloadDone);
 }
 
 void MainWindow::translate()
@@ -528,9 +514,9 @@ void MainWindow::displayErrorMessage(const QString &title, const QString &messag
         text+="<br/><br/><b>"+_tr("DetailsError")+"</b><br/> "+QString(ErrorHandler::codeToString(error->code(), LinguistManager::instance()->languageToString()).c_str())+".";
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
-    QIcon icon(":/images/icon.png");
+    QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
-    dialog.setIconPixmap(QPixmap(":/images/icon.png"));
+    dialog.setIconPixmap(QPixmap(":/icon.png"));
     dialog.exec();
 }
 
@@ -551,9 +537,9 @@ void MainWindow::aboutRequested()
     text+="<br/>Copyright 2009-2026";
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
-    QIcon icon(":/images/icon.png");
+    QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
-    dialog.setIconPixmap(QPixmap(":/images/icon.png"));
+    dialog.setIconPixmap(QPixmap(":/icon.png"));
     dialog.exec();
 }
 
@@ -637,7 +623,7 @@ bool MainWindow::userAcceptToStopSimulation()
     dialog.setIcon(QMessageBox::Question);
     QAbstractButton *yes=dialog.addButton(_tr("Yes"), QMessageBox::YesRole);
     QAbstractButton *no=dialog.addButton(_tr("No"), QMessageBox::NoRole);
-    QIcon icon(":/images/icon.png");
+    QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
     dialog.exec();
 
@@ -683,7 +669,7 @@ bool MainWindow::userWantToRecalculateModel()
     dialog.setIcon(QMessageBox::Question);
     QAbstractButton *yes=dialog.addButton(_tr("Yes"), QMessageBox::YesRole);
     QAbstractButton *no=dialog.addButton(_tr("No"), QMessageBox::NoRole);
-    QIcon icon(":/images/icon.png");
+    QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
     dialog.exec();
 
@@ -710,7 +696,7 @@ bool MainWindow::userAcceptToCloseCurrentModel()
     QAbstractButton *yes=dialog.addButton(_tr("Yes"), QMessageBox::YesRole);
     QAbstractButton *no=dialog.addButton(_tr("No"), QMessageBox::NoRole);
     QAbstractButton *cancel=dialog.addButton(_tr("Cancel"), QMessageBox::RejectRole);
-    QIcon icon(":/images/icon.png");
+    QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
     dialog.exec();
 

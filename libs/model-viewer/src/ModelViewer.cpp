@@ -1073,9 +1073,9 @@ void ModelViewer::initScaleDefinition()
     dialog.setText(text);
     dialog.setWindowModality(Qt::ApplicationModal);
 
-    QIcon icon(":/images/icon.png");
+    QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
-    dialog.setIconPixmap(QPixmap(":/images/icon.png"));
+    dialog.setIconPixmap(QPixmap(":/icon.png"));
 
     dialog.exec();
 }
@@ -1662,9 +1662,9 @@ void ModelViewer::finalizePolyline()
         QString text=_tr("ClosedPathInterDetected");
         dialog.setText(text);
         dialog.setWindowModality(Qt::ApplicationModal);
-        QIcon icon(":/images/icon.png");
+        QIcon icon(":/icon.png");
         dialog.setWindowIcon(icon);
-        dialog.setIconPixmap(QPixmap(":/images/orange-blue/warning.png"));
+        dialog.setIconPixmap(QIcon(":/icons/alert-circle.svg").pixmap(16, 16));
         dialog.exec();
         return;
     }
@@ -3770,10 +3770,10 @@ void ModelViewer::zoomChanged()
 
 void ModelViewer::applyTheme()
 {
-    _rotationCursor      = QCursor(QPixmap(":/images/orange-blue/rotate_cursor.png"));
-    _resizeOriginalImage = QPixmap(":/images/orange-blue/resize.png");
+    _rotationCursor      = QCursor(QIcon(":/icons/rotate.svg").pixmap(16, 16));
+    _resizeOriginalImage = QIcon(":/icons/arrows-move-horizontal.svg").pixmap(16, 16);
 
-    _en13370Button.setIcon(QPixmap(":/images/orange-blue/en13370.png"));
+    _en13370Button.setIcon(QIcon(":/icons/calculator.svg").pixmap(16, 16));
 }
 
 // RGB color arrays.
@@ -3958,9 +3958,9 @@ void ModelViewer::importSelectedElements()
         QString text=_tr("VolumeImportFromDxfErrorText");
         dialog.setText(text);
         dialog.setWindowModality(Qt::ApplicationModal);
-        QIcon icon(":/images/icon.png");
+        QIcon icon(":/icon.png");
         dialog.setWindowIcon(icon);
-        dialog.setIconPixmap(QPixmap(":/images/orange-blue/warning.png"));
+        dialog.setIconPixmap(QIcon(":/icons/alert-circle.svg").pixmap(16, 16));
         dialog.exec();
 
         ActionsManager::instance()->removeAction(action);

@@ -1011,35 +1011,35 @@ void En13370Interface::translate()
 
 void En13370Interface::applyTheme()
 {
-    _13370_basement_ceil_resistance = QPixmap(":/images/orange-blue/13370_basement_ceil_resistance.png");
-    _13370_basement_external_wall = QPixmap(":/images/orange-blue/13370_basement_external_wall.png");
-    _13370_basement_external_wall_height = QPixmap(":/images/orange-blue/13370_basement_external_wall_height.png");
-    _13370_basement_height = QPixmap(":/images/orange-blue/13370_basement_height.png");
-    _13370_basement_mean_height = QPixmap(":/orange-blue/green/13370_basement_mean_height.png");
-    _13370_basement_wall = QPixmap(":/images/orange-blue/13370_basement_wall.png");
-    _13370_crawl_depth = QPixmap(":/images/orange-blue/13370_crawl_depth.png");
-    _13370_crawl_height = QPixmap(":/images/orange-blue/13370_crawl_height.png");
-    _13370_crawl_wall = QPixmap(":/images/orange-blue/13370_crawl_wall.png");
-    _13370_external = QPixmap(":/images/orange-blue/13370_external.png");
-    _13370_floor_area = QPixmap(":/images/orange-blue/13370_floor_area.png");
-    _13370_floor_perimeter = QPixmap(":/images/orange-blue/13370_floor_perimeter.png");
-    _13370_floor_resistance_1 = QPixmap(":/images/orange-blue/13370_floor_resistance_1.png");
-    _13370_floor_resistance_2 = QPixmap(":/images/orange-blue/13370_floor_resistance_2.png");
-    _13370_floor_resistance_3 = QPixmap(":/images/orange-blue/13370_floor_resistance_3.png");
-    _13370_floor_width = QPixmap(":/images/orange-blue/13370_floor_width.png");
-    _13370_ground_conductivity = QPixmap(":/images/orange-blue/13370_ground_conductivity.png");
-    _13370_internal = QPixmap(":/images/orange-blue/13370_internal.png");
-    _13370_model_floor_width = QPixmap(":/images/orange-blue/13370_model_floor_width.png");
-    _13370_wall_thickness_1 = QPixmap(":/images/orange-blue/13370_wall_thickness_1.png");
-    _13370_wall_thickness_2 = QPixmap(":/images/orange-blue/13370_wall_thickness_2.png");
-    _13370_wall_thickness_3 = QPixmap(":/images/orange-blue/13370_wall_thickness_3.png");
-    _13370_crawl_wall_ground = QPixmap(":/images/orange-blue/13370_crawl_wall_ground.png");
-    _13370_iso_h_resistance = QPixmap(":/images/orange-blue/13370_iso_h_resistance.png");
-    _13370_iso_h_thickness = QPixmap(":/images/orange-blue/13370_iso_h_thickness.png");
-    _13370_iso_h_width = QPixmap(":/images/orange-blue/13370_iso_h_width.png");
-    _13370_iso_v_height = QPixmap(":/images/orange-blue/13370_iso_v_height.png");
-    _13370_iso_v_resistance = QPixmap(":/images/orange-blue/13370_iso_v_resistance.png");
-    _13370_iso_v_thickness = QPixmap(":/images/orange-blue/13370_iso_v_thickness.png");
+    _13370_basement_ceil_resistance = QPixmap(":/images/13370/13370_basement_ceil_resistance.png");
+    _13370_basement_external_wall = QPixmap(":/images/13370/13370_basement_external_wall.png");
+    _13370_basement_external_wall_height = QPixmap(":/images/13370/13370_basement_external_wall_height.png");
+    _13370_basement_height = QPixmap(":/images/13370/13370_basement_height.png");
+    _13370_basement_mean_height = QPixmap(":/images/13370_basement_mean_height.png");
+    _13370_basement_wall = QPixmap(":/images/13370/13370_basement_wall.png");
+    _13370_crawl_depth = QPixmap(":/images/13370/13370_crawl_depth.png");
+    _13370_crawl_height = QPixmap(":/images/13370/13370_crawl_height.png");
+    _13370_crawl_wall = QPixmap(":/images/13370/13370_crawl_wall.png");
+    _13370_external = QPixmap(":/images/13370/13370_external.png");
+    _13370_floor_area = QPixmap(":/images/13370/13370_floor_area.png");
+    _13370_floor_perimeter = QPixmap(":/images/13370/13370_floor_perimeter.png");
+    _13370_floor_resistance_1 = QPixmap(":/images/13370/13370_floor_resistance_1.png");
+    _13370_floor_resistance_2 = QPixmap(":/images/13370/13370_floor_resistance_2.png");
+    _13370_floor_resistance_3 = QPixmap(":/images/13370/13370_floor_resistance_3.png");
+    _13370_floor_width = QPixmap(":/images/13370/13370_floor_width.png");
+    _13370_ground_conductivity = QPixmap(":/images/13370/13370_ground_conductivity.png");
+    _13370_internal = QPixmap(":/images/13370/13370_internal.png");
+    _13370_model_floor_width = QPixmap(":/images/13370/13370_model_floor_width.png");
+    _13370_wall_thickness_1 = QPixmap(":/images/13370/13370_wall_thickness_1.png");
+    _13370_wall_thickness_2 = QPixmap(":/images/13370/13370_wall_thickness_2.png");
+    _13370_wall_thickness_3 = QPixmap(":/images/13370/13370_wall_thickness_3.png");
+    _13370_crawl_wall_ground = QPixmap(":/images/13370/13370_crawl_wall_ground.png");
+    _13370_iso_h_resistance = QPixmap(":/images/13370/13370_iso_h_resistance.png");
+    _13370_iso_h_thickness = QPixmap(":/images/13370/13370_iso_h_thickness.png");
+    _13370_iso_h_width = QPixmap(":/images/13370/13370_iso_h_width.png");
+    _13370_iso_v_height = QPixmap(":/images/13370/13370_iso_v_height.png");
+    _13370_iso_v_resistance = QPixmap(":/images/13370/13370_iso_v_resistance.png");
+    _13370_iso_v_thickness = QPixmap(":/images/13370/13370_iso_v_thickness.png");
     update();
 }
 

@@ -198,7 +198,7 @@ void BoundaryConditionList::translate()
 
 void BoundaryConditionList::applyTheme()
 {
-    _headers.setIcon(QPixmap(":/images/orange-blue/boundary.png"));
+    _headers.setIcon(QIcon(":/icons/border-sides.svg").pixmap(16, 16));
 
     QColor themedColor  = QColor(199, 229, 245);
 

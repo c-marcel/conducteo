@@ -622,7 +622,7 @@ Preferences::Preferences(QWidget *parent):
     translate();
     updateContent();
 
-    setWindowIcon(QPixmap(":/images/icon.png"));
+    setWindowIcon(QPixmap(":/icon.png"));
     setFixedSize(450, 400);
 
     catchUserInputs=true;

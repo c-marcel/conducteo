@@ -76,17 +76,6 @@ public:
         Done
     };
 
-    enum UpgradeState
-    {
-        Unknown,
-        UpOfDate,
-        OutOfDate,
-        Downloading,
-        DownloadDone,
-        UpgradeInProgress,
-        UpgradeError
-    };
-
     StatesManager(QObject *parent=0);
     virtual ~StatesManager();
 
@@ -98,7 +87,6 @@ public:
     void setInterfaceMode(InterfaceMode mode);
     void setViewType(ViewType type);
     void setSimulationState(SimulationState state);
-    void setUpgradeState(UpgradeState state);
     void setCurrentMaterialId(const std::string &id);
     void setCurrentBoundaryConditionId(const std::string &id);
     void setCurrentEnvironmentId(const std::string &id);
@@ -124,7 +112,6 @@ public:
     SimulationState simulationState() const;
     Zoom *zoom();
     bool clipboardHasContent() const;
-    UpgradeState upgradeState() const;
     std::string currentMaterialId() const;
     std::string currentBoundaryConditionId() const;
     std::string currentEnvironmentId() const;
@@ -191,7 +178,6 @@ public slots:
 
 private:
     void statesChanged();
-    void upgradeStateChanged();
     void clearModelData();
 
     std::vector<StatesObserver*>    _objects;
@@ -207,9 +193,6 @@ private:
     std::string                     _currentMaterialId;
     std::string                     _currentBoundaryConditionId;
     std::string                     _currentEnvironmentId;
-
-    UpgradeState                    _upgradeState;
-    int                             _upgradePercent;
 
     bool                            _showImages;
     bool                            _showDxf;

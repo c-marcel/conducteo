@@ -650,7 +650,7 @@ void MaterialList::translate()
 
 void MaterialList::applyTheme()
 {
-    _headers.setIcon(QPixmap(":/images/orange-blue/material.png"));
+    _headers.setIcon(QIcon(":/icons/database.svg").pixmap(16, 16));
 
     QColor themedColor = QColor(199, 229, 245);
 

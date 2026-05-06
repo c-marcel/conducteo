@@ -33,7 +33,7 @@ SearchInput::SearchInput(Qt::Orientation o, QWidget *parent):
             &SearchInput::searchInputTextChanged,
             Qt::UniqueConnection);
 
-    _image=QPixmap(":/images/orange-blue/search.png").scaledToHeight(20, Qt::SmoothTransformation);
+    _image = QIcon(":/icons/search.svg").pixmap(10, 10); 
 }
 
 SearchInput::~SearchInput()

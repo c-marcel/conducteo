@@ -95,12 +95,12 @@ void MaterialCustomItem::paintEvent(QPaintEvent *event)
     int w=0;
     if (_favoriteEnabled && !_extrusion)
     {
-        QString image="star_empty.png";
+        QString image="star.svg";
         if (_favorite)
-            image="star_filled.png";
+            image="star-filled.svg";
         if (_hover && !_favorite)
-            image="star_hover.png";
-        QPixmap pixmap(":/images/orange-blue/"+image);
+            image="carambola.svg";
+        QPixmap pixmap = QIcon(":/icons/" + image).pixmap(16, 16);
         pixmap = pixmap.scaledToHeight(25, Qt::SmoothTransformation);
         QRect r2(width()-10-pixmap.width(), (25-pixmap.height())/2, pixmap.width(), pixmap.height());
         qp.drawPixmap(r2, pixmap);
@@ -109,7 +109,7 @@ void MaterialCustomItem::paintEvent(QPaintEvent *event)
 
     else if (_extrusion)
     {
-        QPixmap pixmap(":/images/orange-blue/extrusion.png");
+        QPixmap pixmap = QIcon(":/icons/slice.svg").pixmap(16, 16);
         pixmap = pixmap.scaledToHeight(25, Qt::SmoothTransformation);
         QRect r2(4, 2, pixmap.width(), pixmap.height());
         qp.drawPixmap(r2, pixmap);

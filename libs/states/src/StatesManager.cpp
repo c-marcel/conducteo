@@ -39,8 +39,6 @@ StatesManager::StatesManager(QObject *parent):
     _interfaceMode(Selection),
     _viewType(DisplayModel),
     _simulationState(Idle),
-    _upgradeState(Unknown),
-    _upgradePercent(0),
     _showImages(true),
     _showDxf(true),
 	_zoom(new Zoom),
@@ -147,14 +145,6 @@ void StatesManager::statesChanged()
     for (unsigned int i=0 ; i<_objects.size() ; i++)
         _objects.at(i)->statesChanged();
     LOG_INFO("States changed (signal end).");
-}
-
-void StatesManager::upgradeStateChanged()
-{
-    LOG_INFO("Upgrade state changed (signal begin).");
-    for (unsigned int i=0 ; i<_objects.size() ; i++)
-        _objects.at(i)->upgradeStateChanged();
-    LOG_INFO("Upgrade state changed (signal end).");
 }
 
 bool StatesManager::includeDxfInRhView() const
@@ -424,12 +414,6 @@ void StatesManager::setSimulationState(SimulationState state)
     statesChanged();
 }
 
-void StatesManager::setUpgradePercent(int percent)
-{
-    _upgradePercent=percent;
-    upgradeStateChanged();
-}
-
 StatesManager::SimulationState StatesManager::simulationState() const
 {
     return _simulationState;
@@ -460,19 +444,6 @@ bool StatesManager::clipboardHasContent() const
         return false;
 
     return true;
-}
-
-void StatesManager::setUpgradeState(UpgradeState state)
-{
-    LOG_INFO("Set upgrade state to: " << state);
-
-    _upgradeState=state;
-    upgradeStateChanged();
-}
-
-StatesManager::UpgradeState StatesManager::upgradeState() const
-{
-    return _upgradeState;
 }
 
 void StatesManager::setCurrentMaterialId(const std::string &id)
@@ -520,11 +491,6 @@ void StatesManager::repaintView()
 {
     LOG_INFO("Repaint view requested.");
     statesChanged();
-}
-
-int StatesManager::upgradePercent() const
-{
-    return _upgradePercent;
 }
 
 void StatesManager::showImages(bool show)
