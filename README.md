@@ -25,9 +25,11 @@ conducteo uses the following dependencies:
 
 - Qt 6
 - Eigen
-- tinyxml
+- tinyxml (version 1)
 - dxflib
 - libzip
+- zlib
+- nlohmann-json
 
 **Microsoft Windows build steps**
 
