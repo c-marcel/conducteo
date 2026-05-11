@@ -9,11 +9,13 @@ License: GPL-3+
 Files: resources/icons/*
 Copyright: Tabler Icons contributors
 License: MIT
+Comment:
+ Some icons are modified versions derived from
+ the Tabler Icons project.
 
 Files: resources/icon.* resources/logo.png
 Copyright: 2009-2026, Manoël Verdiel
-License: permissive
- Redistribution and use permitted by the original author.
+License: conducteo-logo
 
 Files: install/data/rt2012.db
 Copyright: 2009-2026, Clément Marcel <clement.marcel@nwanda.fr>
@@ -36,8 +38,9 @@ License: GPL-3+
  On Debian systems, the full text of the GNU General Public License
  version 3 can be found in /usr/share/common-licenses/GPL-3.
 
-License: permissive
- Redistribution and use permitted by the original author.
+License: conducteo-logo
+ Redistribution and use as part of the Conducteo
+ project are permitted by the copyright holder.
 
 License: MIT
  Permission is hereby granted, free of charge, to any person obtaining
