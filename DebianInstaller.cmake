@@ -11,10 +11,6 @@ install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/documentation/
         DESTINATION share/doc/conducteo
         OPTIONAL)
         
-install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/documentation/
-        DESTINATION share/conducteo/docs
-        OPTIONAL)
-        
 # Examples.
 install(DIRECTORY ${CMAKE_SOURCE_DIR}/install/examples/
         DESTINATION share/conducteo/examples

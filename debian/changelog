@@ -9,6 +9,7 @@ conducteo (5.0.2-1) unstable; urgency=medium
     - Change icon set to MIT-licensed open-source icons.
     - Add translation system for software interface and
       materials database.
+    - Fix quickstart guide opening.
     
  -- C. Marcel <clement.marcel@nwanda.fr>  Thu, 18 May 2026 15:00:00 +0200
     

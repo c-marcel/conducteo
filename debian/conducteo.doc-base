@@ -1,0 +1,20 @@
+Document: conducteo-doc
+Title: Conducteo documentation
+Author: Clément Marcel
+Abstract: Documentation for Conducteo thermal bridge simulation software
+Section: Science/Engineering
+
+Format: PDF
+Files: /usr/share/doc/conducteo/quickstart_en.pdf
+
+Format: PDF
+Files: /usr/share/doc/conducteo/quickstart.pdf
+
+Format: PDF
+Files: /usr/share/doc/conducteo/documentation.pdf
+
+Format: PDF
+Files: /usr/share/doc/conducteo/tutorial.pdf
+
+Format: PDF
+Files: /usr/share/doc/conducteo/validations.pdf
