@@ -109,7 +109,7 @@ QString UiTools::getExamplesDir()
 #ifdef WIN32
     return QApplication::applicationDirPath() + "/examples";
 #else
-    return "/usr/share/conducteo/examples";
+    return "/usr/share/doc/conducteo/examples";
 #endif
 }
 
