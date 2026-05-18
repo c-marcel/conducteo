@@ -1,1 +1,2 @@
 extend-diff-ignore = "(^|/)install/windows/.*"
+--extend-diff-ignore=(^|/)resources/windows/.*
