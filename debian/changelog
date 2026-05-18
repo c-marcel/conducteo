@@ -1,13 +1,18 @@
-conducteo (5.0.1-2) unstable; urgency=medium
+conducteo (5.0.2-1) unstable; urgency=medium
 
   * New upstream release.
-    - Remove Boost dependency: use internal implementation.
-    - Remove Eigen source code: use system library
-    - Remove libdxf source code: use system library
-    - Use english as default language for Linux
-    - Install doc into /usr/share/doc/conducteo
-      (runtime docs are installed into /usr/share/conducteo/docs)
-    - Change icon set to open source MIT license
+    - Replaced Boost dependency with internal implementation.
+    - Removed embedded Eigen source code.
+    - Removed embedded dxflib source code.
+    - Use English as default language on Linux.
+    - Move documentation to /usr/share/doc/conducteo/.
+    - Change icon set to MIT-licensed open-source icons.
+    - Add translation system for software interface and
+      materials database.
+    
+ -- C. Marcel <clement.marcel@nwanda.fr>  Thu, 18 May 2026 15:00:00 +0200
+    
+conducteo (5.0.1-1) unstable; urgency=medium
 
   * Initial release. (Closes: #1135142)
 

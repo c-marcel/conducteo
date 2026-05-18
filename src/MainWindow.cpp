@@ -898,16 +898,21 @@ void MainWindow::showQuickStart()
     checkbox->setText(_tr("FirstLaunchQuestionHide"));
     dialog.setCheckBox(checkbox);
 
-    int choice = dialog.exec();
+    dialog.exec();
 
     // Store parameter.
     if (checkbox->isChecked())
         LocalData::instance()->setParameter("show-quickstart-tutorial", "false");
 
-    if (choice == QMessageBox::AcceptRole)
+    if (dialog.clickedButton() == yes)
     {
         LOG_INFO("Quick start guide requested.");
-        QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() +"/quickstart.pdf"));
+
+        if (LinguistManager::instance()->currentLanguage() == LinguistManager::English)
+            QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/quickstart_en.pdf"));
+
+        else
+            QDesktopServices::openUrl(QUrl("file:///" + UiTools::getDocumentationDir() + "/quickstart.pdf"));
     }
 }
 
