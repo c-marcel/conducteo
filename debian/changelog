@@ -11,6 +11,7 @@ conducteo (5.0.2-1) unstable; urgency=medium
       materials database.
     - Fix quickstart guide opening.
     - Move examples to /usr/share/doc/conducteo/examples.
+  * Remove Windows-specific files from Debian source tarball.
     
  -- C. Marcel <clement.marcel@nwanda.fr>  Mon, 18 May 2026 11:00:00 +0200
     
