@@ -56,6 +56,12 @@ void Materials::translate()
     if (material2)
         material2->setName(_tr("PartVentilatedAirCavity").toStdString());
     materialModified(PartiallyVentilatedAirCavityIdentifier);
+
+    // Translate Rt database.
+    foreach(Material * material, _rt)
+    {
+        material->setName(_tr(material->id().c_str()).toStdString());
+    }
 }
 
 Materials::~Materials()

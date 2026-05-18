@@ -29,7 +29,6 @@
 #include <databases/Materials.h>
 #include <physics/Material.h>
 #include <LinguistManager.h>
-#include <LinguistManager.h>
 #include <tools/ToolBox.h>
 #include <tools/UiTools.h>
 #include <StatesManager.h>
@@ -110,25 +109,6 @@ MaterialList::MaterialList(QWidget *parent):
     applyTheme();
     statesChanged();
 
-    // Copy Rt 2012 database if needed.
-    QString destination=LocalData::instance()->getLocalPath().c_str();
-
-    destination = destination + "/rt2012-v3.db";
-
-    QString source= UiTools::getDataDir() + "/rt2012.db";
-    if(!QFile::exists(destination))
-        QFile::copy(source, destination);
-
-    // Copy Rt 2012 if user has old version.
-    QString currentVersion  = readRt2012DatabaseVersion(destination);
-    QString deployedVersion = readRt2012DatabaseVersion(source);
-
-    if (currentVersion != deployedVersion)
-    {
-        QFile::remove(destination);
-        QFile::copy(source, destination);
-    }
-
     // Load databases.
     loadRtDatabase();
     loadUserDatabase();
@@ -144,9 +124,7 @@ MaterialList::~MaterialList()
 
 void MaterialList::loadRtDatabase()
 {
-    QString filename=LocalData::instance()->getLocalPath().c_str();
-
-    filename = filename + "/rt2012-v3.db";
+    QString filename = UiTools::getDataDir() + "/rt2012.db";
 
     std::vector<Material*> materials=readMaterialsFromFile(filename);
     for (unsigned int i=0 ; i<materials.size() ; i++)
@@ -397,7 +375,10 @@ std::vector<Material*> MaterialList::readMaterialsFromFile(const QString &filena
         if (material->Attribute("id"))
             id=material->Attribute("id");
 
-        std::string name;
+        // Translate name from id and dictionary.
+        std::string name = LinguistManager::instance()->translate(id.c_str()).toStdString();
+
+        // Override name.
         if (material->FirstChildElement("name") && material->FirstChildElement("name")->GetText())
             name=material->FirstChildElement("name")->GetText();
 
@@ -646,6 +627,23 @@ void MaterialList::translate()
     _rtMaterialNode.setText(0, _tr("ThermRegTitle"));
     _airMaterialNode.setText(0, _tr("AirCavities"));
     _extrusion->setTitle(_tr("ExtrudeModel"));
+
+    // Translate materials database.
+    Materials::instance()->translate();
+
+    for (int i = 0; i < _rtMaterialNode.childCount(); i++)
+    {
+        MaterialCustomItem* material = dynamic_cast<MaterialCustomItem*>(_rtMaterialNode.child(i));
+        if (material)
+            material->translate();
+    }
+
+    for (int i = 0; i < _lastMaterialNode.childCount(); i++)
+    {
+        MaterialCustomItem* material = dynamic_cast<MaterialCustomItem*>(_lastMaterialNode.child(i));
+        if (material)
+            material->translate();
+    }
 }
 
 void MaterialList::applyTheme()
