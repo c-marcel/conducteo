@@ -429,7 +429,7 @@ void BoundaryConditionList::addNewBoundaryCondition(QTreeWidgetItem *item)
         return;
 
     bc->setColor(rand()%256, rand()%256, rand()%256);
-    bc->setName(LinguistManager::instance()->translate("Nouvelle condition à la limite").toStdString());
+    bc->setName(LinguistManager::instance()->translate("NewBCName").toStdString());
 }
 
 void BoundaryConditionList::removeBoundaryConditionById(QTreeWidgetItem *item, const std::string &id)

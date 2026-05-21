@@ -1,5 +1,7 @@
 {
   "ModelButton": "Modélisation",
+  "NewMaterialName": "Nouveau matériau",
+  "NewBCName": "Nouvelle condition limite",
   "Model1DButton": "Modélisation sans pont thermique",
   "ResultsButton": "Résultats",
   "ReportButton": "Note de calcul",

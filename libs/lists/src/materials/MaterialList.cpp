@@ -938,7 +938,7 @@ void MaterialList::addNewMaterial(QTreeWidgetItem *item)
         return;
 
     material->setColor(rand()%256, rand()%256, rand()%256);
-    material->setName(LinguistManager::instance()->translate("Nouveau matériau").toStdString());
+    material->setName(LinguistManager::instance()->translate("NewMaterialName").toStdString());
 
     Materials::instance()->materialModified(id);
 

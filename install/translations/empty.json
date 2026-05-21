@@ -1,5 +1,7 @@
 {
   "ModelButton": "ModelButton",
+  "NewMaterialName": "NewMaterialName",
+  "NewBCName": "NewBCName",
   "Model1DButton": "Model1DButton",
   "ResultsButton": "ResultsButton",
   "ReportButton": "ReportButton",
