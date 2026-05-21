@@ -17,6 +17,14 @@ git -C ${NAME}-${VERSION} archive \
   -- . ':(exclude)install/windows' \
    ':(exclude)debian' \
   ':(exclude)resources/windows' \
+  ':(exclude)WinInstaller.cmake' \
+  ':(exclude)MacInstaller.cmake' \
+  ':(exclude)RefreshIcon.nsh' \
+  ':(exclude)FileAssociation.nsh' \
+  ':(exclude)build-deb.sh' \
+  ':(exclude)resources/conducteo.icns' \
+  ':(exclude)resources/icon.ico' \
+  ':(exclude)resources/license.txt' \
   > ${NAME}_${VERSION}.orig.tar.gz
 
 echo "Build Debian"
