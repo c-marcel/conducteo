@@ -79,7 +79,7 @@ QString UiTools::getCurrentDate()
 
 QString UiTools::getBinaryDir()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
     return QApplication::applicationDirPath();
 #else
     return "/usr/bin";
@@ -88,7 +88,7 @@ QString UiTools::getBinaryDir()
 
 QString UiTools::getDataDir()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
     return QApplication::applicationDirPath();
 #else
     return "/usr/share/conducteo/data";
@@ -97,7 +97,7 @@ QString UiTools::getDataDir()
 
 QString UiTools::getDocumentationDir()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
     return QApplication::applicationDirPath() + "/documentation";
 #else
     return "/usr/share/doc/conducteo";
@@ -106,7 +106,7 @@ QString UiTools::getDocumentationDir()
 
 QString UiTools::getExamplesDir()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
     return QApplication::applicationDirPath() + "/examples";
 #else
     return "/usr/share/doc/conducteo/examples";
@@ -115,7 +115,7 @@ QString UiTools::getExamplesDir()
 
 QString UiTools::getTemplatesDir()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
     return QApplication::applicationDirPath() + "/templates";
 #else
     return "/usr/share/conducteo/templates";
@@ -124,7 +124,7 @@ QString UiTools::getTemplatesDir()
 
 QString UiTools::getTranslationsDir()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
     return QApplication::applicationDirPath() + "/translations";
 #else
     return "/usr/share/conducteo/translations";

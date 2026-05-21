@@ -44,11 +44,16 @@ set_source_files_properties(${mac_docx_template_3} PROPERTIES MACOSX_PACKAGE_LOC
 file (GLOB mac_docx_template_4 "${CMAKE_SOURCE_DIR}/install/model_2_en.docx" )
 set_source_files_properties(${mac_docx_template_4} PROPERTIES MACOSX_PACKAGE_LOCATION MacOS/docx)
 
+file(GLOB mac_translations "${CMAKE_SOURCE_DIR}/install/translations/*.json")
+set_source_files_properties(${mac_translations}
+        PROPERTIES MACOSX_PACKAGE_LOCATION MacOS/translations
+)
+
 # Examples.
 file (GLOB examples "${CMAKE_SOURCE_DIR}/install/exemples/*.c2d" )
 set_source_files_properties(${examples} PROPERTIES MACOSX_PACKAGE_LOCATION MacOS/exemples)
 
-set(MACOSXResources ${bundle_icon} ${pdf_docs} ${pdf_docs_2} ${pdf_docs_4} ${rt_db} ${examples} ${mac_docx_template} ${mac_docx_template_2} ${mac_docx_template_3} ${mac_docx_template_4} ${validations_data_en10211} ${validations_data_en10077} ${validations_data_common} ${tutorial_data} ${pdf_docs_3})
+set(MACOSXResources ${bundle_icon} ${pdf_docs} ${pdf_docs_2} ${pdf_docs_4} ${rt_db} ${mac_translations} ${examples} ${mac_docx_template} ${mac_docx_template_2} ${mac_docx_template_3} ${mac_docx_template_4} ${validations_data_en10211} ${validations_data_en10077} ${validations_data_common} ${tutorial_data} ${pdf_docs_3})
 
 # set bundle informations.
 set( MACOSX_BUNDLE_INFO_STRING          "conducteö"                                                                                         )
