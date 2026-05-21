@@ -288,7 +288,7 @@
   "AboutText9": "<b>Site internet :</b> <a href=\"https://conducteo.sourceforge.io\">https://conducteo.sourceforge.io</a><br/>",
   "SoftwareTitle": "conducteo - calcul détaillé des ponts thermiques linéiques - version ",
   "OpenModel": "Ouvrir une modélisation",
-  "OpenModelFilePattern": "Fichiers supportés (*.c2d *.THM *.dxf);;conducteo (*.c2d);;Therm 7.3 (*.THM);;Fichier DXF (*.dxf)",
+  "OpenModelFilePattern": "Fichiers supportés (*.c2d *.C2D *.thm *.THM *.DXF *.dxf);;conducteo (*.c2d *.C2D);;Therm 7.3 (*.THM *.thm);;Fichier DXF (*.dxf *.DXF)",
   "ComputationInProgress": "Simulation en cours",
   "ComputationStop": "Souhaitez-vous annuler la simulation ?",
   "Yes": "Oui",

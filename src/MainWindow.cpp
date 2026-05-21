@@ -382,7 +382,6 @@ void MainWindow::importDxfContent(const std::string &filename)
     // Sort by z-order.
     std::sort(polylines.begin(), polylines.end(), polyline_sort);
 
-
     // Import all volumes.
     for (unsigned int i = 0; i < polylines.size(); i++)
     {

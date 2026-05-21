@@ -287,7 +287,7 @@
   "AboutText9": "<b>Website:</b> <a href=\"https://conducteo.sourceforge.io\">https://conducteo.sourceforge.io</a><br/>",
   "SoftwareTitle": "conducteo - linear thermal bridges calculation - version ",
   "OpenModel": "Open project",
-  "OpenModelFilePattern": "Supported files (*.c2d *.THM *.dxf);;conducteo (*.c2d);;Therm 7.3 (*.THM);;DXF file (*.dxf)",
+  "OpenModelFilePattern": "Supported files (*.c2d *.C2D *.thm *.THM *.DXF *.dxf);;conducteo (*.c2d *.C2D);;Therm 7.3 (*.THM *.thm);;DXF file (*.dxf *.DXF)",
   "ComputationInProgress": "Calculation in progress",
   "ComputationStop": "Would you like to cancel the simulation?",
   "Yes": "Yes",
