@@ -55,6 +55,8 @@ set_source_files_properties(${examples} PROPERTIES MACOSX_PACKAGE_LOCATION Resou
 
 set(MACOSXResources ${bundle_icon} ${pdf_docs} ${pdf_docs_2} ${pdf_docs_4} ${rt_db} ${mac_translations} ${examples} ${mac_docx_template} ${mac_docx_template_2} ${mac_docx_template_3} ${mac_docx_template_4} ${validations_data_en10211} ${validations_data_en10077} ${validations_data_common} ${tutorial_data} ${pdf_docs_3})
 
+set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0")
+    
 # set bundle informations.
 set( MACOSX_BUNDLE_INFO_STRING          "conducteö"                                                                                         )
 set( MACOSX_BUNDLE_ICON_FILE            "conducteo.icns"                                                                                    )
