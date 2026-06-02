@@ -33,16 +33,16 @@ set_source_files_properties(${rt_db} PROPERTIES MACOSX_PACKAGE_LOCATION Resource
 
 # Docx template.
 file (GLOB mac_docx_template "${CMAKE_SOURCE_DIR}/install/templates/model_fr.docx" )
-set_source_files_properties(${mac_docx_template} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/docx)
+set_source_files_properties(${mac_docx_template} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/templates)
 
 file (GLOB mac_docx_template_2 "${CMAKE_SOURCE_DIR}/install/templates/model_2_fr.docx" )
-set_source_files_properties(${mac_docx_template_2} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/docx)
+set_source_files_properties(${mac_docx_template_2} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/templates)
 
 file (GLOB mac_docx_template_3 "${CMAKE_SOURCE_DIR}/install/templates/model_en.docx" )
-set_source_files_properties(${mac_docx_template_3} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/docx)
+set_source_files_properties(${mac_docx_template_3} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/templates)
 
 file (GLOB mac_docx_template_4 "${CMAKE_SOURCE_DIR}/install/templates/model_2_en.docx" )
-set_source_files_properties(${mac_docx_template_4} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/docx)
+set_source_files_properties(${mac_docx_template_4} PROPERTIES MACOSX_PACKAGE_LOCATION Resources/templates)
 
 file(GLOB mac_translations "${CMAKE_SOURCE_DIR}/install/translations/*.json")
 set_source_files_properties(${mac_translations}
