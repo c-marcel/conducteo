@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: C. Marcel <clement.marcel@nwanda.fr>
 Build-Depends: debhelper-compat (= 13), cmake, qt6-base-dev, libzip-dev, 
         uuid-dev, libtinyxml-dev, libeigen3-dev, libdxflib-dev,
-        nlohmann-json3-dev
+        nlohmann-json3-dev, qt6-svg-dev
 Standards-Version: 4.7.2
 Homepage: https://sourceforge.net/projects/conducteo
 

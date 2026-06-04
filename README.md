@@ -16,7 +16,7 @@ Requirements:
 
 - CMake
 - c++ compiler
-- Qt 6
+- Qt 6 (+ Qt6 SVG)
 - (Windows only) NSIS: Nullsoft Scriptable Install System
 
 **Libraries dependencies**
