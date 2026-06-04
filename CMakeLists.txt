@@ -36,7 +36,7 @@ endif()
 include_directories(${DXFLIB_INCLUDE_DIR})
 
 # tinyxml.
-if (WIN32)
+if (WIN32 OR APPLE)
     set(TINYXML_ROOT_DIRECTORY "" CACHE PATH "Path to tinyxml root directory")
     
     if (NOT TINYXML_ROOT_DIRECTORY)
@@ -167,6 +167,10 @@ endif()
 # Mac OS X Core Foundation & Bundle creation.
 if (APPLE)
     FIND_LIBRARY(COREFOUNDATION_LIBRARY CoreFoundation)
+
+    find_library(LIBZIP_LIBRARY NAMES zip PATHS "/opt/homebrew/lib")
+    include_directories("/opt/homebrew/include")
+
     include(MacInstaller.cmake)
 endif()
 
@@ -182,7 +186,13 @@ if (UNIX AND NOT APPLE)
 endif()
 
 if (APPLE)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport Qt${QT_VERSION_MAJOR}::Svg ${COREFOUNDATION_LIBRARY})
+    target_link_libraries(conducteo PRIVATE
+            Qt${QT_VERSION_MAJOR}::Widgets
+            Qt${QT_VERSION_MAJOR}::PrintSupport
+            Qt${QT_VERSION_MAJOR}::Svg
+            ${COREFOUNDATION_LIBRARY}
+            ${LIBZIP_LIBRARY}
+    )
 endif()
 
 if(QT_VERSION_MAJOR EQUAL 6)

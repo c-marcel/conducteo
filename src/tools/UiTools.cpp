@@ -20,6 +20,7 @@
 #include <LinguistManager.h>
 #include <QApplication>
 #include <QDateTime>
+#include <QDir>
 
 QString UiTools::getSoftwareVersion()
 {
@@ -77,9 +78,21 @@ QString UiTools::getCurrentDate()
     return s_date;
 }
 
+static QString appleResourcesDir()
+{
+#if defined(__APPLE__)
+    QDir dir(QCoreApplication::applicationDirPath());
+    dir.cdUp();
+    dir.cd("Resources");
+    return dir.absolutePath();
+#else
+    return QString();
+#endif
+}
+
 QString UiTools::getBinaryDir()
 {
-#ifdef WIN32
+#if defined(WIN32) || defined(__APPLE__)
     return QApplication::applicationDirPath();
 #else
     return "/usr/bin";
@@ -88,8 +101,10 @@ QString UiTools::getBinaryDir()
 
 QString UiTools::getDataDir()
 {
-#ifdef WIN32
+#if defined(WIN32)
     return QApplication::applicationDirPath();
+#elif defined(__APPLE__)
+    return appleResourcesDir() + "/data";
 #else
     return "/usr/share/conducteo/data";
 #endif
@@ -97,8 +112,10 @@ QString UiTools::getDataDir()
 
 QString UiTools::getDocumentationDir()
 {
-#ifdef WIN32
+#if defined(WIN32)
     return QApplication::applicationDirPath() + "/documentation";
+#elif defined(__APPLE__)
+    return appleResourcesDir() + "/documentation";
 #else
     return "/usr/share/doc/conducteo";
 #endif
@@ -106,8 +123,10 @@ QString UiTools::getDocumentationDir()
 
 QString UiTools::getExamplesDir()
 {
-#ifdef WIN32
+#if defined(WIN32)
     return QApplication::applicationDirPath() + "/examples";
+#elif defined(__APPLE__)
+    return appleResourcesDir() + "/examples";
 #else
     return "/usr/share/doc/conducteo/examples";
 #endif
@@ -115,8 +134,10 @@ QString UiTools::getExamplesDir()
 
 QString UiTools::getTemplatesDir()
 {
-#ifdef WIN32
+#if defined(WIN32)
     return QApplication::applicationDirPath() + "/templates";
+#elif defined(__APPLE__)
+    return appleResourcesDir() + "/templates";
 #else
     return "/usr/share/conducteo/templates";
 #endif
@@ -124,8 +145,10 @@ QString UiTools::getTemplatesDir()
 
 QString UiTools::getTranslationsDir()
 {
-#ifdef WIN32
+#if defined(WIN32)
     return QApplication::applicationDirPath() + "/translations";
+#elif defined(__APPLE__)
+    return appleResourcesDir() + "/translations";
 #else
     return "/usr/share/conducteo/translations";
 #endif

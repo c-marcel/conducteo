@@ -1,2 +1,10 @@
-extend-diff-ignore = "(^|/)install/windows/.*"
+--extend-diff-ignore=(^|/)install/windows/.*
 --extend-diff-ignore=(^|/)resources/windows/.*
+--extend-diff-ignore=(^|/)WinInstaller\.cmake$
+--extend-diff-ignore=(^|/)MacInstaller\.cmake$
+--extend-diff-ignore=(^|/)RefreshIcon\.nsh$
+--extend-diff-ignore=(^|/)FileAssociation\.nsh$
+--extend-diff-ignore=(^|/)build-deb\.sh$
+--extend-diff-ignore=(^|/)resources/conducteo\.icns$
+--extend-diff-ignore=(^|/)resources/icon\.ico$
+--extend-diff-ignore=(^|/)resources/license\.txt$
