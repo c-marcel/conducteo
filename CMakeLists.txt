@@ -106,7 +106,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 REQUIRED COMPONENTS Widgets Core Gui PrintSupport)
+find_package(Qt6 REQUIRED COMPONENTS Widgets Core Gui PrintSupport Svg)
 
 # conducteö headers.
 include_directories("include")
@@ -122,6 +122,7 @@ include_directories("libs/local-data/include")
 include_directories("libs/model-viewer/include")
 include_directories("libs/mouse/include")
 include_directories("libs/states/include")
+include_directories("libs/themed-icons/include")
 include_directories("libs/string/include")
 include_directories("libs/surface-results/include")
 include_directories("libs/temperature/include")
@@ -173,15 +174,15 @@ qt_add_executable(conducteo MANUAL_FINALIZATION MACOSX_BUNDLE ${MACOSXResources}
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 if (WIN32)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport ${LIBZIP_LIBRARY} ${ZLIB_LIBRARY})
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport Qt${QT_VERSION_MAJOR}::Svg ${LIBZIP_LIBRARY} ${ZLIB_LIBRARY})
 endif()
 
 if (UNIX AND NOT APPLE)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport uuid zip tinyxml Eigen3::Eigen ${DXFLIB_LIBRARY} nlohmann_json::nlohmann_json)
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport Qt${QT_VERSION_MAJOR}::Svg uuid zip tinyxml Eigen3::Eigen ${DXFLIB_LIBRARY} nlohmann_json::nlohmann_json)
 endif()
 
 if (APPLE)
-    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport ${COREFOUNDATION_LIBRARY})
+    target_link_libraries(conducteo PRIVATE Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::PrintSupport Qt${QT_VERSION_MAJOR}::Svg ${COREFOUNDATION_LIBRARY})
 endif()
 
 if(QT_VERSION_MAJOR EQUAL 6)
