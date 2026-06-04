@@ -26,6 +26,7 @@
 #include <QPainter>
 #include <Log.h>
 #include <QUrl>
+#include "ThemedIcon.h"
 
 Report::Report(QWidget *parent):
     QWidget(parent),
@@ -69,9 +70,9 @@ Report::~Report()
 
 void Report::setIcons()
 {
-    _export.setIcon(QIcon(":/icons/report.svg"));
-    _pdfExport->setIcon(QIcon(":/icons/file-type-pdf.svg"));
-    _exportMenuAction->setIcon(QIcon(":/icons/file-type-docx.svg"));
+    _export.setIcon(ThemedIcon::get(":/icons/report.svg"));
+    _pdfExport->setIcon(ThemedIcon::get(":/icons/file-type-pdf.svg"));
+    _exportMenuAction->setIcon(ThemedIcon::get(":/icons/file-type-docx.svg"));
     _export.setIconSize(QSize(24, 24));
 }
 

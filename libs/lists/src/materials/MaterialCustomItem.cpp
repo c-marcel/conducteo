@@ -27,6 +27,7 @@
 #include <QMouseEvent>
 #include <QPainter>
 #include <QLocale>
+#include "ThemedIcon.h"
 
 #define ItemWidth                       200
 #define ClosedItemHeight                25
@@ -100,7 +101,7 @@ void MaterialCustomItem::paintEvent(QPaintEvent *event)
             image="star-filled.svg";
         if (_hover && !_favorite)
             image="carambola.svg";
-        QPixmap pixmap = QIcon(":/icons/" + image).pixmap(16, 16);
+        QPixmap pixmap = ThemedIcon::get(":/icons/" + image).pixmap(16, 16);
         pixmap = pixmap.scaledToHeight(25, Qt::SmoothTransformation);
         QRect r2(width()-10-pixmap.width(), (25-pixmap.height())/2, pixmap.width(), pixmap.height());
         qp.drawPixmap(r2, pixmap);
@@ -109,7 +110,7 @@ void MaterialCustomItem::paintEvent(QPaintEvent *event)
 
     else if (_extrusion)
     {
-        QPixmap pixmap = QIcon(":/icons/slice.svg").pixmap(16, 16);
+        QPixmap pixmap = ThemedIcon::get(":/icons/slice.svg").pixmap(16, 16);
         pixmap = pixmap.scaledToHeight(25, Qt::SmoothTransformation);
         QRect r2(4, 2, pixmap.width(), pixmap.height());
         qp.drawPixmap(r2, pixmap);

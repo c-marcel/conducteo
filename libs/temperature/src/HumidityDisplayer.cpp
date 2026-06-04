@@ -23,6 +23,7 @@
 #include <QPainter>
 #include <QLocale>
 #include <Log.h>
+#include "ThemedIcon.h"
 
 HumidityDisplayer::HumidityDisplayer(QWidget *parent):
     QWidget(parent),
@@ -113,7 +114,7 @@ void HumidityDisplayer::translate()
 
 void HumidityDisplayer::applyTheme()
 {
-    _pixmap = QIcon(":/icons/droplets.svg").pixmap(16, 16);
+    _pixmap = ThemedIcon::get(":/icons/droplets.svg").pixmap(16, 16);
     update();
 }
 

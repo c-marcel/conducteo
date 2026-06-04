@@ -20,6 +20,7 @@
 #include <LinguistManager.h>
 #include <QMouseEvent>
 #include <QPainter>
+#include "ThemedIcon.h"
 
 SearchInput::SearchInput(Qt::Orientation o, QWidget *parent):
     CustomHeaderView(o, parent),
@@ -33,7 +34,7 @@ SearchInput::SearchInput(Qt::Orientation o, QWidget *parent):
             &SearchInput::searchInputTextChanged,
             Qt::UniqueConnection);
 
-    _image = QIcon(":/icons/search.svg").pixmap(10, 10); 
+    _image = ThemedIcon::get(":/icons/search.svg").pixmap(10, 10); 
 }
 
 SearchInput::~SearchInput()

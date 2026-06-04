@@ -26,6 +26,7 @@
 #include <StatesManager.h>
 #include <QInputDialog>
 #include <QMenu>
+#include "ThemedIcon.h"
 
 EnvironmentList::EnvironmentList(QWidget *parent):
     QWidget(parent),
@@ -133,7 +134,7 @@ void EnvironmentList::translate()
 
 void EnvironmentList::applyTheme()
 {
-    _headers.setIcon(QIcon(":/icons/layout-collage.svg").pixmap(16, 16));
+    _headers.setIcon(ThemedIcon::get(":/icons/layout-collage.svg").pixmap(16, 16));
 
     QColor themedColor = QColor(199, 229, 245);
 

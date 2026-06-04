@@ -24,6 +24,7 @@
 #include <StatesManager.h>
 #include <model/Volume.h>
 #include <QPainter>
+#include "ThemedIcon.h"
 
 VolumeProperties::VolumeProperties(QWidget *parent):
     QWidget(parent),
@@ -136,7 +137,7 @@ void VolumeProperties::paintEvent(QPaintEvent *event)
     qp.drawRect(rec2);
 
     // Draw image.
-    QPixmap pixmap = QIcon(":/icons/rectangle.svg").pixmap(16, 16);
+    QPixmap pixmap = ThemedIcon::get(":/icons/rectangle.svg").pixmap(16, 16);
     int left=10;
     int top=(rec2.height()-pixmap.height())/2;
     QRect r(10+left, 10+top, pixmap.width(), pixmap.height());
