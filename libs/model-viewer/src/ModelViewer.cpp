@@ -80,6 +80,7 @@
 
 #define _USE_MATH_DEFINES
 #include <math.h>
+#include "ThemedIcon.h"
 
 #ifdef WIN32
 #define isnan(x) _isnan(x)
@@ -1664,7 +1665,7 @@ void ModelViewer::finalizePolyline()
         dialog.setWindowModality(Qt::ApplicationModal);
         QIcon icon(":/icon.png");
         dialog.setWindowIcon(icon);
-        dialog.setIconPixmap(QIcon(":/icons/alert-circle.svg").pixmap(16, 16));
+        dialog.setIconPixmap(ThemedIcon::get(":/icons/alert-circle.svg").pixmap(16, 16));
         dialog.exec();
         return;
     }
@@ -3770,10 +3771,10 @@ void ModelViewer::zoomChanged()
 
 void ModelViewer::applyTheme()
 {
-    _rotationCursor      = QCursor(QIcon(":/icons/rotate.svg").pixmap(16, 16));
-    _resizeOriginalImage = QIcon(":/icons/arrows-move-horizontal.svg").pixmap(16, 16);
+    _rotationCursor      = QCursor(ThemedIcon::get(":/icons/rotate.svg").pixmap(16, 16));
+    _resizeOriginalImage = ThemedIcon::get(":/icons/arrows-move-horizontal.svg").pixmap(16, 16);
 
-    _en13370Button.setIcon(QIcon(":/icons/calculator.svg").pixmap(16, 16));
+    _en13370Button.setIcon(ThemedIcon::get(":/icons/calculator.svg").pixmap(16, 16));
 }
 
 // RGB color arrays.
@@ -3960,7 +3961,7 @@ void ModelViewer::importSelectedElements()
         dialog.setWindowModality(Qt::ApplicationModal);
         QIcon icon(":/icon.png");
         dialog.setWindowIcon(icon);
-        dialog.setIconPixmap(QIcon(":/icons/alert-circle.svg").pixmap(16, 16));
+        dialog.setIconPixmap(ThemedIcon::get(":/icons/alert-circle.svg").pixmap(16, 16));
         dialog.exec();
 
         ActionsManager::instance()->removeAction(action);

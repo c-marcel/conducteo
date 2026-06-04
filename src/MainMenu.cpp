@@ -63,6 +63,7 @@
 #include <Log.h>
 #include <QDir>
 #include <QUrl>
+#include "ThemedIcon.h"
 
 MainMenu::MainMenu(QWidget *parent):
     QMenuBar(parent),
@@ -514,52 +515,52 @@ void MainMenu::translate()
 
 void MainMenu::applyTheme()
 {
-    _newDocumentAction.setIcon(QIcon(":/icons/file.svg"));
-    _openDocumentAction.setIcon(QIcon(":/icons/folder-open.svg"));
-    _saveDocumentAction.setIcon(QIcon(":/icons/device-floppy.svg"));
-    _saveDocumentAsAction.setIcon(QIcon(":/icons/save-as.svg"));
-    _cutAction.setIcon(QIcon(":/icons/cut.svg"));
-    _copyAction.setIcon(QIcon(":/icons/copy.svg"));
-    _pasteAction.setIcon(QIcon(":/icons/clipboard.svg"));
-    _undoAction.setIcon(QIcon(":/icons/arrow-back-up.svg"));
-    _redoAction.setIcon(QIcon(":/icons/arrow-forward-up.svg"));
-    _aboutAction.setIcon(QIcon(":/icons/info-circle.svg"));
+    _newDocumentAction.setIcon(ThemedIcon::get(":/icons/file.svg"));
+    _openDocumentAction.setIcon(ThemedIcon::get(":/icons/folder-open.svg"));
+    _saveDocumentAction.setIcon(ThemedIcon::get(":/icons/device-floppy.svg"));
+    _saveDocumentAsAction.setIcon(ThemedIcon::get(":/icons/save-as.svg"));
+    _cutAction.setIcon(ThemedIcon::get(":/icons/cut.svg"));
+    _copyAction.setIcon(ThemedIcon::get(":/icons/copy.svg"));
+    _pasteAction.setIcon(ThemedIcon::get(":/icons/clipboard.svg"));
+    _undoAction.setIcon(ThemedIcon::get(":/icons/arrow-back-up.svg"));
+    _redoAction.setIcon(ThemedIcon::get(":/icons/arrow-forward-up.svg"));
+    _aboutAction.setIcon(ThemedIcon::get(":/icons/info-circle.svg"));
 
-    _selectionModeAction.setIcon(QIcon(":/icons/pointer.svg"));
-    _addRectangleModeAction.setIcon(QIcon(":/icons/rectangle.svg"));
+    _selectionModeAction.setIcon(ThemedIcon::get(":/icons/pointer.svg"));
+    _addRectangleModeAction.setIcon(ThemedIcon::get(":/icons/rectangle.svg"));
 
-    _getMaterialModeAction.setIcon(QIcon(":/icons/color-picker.svg"));
-    _setPhysicModeAction.setIcon(QIcon(":/icons/bucket-droplet.svg"));
-    _setEnvironmentModeAction.setIcon(QIcon(":/icons/layout-collage.svg"));
+    _getMaterialModeAction.setIcon(ThemedIcon::get(":/icons/color-picker.svg"));
+    _setPhysicModeAction.setIcon(ThemedIcon::get(":/icons/bucket-droplet.svg"));
+    _setEnvironmentModeAction.setIcon(ThemedIcon::get(":/icons/layout-collage.svg"));
 
-    _computeAction.setIcon(QIcon(":/icons/player-play.svg"));
+    _computeAction.setIcon(ThemedIcon::get(":/icons/player-play.svg"));
 
-    _frontAction.setIcon(QIcon(":/icons/stack-front.svg"));
-    _backAction.setIcon(QIcon(":/icons/stack-back.svg"));
+    _frontAction.setIcon(ThemedIcon::get(":/icons/stack-front.svg"));
+    _backAction.setIcon(ThemedIcon::get(":/icons/stack-back.svg"));
 
-    _frontOneShotAction.setIcon(QIcon(":/icons/stack-forward.svg"));
-    _backOneShotAction.setIcon(QIcon(":/icons/stack-backward.svg"));
+    _frontOneShotAction.setIcon(ThemedIcon::get(":/icons/stack-forward.svg"));
+    _backOneShotAction.setIcon(ThemedIcon::get(":/icons/stack-backward.svg"));
 
-    _fitAction.setIcon(QIcon(":/icons/zoom-scan.svg"));
-    _zoomInAction.setIcon(QIcon(":/icons/zoom-in.svg"));
-    _zoomOutAction.setIcon(QIcon(":/icons/zoom-out.svg"));
+    _fitAction.setIcon(ThemedIcon::get(":/icons/zoom-scan.svg"));
+    _zoomInAction.setIcon(ThemedIcon::get(":/icons/zoom-in.svg"));
+    _zoomOutAction.setIcon(ThemedIcon::get(":/icons/zoom-out.svg"));
 
-    _copy2DModelTo1DModel.setIcon(QIcon(":/icons/restore.svg"));
-    _toogleEn13370.setIcon(QIcon(":/icons/calculator.svg"));
+    _copy2DModelTo1DModel.setIcon(ThemedIcon::get(":/icons/restore.svg"));
+    _toogleEn13370.setIcon(ThemedIcon::get(":/icons/calculator.svg"));
     
-    _addPolyline.setIcon(QIcon(":/icons/polygon.svg"));
-    _addPoint.setIcon(QIcon(":/icons/transform-point-bottom-left.svg"));
-    _addCircleModeAction.setIcon(QIcon(":/icons/circle.svg"));
-    _addEllipseModeAction.setIcon(QIcon(":/icons/ellipse.svg"));
+    _addPolyline.setIcon(ThemedIcon::get(":/icons/polygon.svg"));
+    _addPoint.setIcon(ThemedIcon::get(":/icons/transform-point-bottom-left.svg"));
+    _addCircleModeAction.setIcon(ThemedIcon::get(":/icons/circle.svg"));
+    _addEllipseModeAction.setIcon(ThemedIcon::get(":/icons/ellipse.svg"));
 
-    _addImageAction.setIcon(QIcon(":/icons/photo.svg"));
-    _addDxfAction.setIcon(QIcon(":/icons/photo-code.svg"));
+    _addImageAction.setIcon(ThemedIcon::get(":/icons/photo.svg"));
+    _addDxfAction.setIcon(ThemedIcon::get(":/icons/photo-code.svg"));
 
-    _getLength.setIcon(QIcon(":/icons/ruler-3.svg"));
-    _getAngle.setIcon(QIcon(":/icons/angle.svg"));
+    _getLength.setIcon(ThemedIcon::get(":/icons/ruler-3.svg"));
+    _getAngle.setIcon(ThemedIcon::get(":/icons/angle.svg"));
 
-    _addText.setIcon(QIcon(":/icons/text-color.svg"));
-    _addArrow.setIcon(QIcon(":/icons/arrow-bear-right.svg"));
+    _addText.setIcon(ThemedIcon::get(":/icons/text-color.svg"));
+    _addArrow.setIcon(ThemedIcon::get(":/icons/arrow-bear-right.svg"));
 
     updateImagesVisibility();
 }
@@ -567,9 +568,9 @@ void MainMenu::applyTheme()
 void MainMenu::updateImagesVisibility()
 {
     if (StatesManager::instance()->showImages())
-        _imagesVisibilityAction.setIcon(QIcon(":/icons/image-on.svg"));
+        _imagesVisibilityAction.setIcon(ThemedIcon::get(":/icons/image-on.svg"));
     else
-        _imagesVisibilityAction.setIcon(QIcon(":/icons/image-off.svg"));
+        _imagesVisibilityAction.setIcon(ThemedIcon::get(":/icons/image-off.svg"));
 
     if (StatesManager::instance()->showImages())
         _imagesVisibilityAction.setText(_tr("HideImages"));
@@ -577,9 +578,9 @@ void MainMenu::updateImagesVisibility()
         _imagesVisibilityAction.setText(_tr("ShowImages"));
 
     if (StatesManager::instance()->showDxf())
-        _dxfVisibilityAction.setIcon(QIcon(":/icons/dxf-on.svg"));
+        _dxfVisibilityAction.setIcon(ThemedIcon::get(":/icons/dxf-on.svg"));
     else
-        _dxfVisibilityAction.setIcon(QIcon(":/icons/dxf-off.svg"));
+        _dxfVisibilityAction.setIcon(ThemedIcon::get(":/icons/dxf-off.svg"));
 
     if (StatesManager::instance()->showDxf())
         _dxfVisibilityAction.setText(_tr("HideDxf"));
@@ -1752,7 +1753,7 @@ void MainMenu::exceptionCaught(ErrorHandler::ErrorCode code)
     dialog.setWindowModality(Qt::ApplicationModal);
     QIcon icon(":/icon.png");
     dialog.setWindowIcon(icon);
-    dialog.setIconPixmap(QIcon(":/icons/alert-circle.svg").pixmap(16, 16));
+    dialog.setIconPixmap(ThemedIcon::get(":/icons/alert-circle.svg").pixmap(16, 16));
     dialog.exec();
 }
 

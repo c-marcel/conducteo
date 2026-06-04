@@ -32,6 +32,7 @@
 #include <QMenu>
 #include <QFile>
 #include <Log.h>
+#include "ThemedIcon.h"
 
 BoundaryConditionList::BoundaryConditionList(QWidget *parent):
     QWidget(parent),
@@ -198,7 +199,7 @@ void BoundaryConditionList::translate()
 
 void BoundaryConditionList::applyTheme()
 {
-    _headers.setIcon(QIcon(":/icons/border-sides.svg").pixmap(16, 16));
+    _headers.setIcon(ThemedIcon::get(":/icons/border-sides.svg").pixmap(16, 16));
 
     QColor themedColor  = QColor(199, 229, 245);
 

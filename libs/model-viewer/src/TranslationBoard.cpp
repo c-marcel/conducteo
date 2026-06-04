@@ -19,6 +19,7 @@
 #include <TranslationBoard.h>
 #include <LinguistManager.h>
 #include <QPainter>
+#include "ThemedIcon.h"
 
 TranslationBoard::TranslationBoard(Direction direction, QWidget *parent):
     QWidget(parent),
@@ -67,13 +68,13 @@ void TranslationBoard::applyTheme()
 {
     if (_direction==Vertical)
     {
-        _increase.setIcon(QIcon(":/icons/arrow-narrow-up.svg"));
-        _decrease.setIcon(QIcon(":/icons/arrow-narrow-down.svg"));
+        _increase.setIcon(ThemedIcon::get(":/icons/arrow-narrow-up.svg"));
+        _decrease.setIcon(ThemedIcon::get(":/icons/arrow-narrow-down.svg"));
     }
 
     else if (_direction==Horizontal)
     {
-        _decrease.setIcon(QIcon(":/icons/arrow-narrow-left.svg"));
-        _increase.setIcon(QIcon(":/icons/arrow-narrow-right.svg"));
+        _decrease.setIcon(ThemedIcon::get(":/icons/arrow-narrow-left.svg"));
+        _increase.setIcon(ThemedIcon::get(":/icons/arrow-narrow-right.svg"));
     }
 }

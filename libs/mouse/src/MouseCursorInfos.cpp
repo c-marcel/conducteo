@@ -21,6 +21,7 @@
 #include <QApplication>
 #include <QPainter>
 #include <QLocale>
+#include "ThemedIcon.h"
 
 MouseCursorInfos::MouseCursorInfos(QWidget *parent):
     QWidget(parent),
@@ -142,7 +143,7 @@ void MouseCursorInfos::paintEvent(QPaintEvent *event)
     qp.drawRect(rec2);
 
     // Draw image.
-    QPixmap pixmap = QIcon(":/icons/mouse-2.svg").pixmap(16, 16);
+    QPixmap pixmap = ThemedIcon::get(":/icons/mouse-2.svg").pixmap(16, 16);
     int left=10;
     int top=(rec2.height()-pixmap.height())/2;
     QRect r(10+left, 10+top, pixmap.width(), pixmap.height());

@@ -22,6 +22,7 @@
 #include <QPainter>
 #include <QLocale>
 #include <Log.h>
+#include "ThemedIcon.h"
 
 TemperatureDisplayer::TemperatureDisplayer(QWidget *parent):
     QWidget(parent),
@@ -49,7 +50,7 @@ TemperatureDisplayer::TemperatureDisplayer(QWidget *parent):
     translate();
     statesChanged();
 
-    _pixmap = QIcon(":/icons/temperature-sun.svg").pixmap(16, 16);
+    _pixmap = ThemedIcon::get(":/icons/temperature-sun.svg").pixmap(16, 16);
 }
 
 TemperatureDisplayer::~TemperatureDisplayer()

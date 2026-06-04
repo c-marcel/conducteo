@@ -21,6 +21,7 @@
 #include <StatesManager.h>
 #include <model/Model.h>
 #include <Log.h>
+#include "ThemedIcon.h"
 
 ButtonTabs::ButtonTabs(QWidget *parent):
     QWidget(parent),
@@ -173,15 +174,15 @@ void ButtonTabs::translate()
 
 void ButtonTabs::applyTheme()
 {
-    _modelButton.setIcon(QIcon(":/icons/blocks.svg"));
+    _modelButton.setIcon(ThemedIcon::get(":/icons/blocks.svg"));
     _modelButton.setIconSize(QSize(24, 24));
-    _1DModelButton.setIcon(QIcon(":/icons/blocks-backslash.svg"));
+    _1DModelButton.setIcon(ThemedIcon::get(":/icons/blocks-backslash.svg"));
     _1DModelButton.setIconSize(QSize(24, 24));
-    _resultsButton.setIcon(QIcon(":/icons/temperature-sun.svg"));
+    _resultsButton.setIcon(ThemedIcon::get(":/icons/temperature-sun.svg"));
     _resultsButton.setIconSize(QSize(24, 24));
-    _reportButton.setIcon(QIcon(":/icons/report.svg"));
+    _reportButton.setIcon(ThemedIcon::get(":/icons/report.svg"));
     _reportButton.setIconSize(QSize(24, 24));
-    _meshButton.setIcon(QIcon(":/icons/mesh.svg"));
+    _meshButton.setIcon(ThemedIcon::get(":/icons/mesh.svg"));
     _meshButton.setIconSize(QSize(24, 24));
 }
 

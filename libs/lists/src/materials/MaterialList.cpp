@@ -40,6 +40,7 @@
 #include <tinyxml.h>
 #include <QDrag>
 #include <QMenu>
+#include "ThemedIcon.h"
 
 MaterialList::MaterialList(QWidget *parent):
     QWidget(parent),
@@ -648,7 +649,7 @@ void MaterialList::translate()
 
 void MaterialList::applyTheme()
 {
-    _headers.setIcon(QIcon(":/icons/database.svg").pixmap(16, 16));
+    _headers.setIcon(ThemedIcon::get(":/icons/database.svg").pixmap(16, 16));
 
     QColor themedColor = QColor(199, 229, 245);
 
